@@ -70,7 +70,7 @@ export function Footer() {
                         Les marques citées appartiennent à leurs propriétaires respectifs.
                     </p>
                     <p>
-                        &copy; {new Date().getFullYear()} FreeMobileAndroid.fr - Fait avec Next.js & Tailwind.
+                        &copy; {new Date().getFullYear()} FreeMobileAndroid.fr
                     </p>
                 </div>
             </div>
