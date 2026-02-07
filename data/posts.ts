@@ -1,25 +1,25 @@
 export interface BlogPost {
-    slug: string;
-    title: string;
-    excerpt: string;
-    content: string; // HTML string for simplicity in this MVP
-    date: string;
-    author: string;
-    readTime: string;
-    category: string;
-    image?: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string; // HTML string for simplicity in this MVP
+  date: string;
+  author: string;
+  readTime: string;
+  category: string;
+  image?: string;
 }
 
 export const posts: BlogPost[] = [
-    {
-        slug: "pourquoi-5g-free-ne-marche-pas",
-        title: "Pourquoi la 5G Free Mobile ne fonctionne pas sur mon téléphone ?",
-        excerpt: "Vous avez un forfait 5G et un smartphone compatible, mais vous restez bloqué en 4G ? Voici les 3 raisons principales et comment les résoudre.",
-        date: "2026-02-07",
-        author: "Wade",
-        readTime: "5 min",
-        category: "Dépannage",
-        content: `
+  {
+    slug: "pourquoi-5g-free-ne-marche-pas",
+    title: "Pourquoi la 5G Free Mobile ne fonctionne pas sur mon téléphone ?",
+    excerpt: "Vous avez un forfait 5G et un smartphone compatible, mais vous restez bloqué en 4G ? Voici les 3 raisons principales et comment les résoudre.",
+    date: "2026-02-07",
+    author: "L'Équipe FreeMobileAndroid",
+    readTime: "5 min",
+    category: "Dépannage",
+    content: `
       <h2>1. L'option 5G n'est pas activée dans votre Espace Abonné</h2>
       <p>C'est la cause n°1 ! Chez Free Mobile, la 5G n'est pas active par défaut, même si vous avez le forfait à 19,99€. Vous devez l'activer manuellement.</p>
       <p><strong>Solution :</strong></p>
@@ -49,16 +49,16 @@ export const posts: BlogPost[] = [
       <h2>Toujours rien ? Vérifiez la couverture</h2>
       <p>Si tout est OK, vous êtes peut-être simplement dans une zone blanche. Consultez la <a href="https://mobile.free.fr/couverture" target="_blank" class="text-red-600 underline">carte de couverture officielle</a>.</p>
     `,
-    },
-    {
-        slug: "difference-apn-free-et-mmsfree",
-        title: "APN 'free' vs 'mmsfree' : Lequel choisir ?",
-        excerpt: "Confusion totale entre les deux APN de Free ? On vous explique pourquoi il en faut deux et comment éviter les erreurs courantes.",
-        date: "2026-02-05",
-        author: "Wade",
-        readTime: "3 min",
-        category: "Configuration",
-        content: `
+  },
+  {
+    slug: "difference-apn-free-et-mmsfree",
+    title: "APN 'free' vs 'mmsfree' : Lequel choisir ?",
+    excerpt: "Confusion totale entre les deux APN de Free ? On vous explique pourquoi il en faut deux et comment éviter les erreurs courantes.",
+    date: "2026-02-05",
+    author: "L'Équipe FreeMobileAndroid",
+    readTime: "3 min",
+    category: "Configuration",
+    content: `
       <h2>Un pour Internet, un pour les MMS</h2>
       <p>Contrairement à d'autres opérateurs qui unifient tout, Free Mobile utilise historiquement deux points d'accès distincts :</p>
       <ul>
@@ -72,5 +72,5 @@ export const posts: BlogPost[] = [
       <h2>Faut-il toujours les deux ?</h2>
       <p>Sur les smartphones récents (iPhone, Samsung Galaxy S24...), la configuration est souvent automatique et unifiée. Mais si vous avez des soucis, la méthode manuelle avec les deux APN reste la plus fiable.</p>
     `
-    }
+  }
 ];

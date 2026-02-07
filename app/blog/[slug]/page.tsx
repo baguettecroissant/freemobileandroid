@@ -76,15 +76,15 @@ export default async function BlogPost({ params }: PageProps) {
                     </h1>
 
                     <div className="flex items-center justify-between border-t border-gray-200 pt-6">
-                        <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-bold">
+                        <Link href="/qui-sommes-nous" className="flex items-center gap-3 group">
+                            <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 font-bold group-hover:scale-105 transition-transform">
                                 {post.author.charAt(0)}
                             </div>
                             <div>
-                                <div className="font-bold text-gray-900">{post.author}</div>
-                                <div className="text-xs text-gray-500">Rédacteur Tech</div>
+                                <div className="font-bold text-gray-900 group-hover:text-red-600 transition-colors">{post.author}</div>
+                                <div className="text-xs text-gray-500">Rédacteurs Tech</div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>

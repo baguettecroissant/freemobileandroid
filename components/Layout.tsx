@@ -57,6 +57,7 @@ export function Footer() {
                     <div>
                         <h4 className="font-semibold text-gray-900 mb-4">Légal</h4>
                         <ul className="space-y-2 text-sm text-gray-500">
+                            <li><Link href="/qui-sommes-nous" className="hover:text-red-600 transition-colors">Qui sommes-nous ?</Link></li>
                             <li><span className="cursor-pointer hover:text-red-600 transition-colors">Mentions Légales</span></li>
                             <li><span className="cursor-pointer hover:text-red-600 transition-colors">Confidentialité</span></li>
                             <li><span className="cursor-pointer hover:text-red-600 transition-colors">Contact</span></li>
