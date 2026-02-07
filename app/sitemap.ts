@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { phones } from "@/data/phones";
+import { posts } from "@/data/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://freemobileandroid.fr";
@@ -20,6 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }));
 
+    const blogUrls = posts.map((post) => ({
+        url: `${baseUrl}/blog/${post.slug}`,
+        lastModified: new Date(post.date),
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
+    }));
+
     return [
         {
             url: baseUrl,
@@ -31,9 +39,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: `${baseUrl}/marques`,
             lastModified: new Date(),
             changeFrequency: "weekly",
-            priority: 1,
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/blog`,
+            lastModified: new Date(),
+            changeFrequency: "daily",
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/qui-sommes-nous`,
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.7,
         },
         ...brandUrls,
         ...phoneUrls,
+        ...blogUrls,
     ];
 }

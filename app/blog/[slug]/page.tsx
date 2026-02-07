@@ -89,6 +89,20 @@ export default async function BlogPost({ params }: PageProps) {
                 </div>
             </div>
 
+
+            {/* Hero Image */}
+            {
+                post.image && (
+                    <div className="max-w-4xl mx-auto px-4 -mt-8 mb-8 relative z-10">
+                        <img
+                            src={post.image}
+                            alt={post.title}
+                            className="w-full h-auto rounded-2xl shadow-xl border border-gray-100"
+                        />
+                    </div>
+                )
+            }
+
             {/* Content */}
             <article className="max-w-3xl mx-auto px-4 py-12">
                 <div
@@ -109,6 +123,6 @@ export default async function BlogPost({ params }: PageProps) {
                     </Link>
                 </div>
             </article>
-        </main>
+        </main >
     );
 }
