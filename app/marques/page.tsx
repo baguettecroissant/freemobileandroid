@@ -37,7 +37,7 @@ export default function MarquesPage() {
             </section>
 
             {/* Brand List Section */}
-            <section className="max-w-6xl mx-auto px-4 -mt-10 relative z-10">
+            <section className="max-w-6xl mx-auto px-4 -mt-10 relative z-10 mb-20">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {brands.map((brand) => (
                         <Link
@@ -65,6 +65,50 @@ export default function MarquesPage() {
                             </div>
                         </Link>
                     ))}
+                </div>
+            </section>
+
+            {/* SEO Content Section */}
+            <section className="bg-gray-50 border-t border-gray-100 py-16">
+                <div className="max-w-3xl mx-auto px-4">
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+                        Pourquoi la configuration Free Mobile dépend de votre marque ?
+                    </h2>
+
+                    <div className="space-y-8 text-gray-600 leading-relaxed">
+                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                                <span className="w-8 h-8 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-sm font-bold">1</span>
+                                Les Surcouches Constructeur (MIUI, OneUI...)
+                            </h3>
+                            <p>
+                                Chaque fabricant modifie Android à sa sauce. Un smartphone <strong>Samsung</strong> n'a pas les mêmes menus qu'un <strong>Xiaomi</strong> ou un <strong>Google Pixel</strong>.
+                                Les réglages APN (Noms des Points d'Accès) sont parfois cachés dans des sous-menus différents. C'est pourquoi nous avons créé des guides spécifiques par marque.
+                            </p>
+                        </div>
+
+                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                                <span className="w-8 h-8 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-sm font-bold">2</span>
+                                La Compatibilité des Bandes de Fréquences
+                            </h3>
+                            <p>
+                                Pour capter la 4G et la 5G Free Mobile de manière optimale, votre téléphone doit être compatible avec certaines fréquences clés, notamment la <strong>bande n28 (700 MHz)</strong>.
+                                Certaines marques asiatiques (comme les modèles importés de Xiaomi ou OnePlus) peuvent ne pas supporter cette bande, réduisant considérablement votre couverture en campagne.
+                            </p>
+                        </div>
+
+                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                                <span className="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center text-sm font-bold">3</span>
+                                Le cas particulier des iPhone (iOS)
+                            </h3>
+                            <p>
+                                Contrairement à Android, les <strong>iPhone</strong> d'Apple gèrent souvent la configuration opérateur via des mises à jour automatiques ("Réglages Opérateur").
+                                Cependant, des problèmes de MMS ou de partage de connexion peuvent survenir après une mise à jour d'iOS, nécessitant une intervention manuelle spécifique.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

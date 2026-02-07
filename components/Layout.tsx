@@ -19,6 +19,9 @@ export function Header() {
                 </Link>
 
                 <nav className="flex items-center gap-6 text-sm font-medium text-gray-600">
+                    <Link href="/configurer-apn" className="hidden md:block hover:text-red-600 transition-colors">
+                        Config APN
+                    </Link>
                     <Link href="/marques" className="hover:text-red-600 transition-colors">
                         Marques
                     </Link>

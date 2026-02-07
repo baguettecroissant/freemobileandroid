@@ -33,10 +33,14 @@ export default function Home() {
             Guides étape par étape pour tous les smartphones.
           </p>
 
-          <div className="pt-8 flex justify-center gap-4">
-            <Link href="/marques" className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-semibold transition-all hover:scale-105 shadow-lg shadow-red-900/50">
+          <div className="pt-8 flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/configurer-apn" className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-semibold transition-all hover:scale-105 shadow-lg shadow-red-900/50">
+              <Settings2 className="w-5 h-5" />
+              Configurer mon APN
+            </Link>
+            <Link href="/marques" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold transition-all hover:scale-105">
               <Search className="w-5 h-5" />
-              Trouver mon modèle
+              Chercher mon modèle
             </Link>
           </div>
         </div>

@@ -53,6 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "monthly",
             priority: 0.7,
         },
+        {
+            url: `${baseUrl}/configurer-apn`,
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 1,
+        },
         ...brandUrls,
         ...phoneUrls,
         ...blogUrls,

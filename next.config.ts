@@ -7,17 +7,9 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // 1. Redirections Stratégiques (Marques)
-      {
-        source: '/(.*)samsung(.*)',
-        destination: '/marques/samsung',
-        permanent: true,
-      },
-      {
-        source: '/(.*)honor(.*)',
-        destination: '/marques/honor',
-        permanent: true,
-      },
+      // 1. Redirections Stratégiques (Marques) - Ciblées
+      // On retire les règles génériques (.*)samsung(.*) qui bouclent sur /marques/samsung
+      // On privilégie les redirections exactes ci-dessous ou des règles plus précises si besoin.
 
       // 2. Redirections URL Exactes (Legacy Semrush)
       {
