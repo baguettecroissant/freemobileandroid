@@ -8,6 +8,7 @@ export interface BlogPost {
   readTime: string;
   category: string;
   image?: string;
+  imagePrompt?: string;
 }
 
 export const posts: BlogPost[] = [
@@ -121,6 +122,58 @@ export const posts: BlogPost[] = [
       R : En France : NON (inutile). À l'étranger (Zone Europe/Monde) : OUI, sinon pas d'internet.</p>
 
       <p>Votre mobile ne capte toujours pas ? Vérifiez si votre modèle est bien compatible avec les <a href="/marques" class="text-red-600 font-bold hover:underline">fréquences Free Mobile</a> ou suivez notre guide complet de <a href="/configurer-apn" class="text-red-600 font-bold hover:underline">configuration APN par marque</a>.</p>
+    `,
+  },
+  {
+    slug: "apn-free-mobile-configuration-officielle",
+    title: "APN Free Mobile : La Config Ultime Qui Marche à 100% (2026)",
+    excerpt: "Plus d'internet ou de MMS ? Ne galérez plus. Voici LE réglage APN officiel Free Mobile à copier-coller pour réparer votre connexion en 30 secondes chrono.",
+    date: "2026-02-09",
+    author: "L'Équipe FreeMobileAndroid",
+    readTime: "3 min",
+    category: "Configuration",
+    image: "/blog_apn_config_2026_tech_3d.png",
+    imagePrompt: "Tech 3D, Isometric, Glassmorphism, Free Mobile colors (Red/White), clean background, smartphone with settings icon and signal bars, high quality, 8k",
+    content: `
+      <h2>Votre internet Free Mobile rame ou ne marche pas ?</h2>
+      <p>Vous avez une barre de réseau mais <strong>aucune connexion internet</strong> ? Vos MMS tournent dans le vide sans jamais partir ? C'est le symptôme classique d'une mauvaise configuration <strong>APN (Access Point Name)</strong>.</p>
+      <p>Pas de panique. Que vous ayez un Android (Xiaomi, Samsung, Pixel) ou un iPhone, voici la configuration universelle qui répare 100% des problèmes réseau chez Free.</p>
+
+      <h2>La Solution Immédiate : Copiez-collez ceci</h2>
+      <p>N'écoutez pas les forums datés de 2015. Aujourd'hui, un seul réglage compte vraiment. Allez dans <strong>Paramètres > Réseaux mobiles > Noms des points d'accès (APN)</strong> et créez un nouveau profil avec ces valeurs exactes :</p>
+
+      <h3>Pour Internet ET MMS (Android)</h3>
+      <ul>
+        <li><strong>Nom :</strong> Free</li>
+        <li><strong>APN :</strong> free</li>
+        <li><strong>MMSC :</strong> http://mms.free.fr</li>
+        <li><strong>MCC :</strong> 208</li>
+        <li><strong>MNC :</strong> 15</li>
+        <li><strong>Type d'APN :</strong> default,mms,supl,hipri,dun</li>
+        <li><strong>Protocole APN :</strong> IPv4/IPv6</li>
+        <li><strong>Réseau :</strong> Non spécifié (ou tout cocher si possible)</li>
+      </ul>
+      <p><strong>Important :</strong> Une fois saisi, appuyez sur les 3 petits points (menu) et cliquez sur <strong>Enregistrer</strong>. Sélectionnez ensuite ce nouveau profil.</p>
+
+      <h2>Pourquoi ça ne marchait pas avant ?</h2>
+      <p>Souvent, les téléphones importés ou les mises à jour logicielles écrasent les réglages de l'opérateur. Parfois, l'APN est réglé sur "orange" (héritage de l'itinérance) ou il manque le champ "mms".</p>
+      <p>Avec la configuration ci-dessus, vous forcez votre téléphone à utiliser les passerelles directes de <strong>Free Mobile</strong> pour la 4G et la <strong>5G</strong>, sans passer par des bridages inutiles.</p>
+
+      <h3>Sur iPhone, c'est automatique (normalement)</h3>
+      <p>Si vous avez un iPhone, Apple gère cela tout seul. Mais si ça ne marche pas :</p>
+      <ul>
+        <li>Allez dans <strong>Réglages > Général > Transférer ou réinitialiser l'iPhone > Réinitialiser > Réinitialiser les réglages réseau</strong>.</li>
+        <li>Attention, cela efface aussi vos mots de passe Wi-Fi enregistrés, mais c'est radical pour retrouver la 4G.</li>
+      </ul>
+
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p><strong>Q : Je ne capte toujours pas la 5G malgré cette config.</strong><br>
+      R : Vérifiez que l'option "Service 5G" est bien activée dans votre Espace Abonné. C'est la cause n°1 des problèmes. Consultez notre guide pour <a href="/pourquoi-5g-free-ne-marche-pas" class="text-red-600 font-bold hover:underline">activer la 5G Free</a>.</p>
+
+      <p><strong>Q : J'ai deux lignes "Free" et "Free MMS", je garde les deux ?</strong><br>
+      R : Oui ! Sur certains modèles anciens, il faut séparer Internet (APN "free") et MMS (APN "mmsfree"). Mais la config unique ci-dessus marche pour 99% des smartphones récents.</p>
+
+      <p>Besoin d'aide pour votre modèle spécifique ? Regardez nos tutos pour <a href="/marques" class="text-red-600 font-bold hover:underline">Xiaomi, Samsung et autres marques</a>.</p>
     `,
   }
 ];
