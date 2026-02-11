@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = "https://freemobileandroid.fr";
+    const baseUrl = "https://www.freemobileandroid.fr";
 
     return {
         rules: {

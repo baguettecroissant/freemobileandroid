@@ -63,48 +63,57 @@ export const posts: BlogPost[] = [
     `,
   },
   {
-    slug: "difference-apn-free-et-mmsfree",
-    title: "APN 'free' vs 'mmsfree' : Lequel Choisir ? (Et Pourquoi Vous Avez Tort)",
-    excerpt: "Internet ou MMS ? Un seul APN ou les deux ? Ne faites plus l'erreur classique qui bloque vos photos et vos données chez Free Mobile.",
-    date: "2026-02-05",
-    author: "L'Équipe FreeMobileAndroid",
-    readTime: "4 min",
+    slug: "deux-apn-free-mmsfree-lequel-choisir",
+    title: "Deux APN Free Mobile (free & mmsfree) : Lequel Choisir ?",
+    excerpt: "Pourquoi votre téléphone affiche deux APN chez Free Mobile ? Découvrez le rôle exact de 'free' et 'mmsfree', et la config à appliquer selon votre smartphone.",
+    date: "2026-02-11",
+    author: "Wade",
+    readTime: "6 min",
     category: "Configuration",
-    image: "/blog_apn_comparison_tech_3d.png",
+    image: "/blog_deux_apn_free_mobile.png",
+    imagePrompt: "Tech 3D isometric illustration, glassmorphism style, two floating translucent smartphone settings panels side by side labeled 'free' and 'mmsfree', connected by glowing data streams, Free Mobile brand colors (vibrant red and clean white), signal bars and Wi-Fi icons floating around, clean white/light grey background, modern minimal high quality digital art, 8k",
     content: `
-      <p>C'est la question qui revient le plus souvent sur les forums : <em>"Pourquoi il y a deux APN ? J'ai mis 'free' et ça marche, à quoi sert l'autre ?"</em>.</p>
-      <p>Attention. Ce n'est pas parce que "ça marche" pour Instagram que vous recevez vos MMS. Free Mobile utilise une architecture spécifique héritée de son lancement. Voici la vérité technique pour ne plus jamais avoir de soucis.</p>
+      <p>Vous ouvrez les réglages réseau de votre Android et vous découvrez <strong>deux lignes APN</strong> : l'une appelée <strong>"free"</strong>, l'autre <strong>"mmsfree"</strong>. Logiquement, vous vous posez la question : <em>"Lequel je garde ? Et pourquoi il y en a deux ?"</em></p>
+      <p>Ce n'est ni un bug, ni un doublon. C'est une spécificité <strong>Free Mobile</strong> qui existe depuis le lancement de l'opérateur en 2012. Voici tout ce que vous devez savoir pour <strong>ne plus jamais avoir de problème de réseau ou de MMS</strong>.</p>
 
-      <h2>1. La Règle d'Or : Il vous faut (souvent) les deux</h2>
-      <p>Contrairement à Orange ou SFR qui regroupent tout sous un seul point d'accès, Free sépare historiquement les flux :</p>
+      <h2>Pourquoi Free Mobile utilise deux APN distincts ?</h2>
+      <p>La plupart des opérateurs (Orange, SFR, Bouygues) font passer Internet et les MMS par un <strong>seul et même APN</strong>. Free a fait un choix technique différent en séparant les flux dès le départ :</p>
       <ul>
-        <li><strong>APN "free" :</strong> C'est le tuyau pour la <strong>DATA</strong> (Web, YouTube, WhatsApp, Netflix...). Si vous le supprimez, vous n'avez plus d'Internet.</li>
-        <li><strong>APN "mmsfree" :</strong> C'est le tuyau exclusif pour les <strong>MMS</strong> (Photos/Vidéos par SMS). Il ne donne PAS accès à Internet.</li>
+        <li><strong>APN "free"</strong> → Gère <strong>toute la DATA</strong> : navigation web, YouTube, Netflix, WhatsApp, mails, applications... C'est le tuyau principal. Sans lui, <strong>aucun accès Internet</strong>.</li>
+        <li><strong>APN "mmsfree"</strong> → Gère <strong>uniquement les MMS</strong> (envoi et réception de photos/vidéos par SMS). Ce profil ne donne <strong>aucun accès à Internet</strong>.</li>
       </ul>
-      <p><strong>L'erreur classique :</strong> Configurer uniquement l'APN "free". Tout semble fonctionner... jusqu'au jour où on vous envoie une photo par message, et le téléchargement échoue indéfiniment.</p>
+      <p>Cette séparation est héritée de l'infrastructure initiale de Free Mobile. Elle persiste aujourd'hui sur de nombreux smartphones Android, même si les modèles récents tendent à tout fusionner automatiquement.</p>
 
-      <h2>2. "Mais sur mon iPhone, je n'ai rien fait !"</h2>
-      <p>C'est normal. Les smartphones modernes (iPhone, Samsung récents, Pixel) ont les réglages "en dur" dans le système. Quand vous insérez la SIM, ils appliquent une configuration invisible qui gère les deux flux, parfois sous un seul profil affiché.</p>
-      <p><strong>Le problème survient quand :</strong></p>
+      <h2>L'erreur n°1 qui casse vos MMS</h2>
+      <p>Voici le scénario classique que l'on voit sur tous les forums :</p>
       <ul>
-        <li>Vous avez un smartphone Android un peu ancien ou d'une marque exotique (Doogee, Blackview...).</li>
-        <li>Vous faites une mise à jour manuelle et vous supprimez un profil "en trop".</li>
-        <li>Vous êtes à l'étranger et l'itinérance interfère.</li>
+        <li>Vous configurez <strong>uniquement</strong> l'APN "free".</li>
+        <li>Internet fonctionne parfaitement : pages web, Instagram, mails... tout roule.</li>
+        <li>Un ami vous envoie une <strong>photo par MMS</strong> → le téléchargement tourne en boucle et <strong>échoue</strong>.</li>
+        <li>Vous pensez à un problème réseau. En réalité, il manque le profil "mmsfree".</li>
       </ul>
+      <p><strong>Inversement</strong>, si vous sélectionnez "mmsfree" comme APN par défaut, vous recevrez vos MMS mais vous n'aurez <strong>aucun accès Internet</strong>. C'est l'autre piège.</p>
 
-      <h2>3. La Configuration Parfaite (À copier-coller)</h2>
-      <p>Si vous devez tout rentrer à la main, ne cherchez pas midi à quatorze heures. Voici les seules valeurs qui comptent :</p>
+      <h2>Quel APN choisir selon votre smartphone ?</h2>
+      <h3>Cas 1 : Smartphone récent (2022+)</h3>
+      <p>Sur les <strong>Samsung Galaxy, Google Pixel, iPhone, Xiaomi</strong> et la plupart des modèles récents, la configuration se fait <strong>automatiquement</strong> à l'insertion de la carte SIM Free. Le téléphone crée un profil unique qui gère à la fois Internet ET les MMS.</p>
+      <p><strong>Vous n'avez rien à faire.</strong> Si tout marche, ne touchez à rien.</p>
 
-      <h3>Profil Internet</h3>
+      <h3>Cas 2 : Smartphone ancien ou marque secondaire</h3>
+      <p>Sur les modèles plus anciens, les smartphones importés (Doogee, Blackview, Umidigi...) ou après une <strong>réinitialisation d'usine</strong>, vous devez configurer <strong>les deux APN manuellement</strong> :</p>
+
+      <h3>Profil 1 – Internet (obligatoire)</h3>
       <ul>
         <li><strong>Nom :</strong> Free</li>
         <li><strong>APN :</strong> free</li>
         <li><strong>MCC :</strong> 208</li>
         <li><strong>MNC :</strong> 15</li>
         <li><strong>Type d'APN :</strong> default,supl,hipri</li>
+        <li><strong>Protocole APN :</strong> IPv4/IPv6</li>
       </ul>
+      <p>→ <strong>Sélectionnez ce profil</strong> comme APN par défaut (le rond doit être coché).</p>
 
-      <h3>Profil MMS</h3>
+      <h3>Profil 2 – MMS (indispensable pour les photos)</h3>
       <ul>
         <li><strong>Nom :</strong> Free MMS</li>
         <li><strong>APN :</strong> mmsfree</li>
@@ -112,16 +121,63 @@ export const posts: BlogPost[] = [
         <li><strong>MCC :</strong> 208</li>
         <li><strong>MNC :</strong> 15</li>
         <li><strong>Type d'APN :</strong> mms</li>
+        <li><strong>Protocole APN :</strong> IPv4/IPv6</li>
+      </ul>
+      <p>→ <strong>Ne sélectionnez PAS</strong> ce profil comme APN par défaut. Il ne sert qu'aux MMS, Android l'utilise automatiquement quand nécessaire.</p>
+
+      <h3>Cas 3 : La configuration unifiée (la plus simple)</h3>
+      <p>Si vous voulez simplifier, sachez qu'un <strong>seul APN peut tout gérer</strong> sur la majorité des téléphones modernes. C'est la méthode recommandée par notre <a href="/configurer-apn" class="text-red-600 font-bold hover:underline">guide de configuration APN Free Mobile</a> :</p>
+      <ul>
+        <li><strong>Nom :</strong> Free</li>
+        <li><strong>APN :</strong> free</li>
+        <li><strong>MMSC :</strong> http://mms.free.fr</li>
+        <li><strong>MCC :</strong> 208</li>
+        <li><strong>MNC :</strong> 15</li>
+        <li><strong>Type d'APN :</strong> default,mms,supl,hipri,dun</li>
+        <li><strong>Protocole APN :</strong> IPv4/IPv6</li>
+      </ul>
+      <p>Avec cette config, un seul profil gère <strong>Internet + MMS + 5G</strong>. Plus besoin de deux lignes. Si ça ne marche pas sur votre modèle, revenez aux deux profils séparés ci-dessus.</p>
+
+      <h2>Problèmes fréquents et solutions rapides</h2>
+      <h3>Le deuxième APN disparaît après l'enregistrement</h3>
+      <p>C'est le bug le plus courant. Vérifiez que le <strong>MCC (208)</strong> et le <strong>MNC (15)</strong> sont bien renseignés. Si ces valeurs sont incorrectes ou absentes, Android considère que l'APN ne correspond pas à votre carte SIM Free et le <strong>masque automatiquement</strong>.</p>
+
+      <h3>Les MMS ne partent toujours pas</h3>
+      <ul>
+        <li>Vérifiez que le champ <strong>MMSC</strong> contient bien <code>http://mms.free.fr</code> (et pas https).</li>
+        <li>Assurez-vous que les <strong>données mobiles sont activées</strong>. Les MMS nécessitent une connexion data, même courte.</li>
+        <li>Redémarrez votre téléphone après avoir enregistré les APN.</li>
       </ul>
 
-      <h3>Foire Aux Questions (FAQ)</h3>
-      <p><strong>Q : Je ne peux pas enregistrer le deuxième APN, il disparaît !</strong><br>
-      R : C'est souvent un bug d'affichage Android. Vérifiez bien que le MCC (208) et MNC (15) sont corrects. S'ils sont faux, Android cache l'APN car il pense qu'il ne correspond pas à la carte SIM.</p>
+      <h3>Ça marchait avant, plus maintenant</h3>
+      <p>Après une <strong>mise à jour système</strong> (Android 14, 15...) ou un <strong>changement de carte SIM</strong>, les APN peuvent être réinitialisés ou écrasés. Il suffit de les reconfigurer. Rendez-vous sur notre page <a href="/marques" class="text-red-600 font-bold hover:underline">marques</a> pour trouver le tuto spécifique à votre modèle.</p>
 
-      <p><strong>Q : Faut-il activer l'itinérance des données ?</strong><br>
-      R : En France : NON (inutile). À l'étranger (Zone Europe/Monde) : OUI, sinon pas d'internet.</p>
+      <h2>Et sur iPhone, c'est pareil ?</h2>
+      <p>Non. Apple gère la configuration APN <strong>automatiquement via un fichier intégré</strong> (carrier bundle). Quand vous insérez votre SIM Free, l'iPhone applique les bons réglages sans que vous ayez à intervenir.</p>
+      <p>Si malgré tout vos MMS ne marchent pas sur iPhone :</p>
+      <ul>
+        <li>Allez dans <strong>Réglages > Général > Transférer ou réinitialiser > Réinitialiser les réglages réseau</strong>.</li>
+        <li>Redémarrez le téléphone.</li>
+        <li>Les APN corrects seront automatiquement rétablis.</li>
+      </ul>
 
-      <p>Votre mobile ne capte toujours pas ? Vérifiez si votre modèle est bien compatible avec les <a href="/marques" class="text-red-600 font-bold hover:underline">fréquences Free Mobile</a> ou suivez notre guide complet de <a href="/configurer-apn" class="text-red-600 font-bold hover:underline">configuration APN par marque</a>.</p>
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p><strong>Q : Est-ce que je peux supprimer l'APN "mmsfree" si je n'utilise jamais les MMS ?</strong><br>
+      R : Oui, techniquement. Mais gardez-le : certaines notifications (banque, administrations) sont envoyées par MMS. Sans ce profil, vous ne les recevrez jamais.</p>
+
+      <p><strong>Q : Faut-il activer l'itinérance des données en France ?</strong><br>
+      R : Non. L'itinérance ne sert qu'à l'étranger. En France, laissez-la désactivée pour éviter tout problème réseau inutile.</p>
+
+      <p><strong>Q : J'ai un forfait Free à 2€, j'ai quand même besoin des deux APN ?</strong><br>
+      R : Oui. Le forfait 2€ inclut les MMS en France. Les APN sont les mêmes quel que soit votre forfait Free Mobile (2€ ou 19,99€).</p>
+
+      <p><strong>Q : La 5G Free fonctionne avec ces APN ?</strong><br>
+      R : Oui, la 5G utilise le même APN "free" que la 4G. Si la 5G ne s'active pas, consultez notre guide pour <a href="/pourquoi-5g-free-ne-marche-pas" class="text-red-600 font-bold hover:underline">résoudre les problèmes 5G Free</a>.</p>
+
+      <p><strong>Q : Mon téléphone affiche 3 APN ou plus, c'est normal ?</strong><br>
+      R : Non, c'est probablement un résidu d'anciens profils ou d'itinérance Orange. Supprimez tout sauf "free" (Internet) et "mmsfree" (MMS), puis redémarrez.</p>
+
+      <p>Besoin d'un tuto pas-à-pas pour votre marque ? Consultez nos guides pour <a href="/marques" class="text-red-600 font-bold hover:underline">Samsung, Xiaomi, Pixel et toutes les marques</a>.</p>
     `,
   },
   {

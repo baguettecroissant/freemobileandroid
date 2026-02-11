@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icon.png",
   },
-  metadataBase: new URL("https://freemobileandroid.fr"),
+  metadataBase: new URL("https://www.freemobileandroid.fr"),
   alternates: {
     canonical: "./",
   },

@@ -3,7 +3,7 @@ import { phones } from "@/data/phones";
 import { posts } from "@/data/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://freemobileandroid.fr";
+    const baseUrl = "https://www.freemobileandroid.fr";
 
     const brands = Array.from(new Set(phones.map((phone) => phone.brand.toLowerCase())));
 
