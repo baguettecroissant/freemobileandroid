@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { phones } from "@/data/phones";
-import { Settings2, Smartphone, ArrowRight, Zap, Search } from "lucide-react";
+import { posts } from "@/data/posts";
+import { Settings2, Smartphone, ArrowRight, Zap, Search, BookOpen, Calendar } from "lucide-react";
 import BrandSearch from "@/components/BrandSearch";
+import Script from "next/script";
 
 export default function Home() {
   // Get unique brands
@@ -10,8 +12,34 @@ export default function Home() {
   // Get count per brand
   const getBrandCount = (brand: string) => phones.filter((p) => p.brand === brand).length;
 
+  // WebSite Schema.org JSON-LD
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "FreeMobileAndroid.fr",
+    "url": "https://www.freemobileandroid.fr",
+    "description": "Guide indépendant de référence pour configurer les APN Free Mobile. Tutoriels pour Samsung, Xiaomi, iPhone et tous les smartphones.",
+    "inLanguage": "fr-FR",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.freemobileandroid.fr/marques?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  // Latest blog posts for homepage section
+  const latestPosts = posts.slice(0, 3);
+
   return (
     <main className="min-h-screen">
+      <Script
+        id="website-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
       {/* Modern Hero Section with animated gradient */}
       <section className="relative overflow-hidden bg-gray-900 text-white py-32 sm:py-40">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-900/50 via-gray-900 to-gray-900"></div>
@@ -93,6 +121,43 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Latest Blog Articles Section — Internal Linking */}
+      <section className="max-w-6xl mx-auto px-4 py-24">
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-3">
+            <BookOpen className="w-6 h-6 text-red-600" />
+            Derniers Articles & Astuces
+          </h2>
+          <Link href="/blog" className="text-sm font-medium text-red-600 hover:text-red-700 flex items-center gap-1 group">
+            Tous les articles <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {latestPosts.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            >
+              <span className="text-xs font-bold text-red-600 uppercase tracking-wider">{post.category}</span>
+              <h3 className="font-bold text-gray-900 mt-2 mb-2 group-hover:text-red-600 transition-colors leading-snug">
+                {post.title}
+              </h3>
+              <p className="text-sm text-gray-500 line-clamp-2 mb-4">{post.excerpt}</p>
+              <div className="flex items-center justify-between text-xs text-gray-400">
+                <div className="flex items-center gap-1">
+                  <Calendar className="w-3 h-3" />
+                  {new Date(post.date).toLocaleDateString("fr-FR")}
+                </div>
+                <span className="text-red-600 font-medium flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Lire <ArrowRight className="w-3 h-3" />
+                </span>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
     </main>

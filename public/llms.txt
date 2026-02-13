@@ -1,0 +1,25 @@
+# FreeMobileAndroid.fr
+
+> Guide indépendant de référence pour configurer les APN Free Mobile sur tous les smartphones.
+
+## About
+FreeMobileAndroid.fr est un média indépendant spécialisé dans :
+- La configuration APN Free Mobile (Internet + MMS)
+- Le dépannage réseau 4G/5G chez Free
+- Les guides techniques par marque de smartphone (Samsung, Xiaomi, Apple, etc.)
+
+## Key Pages
+- /configurer-apn : Guide complet de configuration APN Free Mobile
+- /marques : Index de toutes les marques de smartphones avec guides APN
+- /blog : Articles, tutoriels et astuces Free Mobile
+
+## Topics Covered
+- Configuration APN Free Mobile (Internet et MMS)
+- Problèmes réseau 5G Free Mobile (activation, compatibilité bandes)
+- Différence entre APN "free" et "mmsfree"
+- Configuration par marque : Samsung, Xiaomi, Apple iPhone, Google Pixel, Oppo, Honor...
+- eSIM et montres connectées (Apple Watch) avec Free Mobile
+
+## Contact
+- Website: https://www.freemobileandroid.fr
+- About: https://www.freemobileandroid.fr/qui-sommes-nous

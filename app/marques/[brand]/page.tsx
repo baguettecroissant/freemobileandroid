@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { phones } from "@/data/phones";
-import { ChevronRight, Smartphone } from "lucide-react";
+import { posts } from "@/data/posts";
+import { ChevronRight, Smartphone, ArrowRight } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 
 interface PageProps {
     params: Promise<{ brand: string }>;
@@ -23,6 +25,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
         title: `Smartphones ${brandName} - Config APN Free Mobile`,
         description: `Liste des modèles ${brandName} pour configurer l'APN Free Mobile.`,
+        alternates: {
+            canonical: `https://www.freemobileandroid.fr/marques/${brand}`,
+        },
+        openGraph: {
+            title: `Smartphones ${brandName} - Config APN Free Mobile`,
+            description: `Liste des modèles ${brandName} pour configurer l'APN Free Mobile.`,
+            url: `https://www.freemobileandroid.fr/marques/${brand}`,
+            siteName: 'FreeMobileAndroid.fr',
+            locale: 'fr_FR',
+        },
     };
 }
 
@@ -71,8 +83,42 @@ export default async function Page({ params }: PageProps) {
 
     const specifics = getBrandSpecifics(brandName);
 
+    // FAQPage Schema.org
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": `Mon téléphone ${brandName} est-il compatible 5G Free ?`,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": `Cela dépend du modèle et de sa provenance. Les modèles ${brandName} vendus en Europe sont généralement compatibles avec la bande n78 (3.5 GHz) et n28 (700 MHz). Vérifiez la fiche technique de votre modèle.`
+                }
+            },
+            {
+                "@type": "Question",
+                "name": `Internet fonctionne mais pas les MMS sur mon ${brandName}`,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": `Assurez-vous d'avoir bien configuré l'APN "mmsfree" séparément de l'APN Internet "free", et que la taille maximale des MMS est définie (souvent 600 ko ou illimité).`
+                }
+            }
+        ]
+    };
+
+    // Relevant blog posts for cross-linking
+    const relevantPosts = posts.filter(p =>
+        p.category === "Configuration" || p.category === "Dépannage" || p.category === "5G"
+    ).slice(0, 2);
+
     return (
         <main className="min-h-screen bg-gray-50/50 pb-20">
+            <Script
+                id="faq-jsonld"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             <section className="bg-white border-b border-gray-100 pt-28 pb-12 px-4 shadow-sm">
                 <div className="max-w-5xl mx-auto">
                     {/* Breadcrumb */}
@@ -169,6 +215,31 @@ export default async function Page({ params }: PageProps) {
                         </div>
                     </div>
                 </div>
+
+                {/* Blog Cross-Links */}
+                {relevantPosts.length > 0 && (
+                    <div className="mt-16">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-6">📖 Articles & Astuces Free Mobile</h2>
+                        <div className="grid md:grid-cols-2 gap-4">
+                            {relevantPosts.map((post) => (
+                                <Link
+                                    key={post.slug}
+                                    href={`/blog/${post.slug}`}
+                                    className="group bg-white rounded-xl p-6 border border-gray-100 hover:border-red-100 hover:shadow-md transition-all"
+                                >
+                                    <span className="text-xs font-bold text-red-600 uppercase tracking-wider">{post.category}</span>
+                                    <h3 className="font-bold text-gray-900 mt-2 mb-2 group-hover:text-red-600 transition-colors leading-snug">
+                                        {post.title}
+                                    </h3>
+                                    <p className="text-sm text-gray-500 line-clamp-2">{post.excerpt}</p>
+                                    <span className="inline-flex items-center gap-1 text-sm text-red-600 font-medium mt-3 group-hover:translate-x-1 transition-transform">
+                                        Lire <ArrowRight className="w-3 h-3" />
+                                    </span>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                )}
 
             </section>
         </main>

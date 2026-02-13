@@ -1,5 +1,6 @@
 import { phones } from "@/data/phones";
 import phoneContentsData from "@/data/phone-content.json";
+import { posts } from "@/data/posts";
 
 interface PhoneContent {
     slug: string;
@@ -14,9 +15,10 @@ import MonetizationCTA from "@/components/MonetizationCTA";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Settings } from "lucide-react";
+import { Settings, ArrowRight } from "lucide-react";
 import PhoneImage from "@/components/PhoneImage";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Script from "next/script";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -45,6 +47,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
         title,
         description,
+        alternates: {
+            canonical: `https://www.freemobileandroid.fr/configurer-apn/${slug}`,
+        },
+        openGraph: {
+            title,
+            description,
+            type: 'article',
+            url: `https://www.freemobileandroid.fr/configurer-apn/${slug}`,
+            siteName: 'FreeMobileAndroid.fr',
+            locale: 'fr_FR',
+        },
     };
 }
 
@@ -57,9 +70,112 @@ export default async function Page({ params }: PageProps) {
     }
 
     const currentYear = new Date().getFullYear();
+    const phoneContent = phoneContents.find(c => c.slug === phone.slug);
+
+    // HowTo Schema.org JSON-LD
+    const howToJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": `Configurer l'APN Free Mobile sur ${phone.brand} ${phone.model}`,
+        "description": `Guide étape par étape pour configurer Internet et MMS Free Mobile sur votre ${phone.brand} ${phone.model}.`,
+        "totalTime": "PT3M",
+        "supply": [
+            {
+                "@type": "HowToSupply",
+                "name": `${phone.brand} ${phone.model} avec carte SIM Free Mobile`
+            }
+        ],
+        "step": [
+            {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Ouvrir les paramètres APN",
+                "text": "Rendez-vous dans Paramètres → Réseau mobile → Noms des points d'accès (APN)."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Créer un nouvel APN Internet",
+                "text": "Nom : Free, APN : free, MCC : 208, MNC : 15, Type d'APN : default,supl,hipri"
+            },
+            {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Créer un APN MMS",
+                "text": "Nom : Free MMS, APN : mmsfree, MMSC : http://mms.free.fr, MCC : 208, MNC : 15, Type d'APN : mms"
+            },
+            {
+                "@type": "HowToStep",
+                "position": 4,
+                "name": "Enregistrer et redémarrer",
+                "text": "Appuyez sur le menu (3 points) et sélectionnez Enregistrer. Sélectionnez l'APN Free comme profil par défaut. Redémarrez votre téléphone."
+            }
+        ]
+    };
+
+    // FAQPage Schema.org (from dynamic FAQs + static troubleshooting)
+    const faqItems = [];
+
+    // Add dynamic FAQs if available
+    if (phoneContent?.faqs) {
+        phoneContent.faqs.forEach((faq) => {
+            faqItems.push({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer,
+                }
+            });
+        });
+    }
+
+    // Add static troubleshooting FAQs
+    faqItems.push({
+        "@type": "Question",
+        "name": `Mon ${phone.brand} ${phone.model} capte-t-il la 5G Free Mobile ?`,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": phone.compatible_5g
+                ? `Oui, le ${phone.brand} ${phone.model} est compatible 5G Free Mobile. Vérifiez que l'option 5G est activée dans votre Espace Abonné.`
+                : `Non, le ${phone.brand} ${phone.model} n'est pas compatible 5G. Vous bénéficierez de la 4G/4G+ avec Free Mobile.`,
+        }
+    });
+
+    faqItems.push({
+        "@type": "Question",
+        "name": "Les MMS ne fonctionnent pas, que faire ?",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vérifiez que le Type d'APN contient 'mms' en minuscules et que le MMSC est bien http://mms.free.fr. Les données mobiles doivent être activées pour envoyer et recevoir des MMS.",
+        }
+    });
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqItems,
+    };
+
+    // Pick relevant blog posts to cross-link
+    const relevantPosts = posts.filter(p =>
+        p.category === "Configuration" || p.category === "Dépannage"
+    ).slice(0, 2);
 
     return (
         <main className="min-h-screen bg-white pb-20">
+            {/* Schema.org JSON-LD */}
+            <Script
+                id="howto-jsonld"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+            />
+            <Script
+                id="faq-jsonld"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
+
             {/* Breadcrumb Header */}
             <div className="bg-gray-50/80 backdrop-blur-sm border-b border-gray-100 pt-24 pb-8 sticky top-0 z-40 transition-all">
                 <div className="max-w-3xl mx-auto px-4">
@@ -103,9 +219,9 @@ export default async function Page({ params }: PageProps) {
                                 <Settings className="w-5 h-5" />
                             </div>
                             <div className="prose prose-sm text-blue-900">
-                                {phoneContents.find(c => c.slug === phone.slug) ? (
+                                {phoneContent ? (
                                     <p className="m-0">
-                                        {phoneContents.find(c => c.slug === phone.slug)?.intro}
+                                        {phoneContent.intro}
                                     </p>
                                 ) : (
                                     <p className="m-0">
@@ -133,7 +249,7 @@ export default async function Page({ params }: PageProps) {
                                 <div className="bg-yellow-50 border border-yellow-100 rounded-xl p-4 flex gap-3 text-sm text-yellow-800">
                                     <div className="shrink-0 mt-0.5">⚠️</div>
                                     <p className="m-0">
-                                        <strong>Important :</strong> Après avoir saisi ces valeurs, appuyez sur le menu (3 points) et sélectionnez <strong>"Enregistrer"</strong>. Redémarrez ensuite votre téléphone.
+                                        <strong>Important :</strong> Après avoir saisi ces valeurs, appuyez sur le menu (3 points) et sélectionnez <strong>&quot;Enregistrer&quot;</strong>. Redémarrez ensuite votre téléphone.
                                     </p>
                                 </div>
                             </div>
@@ -150,25 +266,25 @@ export default async function Page({ params }: PageProps) {
                     </h2>
 
                     {/* Expert Opinion Section (If available) */}
-                    {phoneContents.find(c => c.slug === phone.slug) && (
+                    {phoneContent && (
                         <div className="mt-12 bg-gray-900 text-white rounded-2xl p-8 relative overflow-hidden">
                             <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-red-600 rounded-full opacity-20 blur-xl"></div>
                             <h2 className="text-xl font-bold mb-4 flex items-center gap-2 relative z-10">
                                 <Settings className="w-5 h-5 text-red-500" />
-                                L'avis de l'expert
+                                L&apos;avis de l&apos;expert
                             </h2>
                             <p className="text-gray-300 relative z-10 leading-relaxed">
-                                "{phoneContents.find(c => c.slug === phone.slug)?.expert_opinion}"
+                                &quot;{phoneContent.expert_opinion}&quot;
                             </p>
                         </div>
                     )}
 
                     {/* Dynamic FAQ Section (If available) */}
-                    {phoneContents.find(c => c.slug === phone.slug) && (
+                    {phoneContent && (
                         <div className="mt-12">
                             <h2 className="text-2xl font-bold text-gray-900 mb-6">Questions Fréquentes</h2>
                             <div className="space-y-4">
-                                {phoneContents.find(c => c.slug === phone.slug)?.faqs.map((faq, idx) => (
+                                {phoneContent.faqs.map((faq, idx) => (
                                     <div key={idx} className="bg-gray-50 rounded-xl p-6 border border-gray-100">
                                         <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
                                         <p className="text-gray-600 text-sm">{faq.answer}</p>
@@ -182,17 +298,41 @@ export default async function Page({ params }: PageProps) {
                         <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
                             <h3 className="font-bold text-gray-900 mb-2">Pas de 5G ?</h3>
                             <p className="text-sm text-gray-600">
-                                Vérifiez que l'option 5G est active dans votre <a href="https://mobile.free.fr/account/" target="_blank" className="text-red-600 underline decoration-red-200 underline-offset-2">Espace Abonné</a>.
-                                {phone.compatible_5g ? " Votre smartphone est compatible." : <span className="text-red-600 font-medium"> Attention : Ce modèle n'est PAS compatible 5G.</span>}
+                                Vérifiez que l&apos;option 5G est active dans votre <a href="https://mobile.free.fr/account/" target="_blank" className="text-red-600 underline decoration-red-200 underline-offset-2">Espace Abonné</a>.
+                                {phone.compatible_5g ? " Votre smartphone est compatible." : <span className="text-red-600 font-medium"> Attention : Ce modèle n&apos;est PAS compatible 5G.</span>}
                             </p>
                         </div>
                         <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
                             <h3 className="font-bold text-gray-900 mb-2">MMS bloqués ?</h3>
                             <p className="text-sm text-gray-600">
-                                Vérifiez la ligne <strong>Type d'APN</strong>. Elle doit contenir "mms" en minuscules. Les données mobiles doivent être activées.
+                                Vérifiez la ligne <strong>Type d&apos;APN</strong>. Elle doit contenir &quot;mms&quot; en minuscules. Les données mobiles doivent être activées.
                             </p>
                         </div>
                     </div>
+
+                    {/* Cross-link to relevant blog articles */}
+                    {relevantPosts.length > 0 && (
+                        <div className="mt-12 pt-8 border-t border-gray-100">
+                            <h2 className="text-xl font-bold text-gray-900 mb-4">📖 Guides complémentaires</h2>
+                            <div className="grid md:grid-cols-2 gap-4">
+                                {relevantPosts.map((post) => (
+                                    <Link
+                                        key={post.slug}
+                                        href={`/blog/${post.slug}`}
+                                        className="group bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-red-100 hover:shadow-md transition-all"
+                                    >
+                                        <span className="text-xs font-bold text-red-600 uppercase tracking-wider">{post.category}</span>
+                                        <h3 className="font-bold text-gray-900 mt-1 mb-1 text-sm group-hover:text-red-600 transition-colors leading-snug">
+                                            {post.title}
+                                        </h3>
+                                        <span className="inline-flex items-center gap-1 text-xs text-red-600 font-medium mt-2 group-hover:translate-x-1 transition-transform">
+                                            Lire <ArrowRight className="w-3 h-3" />
+                                        </span>
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </article>
         </main>

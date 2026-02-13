@@ -7,6 +7,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Blog & Astuces Free Mobile | 4G, 5G, APN, Dépannage",
     description: "Actualités, tutoriels et guides de dépannage pour les abonnés Free Mobile. Comprendre la 5G, régler les problèmes de MMS, et plus encore.",
+    alternates: {
+        canonical: "https://www.freemobileandroid.fr/blog",
+    },
 };
 
 export default function BlogIndex() {
@@ -46,10 +49,10 @@ export default function BlogIndex() {
                                     <span className="bg-red-50 text-red-600 px-3 py-1 rounded-full font-medium text-xs uppercase tracking-wider">
                                         {post.category}
                                     </span>
-                                    <div className="flex items-center gap-1">
+                                    <time dateTime={post.date} className="flex items-center gap-1">
                                         <Calendar className="w-4 h-4" />
                                         {new Date(post.date).toLocaleDateString("fr-FR")}
-                                    </div>
+                                    </time>
                                     <div className="flex items-center gap-1">
                                         <Clock className="w-4 h-4" />
                                         {post.readTime}
