@@ -26,12 +26,42 @@ export const posts: BlogPost[] = [
       <p>C'est la promesse ultime de la montre connectée : aller courir, acheter du pain ou promener le chien <strong>sans son téléphone</strong>, tout en restant joignable. Pour ça, il faut une connexion cellulaire (4G/LTE) active sur votre poignet.</p>
       <p>Chez Free Mobile, l'option existe enfin. Mais attention, elle n'est pas (encore) pour tout le monde. Voici le guide sans langue de bois pour connecter votre montre en 2026.</p>
 
+      <h2>Compatibilité en un coup d'œil</h2>
+      <div class="overflow-x-auto my-8">
+        <table class="w-full text-sm text-left text-gray-500 border rounded-lg overflow-hidden">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+              <th scope="col" class="px-6 py-3">Marque</th>
+              <th scope="col" class="px-6 py-3">Modèle Compatible</th>
+              <th scope="col" class="px-6 py-3">Statut Free Mobile</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Apple</td>
+              <td class="px-6 py-4">Apple Watch Series 4 et + (modèles GPS + Cellular)</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Compatible ✅</span></td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Samsung</td>
+              <td class="px-6 py-4">Galaxy Watch 4, 5, 6, 7 (4G)</td>
+              <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Incompatible ❌</span></td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Google / Xiaomi</td>
+              <td class="px-6 py-4">Pixel Watch, Xiaomi Watch 2 Pro</td>
+              <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Incompatible ❌</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <h2>1. La Bonne Nouvelle : Apple Watch (C'est OUI !)</h2>
-      <p>Si vous avez une Apple Watch "Cellular" (reconnaissable au cercle rouge sur la couronne digitale), c'est le jackpot. Free Mobile supporte officiellement l'eSIM pour les montres Apple.</p>
+      <p>Si vous avez une <strong>Apple Watch "Cellular"</strong> (reconnaissable au cercle rouge sur la couronne digitale), c'est le jackpot. Free Mobile supporte officiellement l'eSIM pour les montres Apple.</p>
       
       <h3>Combien ça coûte ?</h3>
       <ul>
-        <li><strong>Abonnés Forfait Free 5G (19,99€) :</strong> L'option est souvent <strong>gratuite</strong> ou incluse (vérifiez votre offre actuelle dans l'Espace Abonné).</li>
+        <li><strong>Abonnés Forfait Free 5G (19,99€) :</strong> L'option est souvent <strong>gratuite</strong> ou incluse (voir conditions dans l'Espace Abonné).</li>
         <li><strong>Frais d'activation :</strong> 10€ à la souscription (une seule fois).</li>
       </ul>
 
@@ -39,27 +69,31 @@ export const posts: BlogPost[] = [
       <ol>
         <li>Ouvrez l'application <strong>Watch</strong> sur votre iPhone.</li>
         <li>Allez dans l'onglet <strong>Ma montre</strong> > <strong>Forfait cellulaire</strong>.</li>
-        <li>Touchez <strong>"Activer le forfait cellulaire"</strong>.</li>
+        <li>Touchez <strong>"Activer le forfait cellulaire"</strong> (ou "Configurer les données mobiles").</li>
         <li>Vous serez redirigé vers une page de connexion Free Mobile. Entrez vos identifiants.</li>
         <li>Validez la commande de l'eSIM.</li>
-        <li>Patientez 2 à 5 minutes. Une fois activé, votre montre captera la 4G toute seule (les barres vertes apparaîtront au cadran).</li>
+        <li>Patientez 2 à 5 minutes. Une fois activé, votre montre captera la 4G toute seule (les barres vertes apparaissent sur le cadran "Explorateur" ou dans le centre de contrôle).</li>
       </ol>
-      <p><strong>Astuce de pro :</strong> Si l'activation échoue ("Échec de la configuration"), déjumelez et rejumelez votre montre. C'est radical.</p>
+      
+      <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
+        <p class="font-bold text-green-800">Astuce de pro :</p>
+        <p class="text-green-700">Si l'activation échoue ("Échec de la configuration"), <strong>déjumelez et rejumelez</strong> votre montre avec l'iPhone. C'est radical pour forcer la mise à jour des réglages opérateur.</p>
+      </div>
 
-      <h2>2. La Mauvaise Nouvelle : Samsung Galaxy Watch & Pixel Watch (C'est NON...)</h2>
-      <p>On va être direct pour vous éviter de chercher pendant des heures : <strong>Non, Free Mobile ne supporte TOUJOURS PAS les montres Android (Samsung, Google, Xiaomi) en 2026.</strong></p>
-      <p>C'est une limitation technique de l'infrastructure Free qui n'a pas encore déployé le serveur (entitlement server) nécessaire pour le standard Android Wear OS.</p>
+      <h2>2. La Mauvaise Nouvelle : Samsung & Android (C'est NON...)</h2>
+      <p>On va être direct pour vous éviter de chercher pendant des heures : <strong>Non, Free Mobile ne supporte TOUJOURS PAS les montres Android (Samsung Galaxy Watch, Google Pixel Watch, Xiaomi Watch) en 2026.</strong></p>
+      <p>C'est une limitation technique de l'infrastructure Free qui n'a pas encore déployé le serveur (<em>entitlement server</em>) nécessaire pour le standard Android Wear OS.</p>
       
       <h3>Vos alternatives si vous êtes chez Free :</h3>
       <ul>
-        <li><strong>Rester en Bluetooth :</strong> Votre montre fonctionne parfaitement tant qu'elle est à portée du téléphone.</li>
+        <li><strong>Rester en Bluetooth :</strong> Votre montre fonctionne parfaitement tant qu'elle est à moins de 10 mètres du téléphone.</li>
         <li><strong>Changer d'opérateur (désolé) :</strong> Orange, SFR et Bouygues supportent les montres Samsung depuis des années.</li>
         <li><strong>Attendre (encore) :</strong> Xavier Niel a promis que "ça arrive", mais c'est l'arlésienne depuis 3 ans.</li>
       </ul>
 
-      <h2>3. Le Piège à éviter : L'eSIM pour téléphone sur une montre</h2>
+      <h2>3. Le Piège à éviter : L'eSIM téléphone sur une montre</h2>
       <p>Certains malins pensent pouvoir scanner un QR Code eSIM de téléphone (forfait à 2€ par exemple) directement sur leur montre. <strong>Ça ne marche pas.</strong></p>
-      <p>Les montres connectées nécessitent une ligne "jumelle" ou une option spécifique liée à votre numéro principal. Vous ne pouvez pas avoir un numéro différent sur votre montre et votre téléphone (sauf Apple Watch en mode "Configuration familiale", mais Free ne le propose pas encore).</p>
+      <p>Les montres connectées nécessitent une ligne "jumelle" (Multi-SIM appels + data) ou une option spécifique spécifique. Vous ne pouvez pas avoir un numéro différent sur votre montre et votre téléphone (sauf Apple Watch en mode "Configuration familiale", mais Free ne le propose pas encore).</p>
 
       <h3>Foire Aux Questions (FAQ)</h3>
       <p><strong>Q : Est-ce que la 5G fonctionne sur ma montre ?</strong><br>
@@ -68,7 +102,9 @@ export const posts: BlogPost[] = [
       <p><strong>Q : L'option montre consomme-t-elle ma data ?</strong><br>
       R : Oui, la data consommée par la montre est décomptée de votre enveloppe globale (300 Go ou illimitée). Autant dire que c'est une goutte d'eau.</p>
 
-      <p>Besoin de vérifier si votre téléphone est bien configuré avant de tenter le coup ? Jetez un œil à notre <a href="/configurer-apn" class="text-red-600 font-bold hover:underline">guide APN Free Mobile</a> ou vérifiez la compatibilité de votre <a href="/marques" class="text-red-600 font-bold hover:underline">modèle de smartphone</a>.</p>
+      <p class="mt-8 pt-6 border-t border-gray-100">
+        Besoin de vérifier si votre téléphone est bien configuré avant de tenter le coup ? Jetez un œil à notre <a href="/configurer-apn" class="text-red-600 font-bold hover:underline">guide APN Free Mobile</a> ou vérifiez la compatibilité de votre <a href="/marques/apple" class="text-red-600 font-bold hover:underline">iPhone</a>.
+      </p>
     `,
   },
 
