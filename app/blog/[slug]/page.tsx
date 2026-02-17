@@ -4,6 +4,7 @@ import { posts } from "@/data/posts";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import VpnCTA from "@/components/VpnCTA";
 import { Calendar, User, Clock, ArrowRight } from "lucide-react";
 import Script from "next/script";
 
@@ -217,6 +218,9 @@ export default async function BlogPost({ params }: PageProps) {
                     className="prose prose-lg prose-red max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-a:text-red-600 prose-img:rounded-2xl"
                     dangerouslySetInnerHTML={{ __html: post.content }}
                 />
+
+                {/* NordVPN Affiliate CTA */}
+                <VpnCTA />
 
                 {/* Related Articles Module */}
                 {relatedPosts.length > 0 && (

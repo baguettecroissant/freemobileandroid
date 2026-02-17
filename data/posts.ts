@@ -13,6 +13,165 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "vpn-free-mobile-proteger-connexion-4g-5g",
+    title: "VPN et Free Mobile : Faut-il Protéger sa Connexion 4G/5G ?",
+    excerpt: "Wi-Fi public, hotspot Freebox, réseau 4G... Vos données sont-elles vraiment en sécurité ? On fait le point sans bullshit sur l'utilité réelle d'un VPN pour les abonnés Free Mobile.",
+    date: "2026-02-17",
+    author: "Wade",
+    readTime: "7 min",
+    category: "Sécurité",
+    image: "/blog_vpn_free_mobile.png",
+    imagePrompt: "High-tech 3D isometric illustration of a smartphone protected by a glowing blue shield, encrypted data streams flowing around it, VPN lock icon, 4G/5G signal bars, glassmorphism with deep blue and violet gradients, clean light background, premium professional tech blog style, 8k resolution",
+    content: `
+      <p>Vous venez de <a href="/configurer-apn" class="text-red-600 font-bold hover:underline">configurer votre APN Free Mobile</a>, votre 4G/5G tourne à plein régime... mais <strong>vos données sont-elles protégées</strong> ? Entre les Wi-Fi publics, les hotspots Freebox et les risques inhérents aux réseaux mobiles, la question du VPN mérite d'être posée sérieusement.</p>
+      <p>Cet article n'est pas un publi-reportage déguisé. On va analyser <strong>concrètement</strong> les situations où un VPN est indispensable, celles où il est inutile, et comment choisir le bon.</p>
+
+      <h2>1. C'est quoi un VPN, en 30 secondes ?</h2>
+      <p>Un VPN (Virtual Private Network) crée un <strong>tunnel chiffré</strong> entre votre smartphone et Internet. Concrètement :</p>
+      <ul>
+        <li>Tout votre trafic est <strong>chiffré</strong> (même votre opérateur ne peut pas voir ce que vous faites).</li>
+        <li>Votre <strong>adresse IP réelle</strong> est masquée et remplacée par celle du serveur VPN.</li>
+        <li>Personne sur le même réseau Wi-Fi ne peut <strong>intercepter vos données</strong>.</li>
+      </ul>
+      <p>Pensez-y comme un <strong>coffre-fort invisible</strong> autour de votre connexion Internet. Même si quelqu'un intercepte les données, il ne voit que du charabia chiffré.</p>
+
+      <h2>2. Les 4 situations où un VPN est indispensable pour un abonné Free</h2>
+
+      <h3>Situation 1 : Vous utilisez les hotspots FreeWiFi</h3>
+      <p>C'est LE cas d'usage n°1. Si vous êtes abonné Freebox, vous avez accès aux millions de hotspots <strong>FreeWiFi_secure</strong> disséminés dans toute la France (les Freebox des autres abonnés).</p>
+      <p>Le problème : même sur FreeWiFi_secure, votre trafic transite par la box d'un <strong>inconnu</strong>. Techniquement, le propriétaire de la Freebox pourrait analyser le trafic réseau avec un simple outil comme Wireshark.</p>
+      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6">
+        <p class="font-bold text-red-800">⚠️ Risque concret :</p>
+        <p class="text-red-700 mt-2">Sur un Wi-Fi public (gare, McDo, hôtel), un attaquant peut créer un faux point d'accès "Free_WiFi" et intercepter <strong>tous vos identifiants</strong> en clair si vous n'utilisez pas de VPN. C'est l'attaque "Man in the Middle", et elle prend 5 minutes à mettre en place.</p>
+      </div>
+
+      <h3>Situation 2 : Vous voyagez à l'étranger avec le Pass Free</h3>
+      <p>Avec le forfait Free 5G à 19,99€, vous bénéficiez de data en roaming dans 110 destinations. Mais à l'étranger :</p>
+      <ul>
+        <li>Votre trafic passe par les <strong>réseaux partenaires locaux</strong> (souvent moins sécurisés).</li>
+        <li>Certains pays pratiquent la <strong>surveillance active</strong> du trafic Internet.</li>
+        <li>Des contenus français (replay TV, banque en ligne) peuvent être <strong>géo-bloqués</strong>.</li>
+      </ul>
+      <p>Un VPN résout les trois problèmes d'un coup : trafic chiffré, IP française, accès à tous vos services.</p>
+
+      <h3>Situation 3 : Vous êtes sur le forfait 2€ avec l'option Data</h3>
+      <p>Si vous avez activé <a href="/blog/forfait-2-euros-option-data-internet-mms" class="text-red-600 font-bold hover:underline">l'option Data du forfait 2€</a>, vous avez seulement <strong>50 Mo</strong>. Chaque octet compte.</p>
+      <p>Un VPN <strong>compresse parfois les données</strong> en plus de les chiffrer, ce qui peut légèrement réduire votre consommation. Mais attention : le chiffrement ajoute aussi un <strong>overhead de 5 à 15%</strong> sur le volume de données. Sur 50 Mo, ce n'est pas anodin. <strong>Verdict : à utiliser avec parcimonie sur ce forfait.</strong></p>
+
+      <h3>Situation 4 : Vous regardez du contenu en streaming</h3>
+      <p>Free Mobile ne pratique pas (officiellement) de <strong>throttling</strong> sur les flux vidéo. Mais un VPN peut être utile pour :</p>
+      <ul>
+        <li>Accéder à des <strong>catalogues étrangers</strong> (Netflix US, BBC iPlayer).</li>
+        <li>Contourner les <strong>restrictions géographiques</strong> sur certains événements sportifs.</li>
+        <li>Empêcher votre FAI de <strong>prioriser ou déprioriser</strong> certains types de trafic.</li>
+      </ul>
+
+      <h2>3. Les mythes à oublier</h2>
+
+      <h3>❌ "Un VPN rend ma connexion anonyme"</h3>
+      <p><strong>Faux.</strong> Un VPN masque votre IP, mais si vous êtes connecté à votre compte Google ou Facebook, ces services savent toujours qui vous êtes. Un VPN protège le <em>transport</em> des données, pas votre <em>identité numérique</em>.</p>
+
+      <h3>❌ "Un VPN ralentit forcément ma connexion"</h3>
+      <p><strong>Partiellement vrai en 2020, faux en 2026.</strong> Les VPN modernes utilisent le protocole <strong>WireGuard</strong> qui ajoute moins de 5% de latence. Sur la 5G Free (1 Gbit/s théorique), vous ne sentirez aucune différence au quotidien.</p>
+
+      <h3>❌ "Mon réseau 4G/5G est déjà chiffré, pas besoin de VPN"</h3>
+      <p><strong>Partiellement vrai.</strong> Oui, la 4G/5G utilise un chiffrement entre votre téléphone et l'antenne. Mais après l'antenne, vos données circulent en clair dans l'infrastructure de l'opérateur. Un VPN chiffre <strong>de bout en bout</strong>, jusqu'au serveur de destination.</p>
+
+      <h2>4. Comment choisir un bon VPN pour Free Mobile ?</h2>
+      <p>Tous les VPN ne se valent pas. Voici les critères essentiels pour un usage mobile :</p>
+
+      <div class="overflow-x-auto my-8">
+        <table class="w-full text-sm text-left text-gray-500 border rounded-lg overflow-hidden">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+              <th scope="col" class="px-6 py-3">Critère</th>
+              <th scope="col" class="px-6 py-3">Pourquoi c'est important</th>
+              <th scope="col" class="px-6 py-3">À vérifier</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Protocole</td>
+              <td class="px-6 py-4">Détermine la vitesse et la sécurité</td>
+              <td class="px-6 py-4">WireGuard ou NordLynx (idéal)</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Kill Switch</td>
+              <td class="px-6 py-4">Coupe Internet si le VPN déconnecte</td>
+              <td class="px-6 py-4">Obligatoire sur mobile</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Serveurs en France</td>
+              <td class="px-6 py-4">Minimise la latence</td>
+              <td class="px-6 py-4">Paris + autres villes</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Multi-appareils</td>
+              <td class="px-6 py-4">Protège phone + PC + tablette</td>
+              <td class="px-6 py-4">6 connexions simultanées min.</td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Politique no-log</td>
+              <td class="px-6 py-4">Le VPN ne conserve pas vos données</td>
+              <td class="px-6 py-4">Audit indépendant vérifié</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-gradient-to-r from-blue-50 to-violet-50 border border-blue-200 rounded-xl p-6 my-8">
+        <p class="font-bold text-gray-900 flex items-center gap-2 mb-2">🔒 Notre recommandation : NordVPN</p>
+        <p class="text-gray-700 text-sm leading-relaxed mb-3">NordVPN coche toutes les cases ci-dessus : protocole NordLynx (basé sur WireGuard), kill switch natif sur Android et iOS, plus de 60 serveurs en France, 10 connexions simultanées et une politique no-log auditée par PricewaterhouseCoopers. C'est celui que nous utilisons au quotidien.</p>
+        <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=140680&source=freemobile" target="_blank" rel="nofollow noopener noreferrer sponsored" class="inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-800 hover:underline">Voir l'offre NordVPN →</a>
+      </div>
+
+      <h2>5. Configurer un VPN sur votre smartphone Free Mobile</h2>
+      <p>La bonne nouvelle : <strong>aucun réglage APN n'est nécessaire</strong>. Un VPN fonctionne au-dessus de votre connexion existante. Voici les étapes :</p>
+      <ol>
+        <li><strong>Téléchargez l'application</strong> de votre VPN depuis le Play Store ou l'App Store.</li>
+        <li><strong>Connectez-vous</strong> avec vos identifiants.</li>
+        <li><strong>Sélectionnez un serveur</strong> (France pour la meilleure vitesse, ou un autre pays si besoin).</li>
+        <li>L'application va demander l'autorisation de créer une <strong>"connexion VPN"</strong> dans les paramètres Android/iOS → acceptez.</li>
+        <li>C'est tout. Une icône 🔑 (ou un petit cadenas) apparaît dans la barre de statut : vous êtes protégé.</li>
+      </ol>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
+        <p class="font-bold text-green-800">💡 Astuce Free Mobile :</p>
+        <p class="text-green-700">Si votre <a href="/blog/pourquoi-5g-free-ne-marche-pas" class="text-green-800 font-bold hover:underline">5G Free ne fonctionne pas</a> après activation du VPN, passez temporairement en 4G. Certains serveurs VPN ne supportent pas encore parfaitement l'IPv6 utilisé par la 5G Free. C'est rare, mais ça arrive.</p>
+      </div>
+
+      <h2>6. VPN gratuit vs payant : le vrai du faux</h2>
+      <p>On va être honnête : les <strong>VPN gratuits sont à éviter</strong>. Voici pourquoi :</p>
+      <ul>
+        <li><strong>Vitesse bridée</strong> : souvent limitée à 5-10 Mbit/s (inutile sur la 5G Free).</li>
+        <li><strong>Data limitée</strong> : 500 Mo à 2 Go/mois max (un épisode Netflix = 1 Go).</li>
+        <li><strong>Revente de données</strong> : c'est le modèle économique de nombreux VPN "gratuits". Vous êtes le produit.</li>
+        <li><strong>Pas de kill switch</strong> : si le VPN plante, vos données fuient sans que vous le sachiez.</li>
+      </ul>
+      <p>Un VPN payant de qualité coûte entre <strong>3€ et 5€/mois</strong> en abonnement annuel. C'est le prix d'un café pour protéger tous vos appareils.</p>
+
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p><strong>Q : Free Mobile peut-il bloquer mon VPN ?</strong><br>
+      R : Non. Free ne bloque pas les VPN. Votre connexion fonctionne normalement, simplement le contenu de vos échanges est chiffré. L'opérateur voit que vous utilisez un VPN, mais ne peut pas voir ce que vous faites.</p>
+
+      <p><strong>Q : Un VPN consomme-t-il plus de batterie ?</strong><br>
+      R : Très peu avec les protocoles modernes (WireGuard/NordLynx). Comptez environ 5% de batterie supplémentaire sur une journée d'utilisation normale. C'est négligeable sur les smartphones récents.</p>
+
+      <p><strong>Q : Faut-il laisser le VPN activé en permanence ?</strong><br>
+      R : Idéalement oui, surtout si vous basculez souvent entre 4G et Wi-Fi. La plupart des apps VPN ont un mode "Auto" qui s'active uniquement sur les réseaux non sécurisés.</p>
+
+      <p><strong>Q : Mon VPN interfère-t-il avec la configuration APN Free ?</strong><br>
+      R : Non. Le VPN fonctionne au-dessus de la couche réseau. Vos réglages APN (que vous avez configurés via notre <a href="/configurer-apn" class="text-red-600 font-bold hover:underline">guide APN Free</a>) restent inchangés et actifs.</p>
+
+      <p><strong>Q : Je suis sur le forfait 2€, le VPN fonctionne-t-il ?</strong><br>
+      R : Oui, à condition d'avoir <a href="/blog/forfait-2-euros-option-data-internet-mms" class="text-red-600 font-bold hover:underline">activé l'option Data</a>. Mais attention, le chiffrement VPN augmente légèrement le volume de données consommé (~10-15%). Sur 50 Mo, chaque octet compte.</p>
+
+      <p class="mt-8 pt-6 border-t border-gray-100">
+        La sécurité sur mobile n'est pas un luxe, c'est une nécessité. Si vous avez pris le temps de <a href="/configurer-apn" class="text-red-600 font-bold hover:underline">bien configurer votre APN</a> et de <a href="/blog/pourquoi-5g-free-ne-marche-pas" class="text-red-600 font-bold hover:underline">activer la 5G</a>, prenez 2 minutes de plus pour protéger ce que vous envoyez dessus.
+      </p>
+    `,
+  },
+  {
     slug: "forfait-2-euros-option-data-internet-mms",
     title: "Forfait 2€ Free : Comment Activer Internet et les MMS (Option Data) ?",
     excerpt: "Internet bloqué ou MMS impossibles sur votre forfait 2€ ? C'est une sécurité activée par défaut. Voici le guide complet pour débloquer la Data sans exploser votre facture.",
@@ -234,6 +393,12 @@ export const posts: BlogPost[] = [
       R : Non, toutes les cartes SIM Free Mobile (même anciennes) sont compatibles 5G sans changement.</p>
 
       <p>Besoin de revoir vos réglages APN pour être sûr ? Consultez notre guide pour <a href="/configurer-apn" class="text-red-600 font-bold hover:underline">configurer un APN Free Mobile</a> ou trouvez votre modèle spécifique dans <a href="/marques" class="text-red-600 font-bold hover:underline">la liste des marques</a>.</p>
+
+      <div class="bg-gradient-to-r from-blue-50 to-violet-50 border border-blue-200 rounded-xl p-6 my-8">
+        <p class="font-bold text-gray-900 flex items-center gap-2 mb-2">🔒 Conseil sécurité : Protégez aussi votre connexion</p>
+        <p class="text-gray-700 text-sm leading-relaxed mb-3">Maintenant que votre 5G est activée, vos données transitent à très haut débit. Sur un Wi-Fi public (gare, café, hôtel), elles sont vulnérables. Un VPN chiffre tout votre trafic et protège vos mots de passe, même sur un réseau non sécurisé.</p>
+        <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=140680&source=freemobile" target="_blank" rel="nofollow noopener noreferrer sponsored" class="inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-800 hover:underline">Découvrir NordVPN →</a>
+      </div>
     `,
   },
   {
@@ -404,6 +569,12 @@ export const posts: BlogPost[] = [
       R : Oui ! Sur certains modèles anciens, il faut séparer Internet (APN "free") et MMS (APN "mmsfree"). Mais la config unique ci-dessus marche pour 99% des smartphones récents.</p>
 
       <p>Besoin d'aide pour votre modèle spécifique ? Regardez nos tutos pour <a href="/marques" class="text-red-600 font-bold hover:underline">Xiaomi, Samsung et autres marques</a>.</p>
+
+      <div class="bg-gradient-to-r from-blue-50 to-violet-50 border border-blue-200 rounded-xl p-6 my-8">
+        <p class="font-bold text-gray-900 flex items-center gap-2 mb-2">🔒 Votre APN est configuré ? Pensez aussi à la sécurité</p>
+        <p class="text-gray-700 text-sm leading-relaxed mb-3">Votre connexion Free Mobile est opérationnelle, bravo ! Mais sur un Wi-Fi public (métro, aéroport, hôtel), vos données restent exposées. Un VPN chiffre l'intégralité de votre trafic et protège vos informations personnelles.</p>
+        <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=140680&source=freemobile" target="_blank" rel="nofollow noopener noreferrer sponsored" class="inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-800 hover:underline">Sécuriser ma connexion avec NordVPN →</a>
+      </div>
     `,
   }
 ];
