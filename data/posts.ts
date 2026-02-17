@@ -13,6 +13,84 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "forfait-2-euros-option-data-internet-mms",
+    title: "Forfait 2€ Free : Comment Activer Internet et les MMS (Option Data) ?",
+    excerpt: "Internet bloqué ou MMS impossibles sur votre forfait 2€ ? C'est une sécurité activée par défaut. Voici le guide complet pour débloquer la Data sans exploser votre facture.",
+    date: "2026-02-17",
+    author: "Wade",
+    readTime: "6 min",
+    category: "Configuration",
+    image: "/blog_forfait_2euros_data_option.png",
+    imagePrompt: "High-tech 3D isometric illustration of a SIM card lock being unlocked, with data flow visualizations represented by flowing digital streams. The scene features a warning icon indicating a 50MB data limit. The style is glassmorphism with Free Mobile's brand colors (vibrant red and clean white) against a clean, light background. The image should look premium, professional, and modern, suitable for a tech blog. 8k resolution.",
+    content: `
+      <p>C'est la douche froide classique du nouvel abonné. Vous recevez votre carte SIM pour le fameux <strong>Forfait 2€</strong> (gratuit pour les abonnés Freebox), vous l'insérez dans le smartphone, et là... <strong>rien</strong>.</p>
+      <p>Les appels et SMS fonctionnent, mais impossible de naviguer sur Internet ou d'envoyer la moindre photo par MMS. Vous avez beau configurer les APN dans tous les sens, redémarrer dix fois, le logo 4G refuse d'apparaître.</p>
+      <p>Rassurez-vous, votre téléphone n'est pas en panne. C'est une <strong>sécurité native de Free Mobile</strong> destinée à vous protéger du hors-forfait. Voici le guide définitif pour comprendre, activer et gérer cette option Data sans mauvaise surprise.</p>
+
+      <h2>1. Pourquoi Internet est bloqué par défaut ?</h2>
+      <p>Contrairement aux forfaits illimités (comme le forfait Free 5G à 19,99€), le forfait 2€ est conçu comme une offre d'entrée de gamme, principalement pour la voix et le texte. L'enveloppe Internet incluse est minuscule : <strong>50 Mo</strong> (Mégaoctets).</p>
+      <p>Pour éviter que votre smartphone ne consomme ces 50 Mo en quelques secondes (mises à jour en arrière-plan, synchronisation mail...), Free désactive l'accès au réseau de données (Data) à la souscription. C'est un "garde-fou" financier.</p>
+
+      <h2>2. Le Tutoriel : Activer l'Option Data en 3 Clics</h2>
+      <p>Pour débloquer la situation, vous devez lever cette restriction manuellement depuis votre espace client. Cette procédure est immédiate.</p>
+      
+      <h3>Étape 1 : Connexion à l'Espace Abonné</h3>
+      <p>Rendez-vous sur <a href="https://mobile.free.fr/account/" target="_blank" class="text-red-600 font-bold hover:underline">mobile.free.fr/account</a> et connectez-vous avec vos identifiants (numéro de ligne à 8 chiffres + mot de passe).</p>
+      
+      <h3>Étape 2 : Activer le Service</h3>
+      <ul>
+        <li>Allez dans l'onglet <strong>"Mes Options"</strong>.</li>
+        <li>Recherchez la ligne intitulée <strong>"Service de données"</strong> (parfois "Internet" selon les versions).</li>
+        <li>Cliquez sur le bouton pour faire passer l'option au <strong>vert (Activé)</strong>.</li>
+        <li>Si vous comptez voyager, vérifiez aussi l'option <strong>"Voyage"</strong>, mais attention : ces sont deux options distinctes !</li>
+      </ul>
+
+      <h3>Étape 3 : Le Redémarrage (Crucial)</h3>
+      <p>Une fois l'option active sur le site, votre téléphone ne le sait pas encore. Vous <strong>devez redémarrer votre mobile</strong> (ou activer/désactiver le mode Avion) pour forcer une reconnexion au réseau avec les nouveaux droits.</p>
+
+      <h2>3. Attention Danger : Le Piège des 50 Mo</h2>
+      <p>Une fois l'option activée, les vannes sont ouvertes. Et c'est là qu'il faut être vigilant. <strong>50 Mo, c'est ridiculement peu</strong> en 2026.</p>
+      
+      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6">
+        <p class="font-bold text-red-800">⚠️ Comprendre le coût du hors-forfait :</p>
+        <p class="text-red-700 mt-2">Au-delà des 50 Mo, chaque Mo supplémentaire est facturé <strong>0,05€</strong>. Cela semble inoffensif, mais faisons le calcul :</p>
+        <ul class="list-disc list-inside mt-2 text-red-800">
+          <li>100 Mo de dépassement = 5€</li>
+          <li>1 Go de dépassement = <strong>50€ !</strong></li>
+        </ul>
+      </div>
+
+      <p>Ce forfait n'est <strong>PAS fait pour le surf</strong>. Il est fait pour :</p>
+      <ul>
+        <li>Envoyer/Recevoir des <strong>MMS</strong> (le poids des MMS est généralement décompté des 50 Mo, sauf exception).</li>
+        <li>Une consultation d'urgence ultra-rapide (horaire de train, météo).</li>
+        <li>C'est tout.</li>
+      </ul>
+
+      <h2>4. La Solution "Sérénité" : L'Option Booster</h2>
+      <p>Si vous avez besoin d'un vrai accès Internet (WhatsApp, GPS, petites vidéos) sans crainte, oubliez le dépassement. Optez pour l'option <strong>Booster</strong>.</p>
+      <p>Disponible dans votre Espace Abonné pour quelques euros de plus (généralement entre 2,99€ et 4,99€/mois), elle transforme votre forfait 2€ en forfait "Intermédiaire" avec :</p>
+      <ul>
+        <li><strong>Appels illimités</strong> (au lieu de 2h).</li>
+        <li><strong>1 Go à 5 Go de Data</strong> (selon l'offre du moment).</li>
+      </ul>
+      <p>C'est mathématiquement plus rentable dès que vous consommez plus de 100 Mo par mois.</p>
+
+      <h2>5. Dépannage : Ça ne marche toujours pas ?</h2>
+      <p>L'option est active, vous avez redémarré, mais toujours pas de connexion ?</p>
+      <ol>
+        <li><strong>Vérifiez les APN :</strong> C'est la cause n°1 des problèmes techniques. Consultez notre <a href="/configurer-apn" class="text-red-600 font-bold hover:underline">Guide de Configuration APN Free</a> pour être sûr que votre mobile a la bonne "adresse" pour trouver le réseau.</li>
+        <li><strong>Données mobiles activées ?</strong> Vérifiez que le bouton "Données mobiles" (les deux flèches) est bien allumé dans les réglages rapides de votre téléphone.</li>
+        <li><strong>Itinérance (Roaming) :</strong> Si vous êtes frontalier ou à l'étranger, l'option "Service de données" ne suffit pas, il faut aussi activer l'option "Voyage".</li>
+      </ol>
+
+      <p class="mt-8 pt-6 border-t border-gray-100">
+        Le forfait 2€ est un outil formidable s'il est bien maîtrisé. Pensez à désactiver la 4G sur le téléphone des enfants s'ils n'ont pas l'option Booster, et privilégiez le Wi-Fi à la maison !
+      </p>
+    `,
+  },
+
+  {
     slug: "configurer-apple-watch-galaxy-watch-free-mobile",
     title: "Apple Watch & Galaxy Watch sur Free Mobile : Le Guide de Connexion (Enfin !)",
     excerpt: "Vous rêvez de laisser votre iPhone à la maison ? Découvrez comment activer l'eSIM Free sur votre Apple Watch en 2 min... et pourquoi les propriétaires de Samsung vont (encore) rager.",
