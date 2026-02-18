@@ -13,6 +13,73 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "pass-destination-free-liste-pays-inclus-2026",
+    title: "Pass Destination Free 2026 : La Liste Complète des Pays Inclus (Ne Payez Pas !)",
+    excerpt: "Vous partez à l'étranger ? Attendez avant d'acheter une carte SIM locale ! Le forfait Free 5G inclut désormais plus de 110 destinations sans surcoût. Voici la liste officielle et les nouveautés de 2026.",
+    date: "2026-02-18",
+    author: "Wade",
+    readTime: "6 min",
+    category: "Voyage",
+    image: "/blog_pass_destination_free_2026.png",
+    imagePrompt: "High-tech 3D isometric world map, highlighting countries included in Free Mobile roaming with glowing red pins and zones. Floating 5G logos and data packets traveling between continents. Glassmorphism style, Free Mobile red and white brand colors, clean light studio background, travel theme but highly technical and modern, 8k resolution",
+    content: `
+      <p>C'est le cauchemar de tout voyageur : atterrir à l'autre bout du monde, activer ses données mobiles pour commander un Uber, et recevoir un SMS de l'opérateur annonçant <strong>45€ de hors-forfait</strong> pour 3 Mo de data.</p>
+      <p>C'est là que le <strong>Forfait Free 5G (19,99€)</strong> écrase la concurrence. Avec son enveloppe de <strong>35 Go d'Internet en 4G/5G</strong> utilisable dans plus de <strong>110 destinations</strong>, c'est littéralement le meilleur forfait voyage du marché en 2026.</p>
+      <p>Mais attention : tous les pays ne sont pas logés à la même enseigne. Voici la liste officielle et à jour pour préparer vos valises sereinement.</p>
+
+      <h2>1. L'Europe et les DOM : C'est "Comme à la Maison"</h2>
+      <p>Ici, c'est simple. Dans l'Union Européenne et les DOM, vous utilisez votre forfait (appels, SMS, Internet) exactement comme en France, sans surcoût.</p>
+      <ul>
+        <li><strong>Union Européenne (27 pays) :</strong> Allemagne, Autriche, Belgique, Bulgarie, Chypre, Croatie, Danemark, Espagne, Estonie, Finlande, Grèce, Hongrie, Irlande, Italie, Lettonie, Lituanie, Luxembourg, Malte, Pays-Bas, Pologne, Portugal, République Tchèque, Roumanie, Slovaquie, Slovénie, Suède.</li>
+        <li><strong>DOM :</strong> Guadeloupe, Guyane française, Martinique, Mayotte, La Réunion.</li>
+        <li><strong>Les "Bonus" Free :</strong> Royaume-Uni (toujours inclus malgré le Brexit !), Suisse, Norvège, Islande, Ukraine (depuis 2022).</li>
+      </ul>
+
+      <h2>2. Le Reste du Monde : La Liste XXL (35 Go inclus)</h2>
+      <p>C'est ici que Free Mobile fait la différence. Là où SFR ou Orange vous facturent des "Packs Voyage" hors de prix, Free inclut ces destinations dans votre forfait de base. Vous avez <strong>35 Go</strong> de data (au-delà, c'est bloqué ou facturé, donc surveillez votre conso !).</p>
+
+      <h3>🌎 Amériques</h3>
+      <p>Argentine, Bolivie, Brésil, Canada, Chili, Colombie, Costa Rica, Él Salvador, États-Unis (USA), Mexique, Nicaragua, Panama, Pérou, Uruguay, Venezuela...</p>
+      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-4">
+        <p class="font-bold text-red-800">⚠️ Attention aux USA :</p>
+        <p class="text-red-700 mt-1">Les réseaux 2G/3G sont éteints aux États-Unis. Votre téléphone DOIT être compatible <strong>VoLTE</strong> pour passer des appels. Vérifiez votre modèle dans notre <a href="/marques" class="text-red-800 font-bold hover:underline">liste des marques compatibles</a>.</p>
+      </div>
+
+      <h3>🌏 Asie & Océanie</h3>
+      <p>Australie, Chine, Corée du Sud, Inde, Indonésie, Israël, Japon, Kazakhstan, Malaisie, Nouvelle-Zélande, Philippines, Sri Lanka, Thaïlande, Turquie, Vietnam...</p>
+
+      <h3>🌍 Afrique & Moyen-Orient</h3>
+      <p>Afrique du Sud, Algérie, Arabie Saoudite, Arménie, Égypte, Émirats Arabes Unis (Dubaï/Abu Dhabi), Géorgie, Koweït, Madagascar, Sénégal, Tunisie...</p>
+      <p><em>Note : Cette liste évolue régulièrement. Consultez toujours votre Espace Abonné avant de partir.</em></p>
+
+      <h2>3. Checklist Avant le Départ (Ne sautez pas cette étape !)</h2>
+      <p>Avoir le bon forfait ne suffit pas. Si vous ne configurez pas votre téléphone, vous n'aurez aucun réseau. Faites ces 3 vérifications à l'aéroport :</p>
+
+      <ol>
+        <li><strong>Activez l'option "Voyage" (si nécessaire) :</strong> Connectez-vous à votre Espace Abonné. Dans "Mes Options", vérifiez si l'option "Voyage" ou "Communication à l'international" est activée. C'est surtout vital pour le forfait 2€, mais vérifiez quand même.</li>
+        <li><strong>Activez l'Itinérance des Données (Roaming) :</strong> Sur votre smartphone, allez dans <em>Paramètres > Réseaux Mobiles</em> et activez <strong>"Données en itinérance"</strong>. Sans ça, internet restera bloqué à la frontière.</li>
+        <li><strong>Vérifiez vos APN :</strong> C'est la cause n°1 des pannes à l'étranger. Si votre APN est mal configuré, vous aurez des appels mais pas d'internet. Suivez notre guide <a href="/configurer-apn" class="text-red-600 font-bold hover:underline">Configuration APN Free Mobile</a> pour être sûr.</li>
+      </ol>
+
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p><strong>Q : La 5G fonctionne-t-elle à l'étranger ?</strong><br>
+      R : Oui, dans de plus en plus de pays (USA, Canada, Portugal, etc.) si Free a un accord 5G avec l'opérateur local. Sinon, vous basculerez automatiquement en 4G/4G+.</p>
+
+      <p><strong>Q : Que se passe-t-il si je dépasse les 35 Go ?</strong><br>
+      R : Attention ! Au-delà, le Mo est facturé au tarif en vigueur (souvent très cher, genre 5€/Mo). Free vous envoie un SMS d'alerte à 80% et 100% du forfait. Coupez la data immédiatement à réception.</p>
+
+      <p><strong>Q : J'ai un problème réseau à l'arrivée, que faire ?</strong><br>
+      R : Éteignez et rallumez votre téléphone (classique mais efficace pour forcer la recherche réseau). Si ça ne marche pas, essayez de sélectionner manuellement un réseau partenaire dans les paramètres.</p>
+
+      <div class="bg-gradient-to-r from-blue-50 to-violet-50 border border-blue-200 rounded-xl p-6 my-8">
+        <p class="font-bold text-gray-900 flex items-center gap-2 mb-2">🔒 Cybersécurité en voyage</p>
+        <p class="text-gray-700 text-sm leading-relaxed mb-3">À l'étranger, vous allez sûrement vous connecter aux Wi-Fi douteux des hôtels et aéroports. Ne laissez pas vos données bancaires en libre accès. Un VPN est votre seule protection efficace hors de France.</p>
+        <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=140680&source=freemobile" target="_blank" rel="nofollow noopener noreferrer sponsored" class="inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-800 hover:underline">Protéger mon smartphone en voyage →</a>
+      </div>
+    `,
+  },
+
+  {
     slug: "vpn-free-mobile-proteger-connexion-4g-5g",
     title: "VPN et Free Mobile : Faut-il Protéger sa Connexion 4G/5G ?",
     excerpt: "Wi-Fi public, hotspot Freebox, réseau 4G... Vos données sont-elles vraiment en sécurité ? On fait le point sans bullshit sur l'utilité réelle d'un VPN pour les abonnés Free Mobile.",
