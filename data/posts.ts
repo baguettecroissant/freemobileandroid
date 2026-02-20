@@ -13,6 +13,67 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "code-secret-android-4636-tester-reseau-free-mobile",
+    title: "Codes Secrets Android : Le Menu Caché (*#*#4636#*#*) Pour Tester la 4G/5G",
+    excerpt: "Vous captez mal la 4G/5G avec votre forfait Free Mobile ? Découvrez comment utiliser le menu secret Android (*#*#4636#*#*) pour diagnostiquer votre réseau et retrouver un débit rapide.",
+    date: "2026-02-20",
+    author: "Wade",
+    readTime: "7 min",
+    category: "Astuces",
+    image: "/blog_code_secret_4636.png",
+    imagePrompt: "Tech 3D, Isometric, Glassmorphism, Free Mobile colors (Red/White), clean background, magical glowing smartphone screen displaying a secret diagnostic menu with numbers like 4636, floating digital data streams and signal dbm meters around it, modern professional tech blog illustration, high quality 8k",
+    content: `
+      <p>Vous êtes abonné <strong>Free Mobile</strong> et vous rencontrez des problèmes de connexion ? Votre smartphone affiche 4 barres de réseau en 4G ou 5G, mais le chargement de vos pages web est interminable ? Avant de contacter l'assistance ou de modifier vos <a href="/configurer-apn" class="text-red-600 font-bold hover:underline">réglages APN Free</a>, il existe une méthode infaillible pour diagnostiquer votre ligne : le <strong>menu secret Android *#*#4636#*#*</strong>.</p>
+      <p>Bien loin des barres de réseau qui manquent souvent de précision, ce menu de diagnostic caché offre des données brutes et fiables sur la qualité de votre signal <strong>Free Mobile</strong> et sur l'antenne à laquelle vous êtes connecté. Voici notre guide complet pour maîtriser ce code, interpréter les statistiques (dBm) et forcer le meilleur réseau disponible.</p>
+
+      <h2>1. Comment accéder au menu secret *#*#4636#*#* ?</h2>
+      <p>L'accès à ce menu caché de diagnostic réseau est un jeu d'enfant sur la majorité des smartphones Android. Suivez ces étapes simples :</p>
+      <ol>
+        <li>Ouvrez l'application <strong>Téléphone</strong> (celle que vous utilisez pour passer des appels).</li>
+        <li>Sur le clavier numérique, tapez la séquence exacte suivante : <strong>*#*#4636#*#*</strong></li>
+        <li>Le menu de test (souvent nommé <strong>Test</strong> ou <strong>Informations sur le téléphone</strong>) apparaîtra instantanément, sans même avoir besoin de valider par la touche Appel.</li>
+      </ol>
+      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6">
+        <p class="font-bold text-red-800">⚠️ Compatibilité de votre Smartphone :</p>
+        <p class="text-red-700 mt-1">Ce code de test fonctionne nativement sur les <strong>Google Pixel</strong>, les appareils <a href="/marques" class="font-bold hover:underline">Xiaomi</a>, OnePlus, Sony et de nombreuses autres marques. Cependant, certains constructeurs comme <strong>Samsung</strong>, Huawei ou Honor bloquent parfois ce menu. Si le code ne donne rien, vous pouvez télécharger une application tierce comme <strong>Force LTE Only (4G/5G)</strong> ou <strong>NetMonster</strong> sur le Google Play Store pour accéder aux mêmes informations.</p>
+      </div>
+
+      <h2>2. Analyser la vraie qualité de votre signal Free Mobile</h2>
+      <p>Une fois dans le menu, sélectionnez <strong>Informations sur le téléphone</strong>. L'écran va afficher une multitude de données techniques. Ne vous laissez pas intimider et concentrez-vous sur l'indicateur principal de votre problème de réseau : <strong>l'intensité du réseau</strong>.</p>
+      <ul>
+        <li><strong>Intensité du signal (Signal Strength) :</strong> Mesurée en <strong>dBm</strong> (décibels-milliwatts), c'est l'indicateur de référence, bien plus précis que les barres de réseau Android. Comme il s'agit d'une valeur négative, plus le chiffre se rapproche de 0, meilleur est le signal.
+          <ul class="list-disc list-inside mt-2 text-sm text-gray-700 mb-2">
+            <li><em>Entre -50 et -79 dBm :</em> <strong>Excellent signal</strong>. Vous captez parfaitement l'antenne Free Mobile. La 4G+ et la 5G vous offriront des débits optimaux pour le streaming ou le téléchargement.</li>
+            <li><em>Entre -80 et -99 dBm :</em> <strong>Bon signal</strong>. Suffisant pour une navigation fluide et des appels de bonne qualité en VoLTE.</li>
+            <li><em>Entre -100 et -109 dBm :</em> <strong>Signal faible</strong>. Vous êtes en limite de couverture, en intérieur ou loin de l'antenne. La 5G Free risque d'être instable et la navigation lente.</li>
+            <li><em>-110 dBm ou "pire" :</em> <strong>Mauvais signal</strong>. Le réseau est à la limite du décrochage. Il est tout à fait normal que l'Internet mobile soit inutilisable à ce stade.</li>
+          </ul>
+        </li>
+        <li><strong>Type de réseau vocal / données :</strong> Vérifiez si l'indicateur affiche bien <strong>NR</strong> (pour la 5G) ou <strong>LTE</strong> (pour la 4G). S'il affiche UMTS, HSPA ou EDGE, votre téléphone a basculé sur les anciens réseaux 3G/2G, souvent à cause d'une <a href="/pourquoi-5g-free-ne-marche-pas" class="text-red-600 font-bold hover:underline">mauvaise accroche de la 5G Free</a>.</li>
+      </ul>
+
+      <h2>3. Forcer le réseau 4G ou 5G : La solution ultime</h2>
+      <p>L'outil le plus puissant du menu <strong>*#*#4636#*#*</strong> est sa capacité à "bloquer" votre smartphone sur un type de réseau défini. Il arrive souvent que le téléphone hésite constamment entre une antenne 4G proche et une antenne 5G plus éloignée, provoquant des micro-coupures et vidant votre batterie.</p>
+      <p>Dans ce menu, repérez l'option intitulée <strong>Définir le type de réseau préféré</strong>. Un menu déroulant va s'ouvrir :</p>
+      <ul>
+        <li><strong>NR/LTE/TDSCDMA/CDMA/... (Auto) :</strong> C'est la gestion automatique d'Android (recommandée dans 95% des cas).</li>
+        <li><strong>NR only :</strong> Force le maintien exclusif en <strong>5G (New Radio)</strong>. À utiliser uniquement si vous êtes sûr d'être couvert par une antenne 5G Free Mobile puissante (idéalement 3,5 GHz).</li>
+        <li><strong>LTE only :</strong> Force le maintien en <strong>4G (LTE) exclusive</strong>. C'est l'astuce miracle ! Si la 5G Free Mobile dysfonctionne dans votre zone (parfois le cas sur la bande 700 MHz), forcer la 4G uniquement peut considérablement augmenter votre débit et la stabilité de votre connexion.</li>
+      </ul>
+      <p><em>*Note : Le mode "LTE only" est idéal lors d'un partage de connexion. Toutefois, pensez à remettre l'option sur Auto après votre session de test. En effet, sur certains anciens terminaux (non compatibles VoLTE), forcer la 4G peut bloquer la réception et l'émission d'appels téléphoniques classiques.</em></p>
+
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p><strong>Q : L'utilisation du code *#*#4636#*#* comporte-t-elle des risques ou peut-elle annuler ma garantie ?</strong><br>
+      R : Non, absolument pas. Ce menu est purement consultatif et permet uniquement d'effectuer des tests logiciels. Ne touchez pas aux réglages obscurs, notamment ceux liés à l'itinérance ou au "Provisioning", et vous ne risquez pas de panne. En cas de manipulation hasardeuse sur la bande réseau, un simple redémarrage de votre smartphone Android rétablira la configuration par défaut.</p>
+
+      <p><strong>Q : Pourquoi mon signal dBm est-il très mauvais (ex: -115 dBm) chez moi ?</strong><br>
+      R : La qualité de réception dépend de l'épaisseur des murs, de l'isolation (notamment les vitrages récents) ou simplement de l'éloignement avec l'antenne relais Free Mobile la plus proche. Retirer une coque de protection épaisse ou vous approcher d'une fenêtre peut faire gagner 10 à 15 dBm.</p>
+
+      <p><strong>Q : Le code secret montre que je capte bien, mais je n'ai quand même pas internet, pourquoi ?</strong><br>
+      R : Un signal de bonne intensité (dBm) ne garantit pas l'accès à internet. Si la connexion ne se fait pas, il s'agit très probablement d'un problème logiciel. Assurez-vous que l'itinérance n'est pas bloquée inutilement et surtout, vérifiez que vous avez bien sélectionné <a href="/deux-apn-free-mmsfree-lequel-choisir" class="text-red-600 font-bold hover:underline">le bon APN de Free Mobile</a> dans vos paramètres.</p>
+    `,
+  },
+  {
     slug: "pass-destination-free-liste-pays-inclus-2026",
     title: "Pass Destination Free 2026 : La Liste Complète des Pays Inclus (Ne Payez Pas !)",
     excerpt: "Vous partez à l'étranger ? Attendez avant d'acheter une carte SIM locale ! Le forfait Free 5G inclut désormais plus de 110 destinations sans surcoût. Voici la liste officielle et les nouveautés de 2026.",
