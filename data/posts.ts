@@ -13,6 +13,90 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "apn-free-mobile-etranger-faut-il-changer",
+    title: "APN Free à l'Étranger : Faut-il Changer ses Réglages ?",
+    excerpt: "Plus d'internet en voyage avec Free Mobile ? Découvrez s'il faut changer votre APN et la manipulation exacte pour retrouver la 4G/5G à l'étranger en 2 minutes.",
+    date: "2026-02-23",
+    author: "Wade",
+    readTime: "4 min",
+    category: "Voyage",
+    image: "/blog_apn_free_etranger_2026.png",
+    imagePrompt: "Tech 3D, Isometric, Glassmorphism, Free Mobile colors (Red/White), clean background, smartphone sitting on top of a globe with a glowing airplane flying around, global network connection lines, roaming concept, minimal and premium style, 8k resolution",
+    content: `
+      <p>Vous atterrissez après des heures de vol, vous désactivez le mode avion avec l'espoir de commander un VTC ou de rassurer vos proches, et là, c'est le drame : votre smartphone affiche un désespérant <strong>"aucun réseau"</strong> ou une connexion si lente qu'il est impossible de charger la moindre page web. Ce <strong>problème réseau</strong> est malheureusement la hantise de nombreux voyageurs abonnés chez <strong>Free Mobile</strong>.</p>
+      <p>La question qui revient systématiquement sur les forums et les groupes d'entraide est la suivante : <em>"Faut-il modifier ses réglages <strong>APN</strong> (Access Point Name) quand on part à l'étranger ?"</em> Pour vous éviter de gâcher les premières heures de vos vacances à chercher du Wi-Fi, voici la réponse définitive, claire et directe, ainsi que les manipulations exactes pour retrouver votre connexion 4G/5G en quelques secondes.</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-bold text-blue-800">Résumé de l'article :</p>
+        <ul class="list-disc list-inside mt-2 text-blue-700">
+          <li>Dans 95% des cas, l'APN Free Mobile ne doit <strong>pas</strong> être modifié à l'étranger.</li>
+          <li>Le problème vient généralement de l'<strong>itinérance des données</strong> (roaming) désactivée sur le téléphone.</li>
+          <li>Pour le Forfait 2€, l'option <strong>Voyage</strong> doit être activée depuis l'Espace Abonné.</li>
+          <li>Si rien ne fonctionne, une configuration manuelle de l'APN peut "forcer" l'accroche réseau.</li>
+        </ul>
+      </div>
+
+      <h2>Faut-il vraiment changer d'APN à l'étranger ? La réponse courte : Non, mais...</h2>
+      <p>Soyons clairs : dans l'immense majorité des cas, vous n'avez <strong>strictement rien à changer</strong> à vos réglages réseaux quand vous franchissez une frontière. L'APN (Access Point Name) que vous utilisez en France est universel et conçu pour gérer automatiquement l'<strong>itinérance</strong> (ou roaming) avec les centaines de réseaux partenaires de Free Mobile à travers le monde (Europe, USA, Asie, etc.).</p>
+      <p>Cependant, la technologie n'étant pas infaillible, si après avoir redémarré votre téléphone vous n'avez toujours pas d'accès internet en 4G ou <strong>5G</strong>, c'est que l'un des trois paramètres suivants bloque votre connexion. Procédons par élimination.</p>
+
+      <h2>1. L'Itinérance des données (Le coupable n°1)</h2>
+      <p>C'est l'erreur la plus fréquente chez les abonnés. Pour que votre <strong>APN Free Mobile</strong> puisse communiquer avec une antenne espagnole, américaine ou japonaise afin de vous fournir de la data, votre smartphone doit en avoir l'autorisation explicite. Sans cela, il se contentera de vous permettre d'appeler ou d'envoyer des SMS, mais coupera tout trafic internet pour éviter les frais.</p>
+      <h3>Comment activer l'itinérance sur votre téléphone ?</h3>
+      <ul>
+        <li><strong>Sur Android (Samsung, Xiaomi, Pixel...) :</strong> Allez dans <strong>Paramètres</strong> > <strong>Réseaux mobiles</strong> (ou Connexions) et activez l'interrupteur <strong>Données en itinérance</strong>.</li>
+        <li><strong>Sur iPhone (iOS) :</strong> Allez dans <strong>Réglages</strong> > <strong>Données cellulaires</strong> > <strong>Options</strong> et cochez <strong>Données à l'étranger</strong>.</li>
+      </ul>
+      <p>Dès que cette option est cochée, le petit logo 4G ou 5G devrait réapparaître à côté des barres de réseau.</p>
+
+      <h2>2. L'Option Voyage de Free Mobile (Vigilance pour le Forfait 2€)</h2>
+      <p>Avoir activé l'itinérance sur le menu de votre téléphone ne suffit pas toujours. L'autorisation d'utiliser le réseau hors de France doit aussi venir de votre opérateur. Si vous bénéficiez du <strong>Forfait 2€ (ou 0€ pour les abonnés Freebox)</strong>, l'accès depuis l'étranger est très souvent bloqué par défaut. C'est une sécurité mise en place par Free pour vous éviter des factures de <strong>hors-forfait</strong> astronomiques si vous utilisez internet hors d'Europe.</p>
+      <p>La solution est simple, mais nécessite une connexion Wi-Fi (à l'hôtel ou l'aéroport) :</p>
+      <ol>
+        <li>Rendez-vous dans votre <a href="https://mobile.free.fr/account/" target="_blank" class="text-red-600 font-bold hover:underline">Espace Abonné Free Mobile</a>.</li>
+        <li>Allez dans la rubrique <strong>Mes Options</strong>.</li>
+        <li>Vérifiez que le <strong>Service Voyage</strong> ou l'option <strong>Communication à l'international</strong> est bien activée (le voyant doit être au vert).</li>
+        <li>Redémarrez impérativement votre téléphone.</li>
+      </ol>
+      <p><em>Note : Pour le forfait Free 5G (19,99€), incluant une généreuse enveloppe data à l'étranger, cette vérification est rarement nécessaire, la case étant généralement cochée par défaut.</em></p>
+
+      <h2>3. L'Ultime Recours : Recréer l'APN Free Manuellement</h2>
+      <p>Si l'itinérance est active, que votre option voyage est au vert, mais que le <strong>problème réseau</strong> persiste obstinément (le réseau affiche un point d'exclamation ou reste désespérément en H/3G lente), il est possible que lors du passage de la frontière, votre smartphone ait "écrasé" vos réglages pour basculer sur un profil opérateur vierge ou obsolète.</p>
+      <p>Dans ce cas, vous devez forcer les bons paramètres réseau manuellement. Vous pouvez consulter notre guide détaillé pour <a href="/configurer-apn" class="text-red-600 font-bold hover:underline">configurer votre APN Free Mobile</a> sur les principales marques, ou appliquer directement cette configuration universelle :</p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">Paramètres APN Universels (France & Étranger)</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><strong>Nom :</strong> Free</li>
+          <li><strong>APN :</strong> free</li>
+          <li><strong>MCC :</strong> 208</li>
+          <li><strong>MNC :</strong> 15</li>
+          <li><strong>Type d'APN :</strong> default,mms,supl</li>
+          <li><strong>Protocole APN :</strong> IPv4/IPv6</li>
+          <li><strong>Protocole d'itinérance APN :</strong> IPv4/IPv6</li>
+        </ul>
+      </div>
+
+      <p><strong>Étape cruciale :</strong> Prenez soin d'enregistrer ce nouveau profil (via les trois petits points en haut à droite sur Android) puis de le <strong>sélectionner par défaut</strong> avant de redémarrer intégralement le smartphone. Si le menu refuse de s'enregistrer, assurez-vous de n'avoir fait aucune faute de frappe sur le MCC et MNC. Pour une aide pas à pas selon votre téléphone, vérifiez nos tutoriels dédiés dans notre section des <a href="/marques" class="text-red-600 font-bold hover:underline">marques compatibles</a>.</p>
+
+      <h2>Foire Aux Questions (FAQ) Voyage & APN</h2>
+      <p><strong>Q : Faut-il modifier l'APN "mmsfree" à l'étranger ?</strong><br>
+      R : Absolument pas. L'APN dédié aux MMS (Messaging) reste techniquement le même partout dans le monde. Assurez-vous simplement que le réseau de données mobiles et l'itinérance sont actifs pour pouvoir envoyer et recevoir vos photos de vacances.</p>
+
+      <p><strong>Q : Je n'ai pas de réseau en arrivant, mon téléphone indique "Aucun Service", est-ce l'APN ?</strong><br>
+      R : Non. L'APN sert uniquement à faire fonctionner la connexion Internet (Data) et les MMS. Si le réseau affiche "Aucun Service" ou "Urgence Uniquement", c'est un problème d'accroche de l'antenne cellulaire. Allez dans les réglages de recherche réseau, passez de "Automatique" à "Manuel", laissez le téléphone scanner les réseaux (cela peut prendre 2 minutes) et sélectionnez un autre opérateur partenaire local.</p>
+
+      <p><strong>Q : Puis-je capter la 5G à l'étranger sans rien configurer ?</strong><br>
+      R : Oui ! Free Mobile a d'ores et déjà signé des accords d'itinérance <strong>5G</strong> avec de très nombreux partenaires clés, particulièrement en Europe, en Amérique du Nord et en Asie. Si vous êtes dans une zone couverte par la 5G locale et que l'itinérance est active, votre smartphone (s'il est compatible) basculera automatiquement sur ce réseau ultra-rapide sans aucune manipulation de votre part.</p>
+
+      <div class="bg-gradient-to-r from-blue-50 to-violet-50 border border-blue-200 rounded-xl p-6 my-8">
+        <p class="font-bold text-gray-900 flex items-center gap-2 mb-2">🔒 Attention aux Wi-Fi publics à l'étranger !</p>
+        <p class="text-gray-700 text-sm leading-relaxed mb-3">Si vous n'avez pas beaucoup de data avec votre forfait Free ou que vous utilisez les réseaux Wi-Fi non sécurisés des hôtels et aéroports, vos mots de passe et données bancaires sont en danger. L'utilisation d'un VPN est fortement recommandée en voyage pour chiffrer vos communications.</p>
+        <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=140680&source=freemobile" target="_blank" rel="nofollow noopener noreferrer sponsored" class="inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-800 hover:underline">Découvrir comment un VPN vous protège à l'étranger →</a>
+      </div>
+    `,
+  },
+  {
     slug: "code-secret-android-4636-tester-reseau-free-mobile",
     title: "Codes Secrets Android : Le Menu Caché (*#*#4636#*#*) Pour Tester la 4G/5G",
     excerpt: "Vous captez mal la 4G/5G avec votre forfait Free Mobile ? Découvrez comment utiliser le menu secret Android (*#*#4636#*#*) pour diagnostiquer votre réseau et retrouver un débit rapide.",
