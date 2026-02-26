@@ -786,6 +786,77 @@ export const posts: BlogPost[] = [
         <p class="font-bold text-gray-900 flex items-center gap-2 mb-2">🔒 Votre APN est configuré ? Pensez aussi à la sécurité</p>
         <p class="text-gray-700 text-sm leading-relaxed mb-3">Votre connexion Free Mobile est opérationnelle, bravo ! Mais sur un Wi-Fi public (métro, aéroport, hôtel), vos données restent exposées. Un VPN chiffre l'intégralité de votre trafic et protège vos informations personnelles.</p>
         <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=140680&source=freemobile" target="_blank" rel="nofollow noopener noreferrer sponsored" class="inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-800 hover:underline">Sécuriser ma connexion avec NordVPN →</a>
+    `,
+  },
+  {
+    slug: "apn-free-mobile-google-pixel-5g",
+    title: "Google Pixel & Free : Réglez votre Problème 5G en 3 min",
+    excerpt: "Pas de 5G sur votre Google Pixel avec Free Mobile ? Découvrez notre guide complet pour diagnostiquer, configurer vos APN et retrouver un réseau ultra-rapide !",
+    date: "2026-02-26",
+    author: "Wade",
+    readTime: "5 min",
+    category: "Dépannage",
+    image: "/blog_pixel_5g_free.png",
+    imagePrompt: "Tech 3D, Isometric, Glassmorphism, Free Mobile colors (Red/White), clean background, a modern Google Pixel smartphone displaying a glowing 5G icon, floating digital network nodes, neon data streams, minimalist premium tech blog style, 8k resolution",
+    content: `
+      <p>Vous avez un <strong>Google Pixel</strong> flambant neuf (Pixel 7, 8 ou 9), un forfait <strong>Free Mobile</strong> en 5G, mais votre smartphone s'obstine à rester désespérément bloqué en 4G ou 4G+ ? Vous n'êtes pas seul. Ce <strong>problème réseau</strong> est particulièrement fréquent chez les utilisateurs d'appareils Google, même quand le contrat et l'emplacement géographique sont parfaits. Mais la bonne nouvelle, c'est que la solution prend littéralement moins de 3 minutes.</p>
+
+      <h2>Pourquoi la 5G disparaît-elle sur les Pixel ?</h2>
+      <p>Les Google Pixel sont d'excellents téléphones, loués pour leur interface épurée. Cependant, chaque mise à jour majeure d'Android ou chaque patch opérateur peut parfois réinitialiser silencieusement ou corrompre vos paramètres réseau. Contrairement à <a href="/marques" class="text-red-600 font-bold hover:underline">d'autres marques</a> comme Samsung ou Xiaomi, qui embarquent des profils opérateurs Free pré-validés de manière très agressive, la gamme Pixel nécessite parfois un petit coup de pouce manuel pour "forcer" la bascule sur les antennes 5G (bandes 700 MHz et 3.5 GHz) de Free Mobile.</p>
+
+      <h2>Solution 1 : Forcer la configuration de l'APN Free Mobile (Le plus efficace)</h2>
+      <p>Le plus souvent, l'absence de <strong>5G</strong> est simplement due à un mauvais paramétrage de l'APN (Access Point Name). Sans ce réglage précis, le Pixel ne sait pas quelle "porte" emprunter pour accéder au réseau très haut débit.</p>
+
+      <h3>Étapes de configuration pas à pas :</h3>
+      <ol>
+        <li>Allez dans les <strong>Paramètres</strong> > <strong>Réseau et Internet</strong> > <strong>Cartes SIM</strong>.</li>
+        <li>Sélectionnez votre carte SIM ou eSIM <strong>Free Mobile</strong>.</li>
+        <li>Faites défiler vers le bas et appuyez sur <strong>Noms des points d'accès</strong>.</li>
+        <li>Appuyez sur le signe <strong>+</strong> en haut à droite pour ajouter un nouvel APN et entrez <strong>exactement</strong> ces valeurs :</li>
+      </ol>
+      
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">Paramètres APN Google Pixel (Spécial 5G)</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><strong>Nom :</strong> Free</li>
+          <li><strong>APN :</strong> free</li>
+          <li><strong>MMSC :</strong> http://mms.free.fr</li>
+          <li><strong>MCC :</strong> 208</li>
+          <li><strong>MNC :</strong> 15</li>
+          <li><strong>Type d'APN :</strong> default,mms,supl</li>
+          <li><strong>Protocole APN :</strong> IPv4/IPv6</li>
+          <li><strong>Protocole d'itinérance APN :</strong> IPv4</li>
+        </ul>
+      </div>
+
+      <p><strong>L'étape critique :</strong> N'oubliez pas d'appuyer sur les trois petits points en haut à droite et de choisir <strong>Enregistrer</strong>. Sélectionnez ensuite ce profil (la coche doit être bleue) et <strong>redémarrez votre smartphone</strong> immédiatement.</p>
+
+      <h2>Solution 2 : L'Option 5G est-elle activée chez Free ?</h2>
+      <p>Cela peut paraître évident, mais contrairement à d'autres opérateurs, Free Mobile n'active pas systématiquement l'accès au réseau 5G sur votre ligne lors de la souscription, c'est une <strong>option manuelle (mais gratuite)</strong>.</p>
+      <ul>
+        <li>Rendez-vous sur votre <a href="https://mobile.free.fr/account/" target="_blank" class="text-red-600 font-bold hover:underline">Espace Abonné Free Mobile</a> depuis un navigateur.</li>
+        <li>Allez dans la rubrique <strong>Mes Options</strong>.</li>
+        <li>Cherchez la ligne <strong>Service 5G</strong> (ou similaire) et assurez-vous qu'elle est cochée "Activée" (en vert).</li>
+      </ul>
+
+      <h2>Solution 3 : Le Menu Secret Android (*#*#4636#*#*)</h2>
+      <p>Si tout est bien configuré mais que le logo 5G se cache toujours, votre Pixel "capte" peut-être la 5G mais refuse de s'y connecter pour économiser de la batterie. Le test ultime consiste à regarder les données brutes de l'antenne via le <a href="/blog/code-secret-android-4636-tester-reseau-free-mobile" class="text-red-600 font-bold hover:underline">menu secret Android 4636</a>.</p>
+      <p>Ouvrez l'application <strong>Téléphone</strong>, tapez <strong>*#*#4636#*#*</strong> et choisissez <strong>Informations sur le téléphone</strong>. Dans le menu <em>Définir le type de réseau préféré</em>, assurez-vous qu'une option contenant <strong>"NR"</strong> (New Radio, c'est le nom technique de la 5G) est bien sélectionnée (par exemple : <em>NR/LTE/TDSCDMA/CDMA/EvDo/GSM/WCDMA</em>). Ne choisissez <strong>NR Only</strong> que pour un test momentané, car si vous perdez le signal 5G, vous n'aurez plus aucun réseau, même pour les appels.</p>
+
+      <h2>Foire Aux Questions (FAQ) Dépannage</h2>
+      <p><strong>Q : J'ai bien configuré l'APN, mais toujours pas de 5G. Que faire ?</strong><br>
+      R : Vérifiez que le mode "Économiseur de batterie" de votre Pixel n'est pas activé, car celui-ci coupe la puce 5G de force. Vérifiez également dans <em>Réseau et Internet > SIM > Type de réseau préféré</em> que la <strong>5G recommandée</strong> est bien sélectionnée, et non LTE.</p>
+
+      <p><strong>Q : Faut-il activer l'itinérance des données pour utiliser la 5G Free en France ?</strong><br>
+      R : Pour la 5G en France métropolitaine, l'itinérance (roaming) n'est absolument pas nécessaire. Laissez-la désactivée pour éviter les facturations surprises si vous approchez d'une zone frontalière (Suisse, Andorre).</p>
+
+      <p><strong>Q : Le modèle Pixel 6 et 6a est-il compatible 5G Free ?</strong><br>
+      R : Oui, ils intègrent l'équipement nécessaire. Cependant, la gamme Pixel 6 a connu des soucis matériels récurrents sur son modem (pertes de réseau fréquentes). La solution consiste souvent à appliquer les dernières mises à jour trimestrielles d'Android (Feature Drops) qui incluent des correctifs opérateur.</p>
+
+      <div class="bg-gradient-to-r from-blue-50 to-violet-50 border border-blue-200 rounded-xl p-6 my-8">
+        <p class="font-bold text-gray-900 flex items-center gap-2 mb-2">🔒 Et une fois la 5G activée ? Attention à la sécurité</p>
+        <p class="text-gray-700 text-sm leading-relaxed mb-3">La 5G offre des débits comparables à la fibre optique. Mais si vous utilisez souvent les hotspots Wi-Fi publics (les FreeWiFi par exemple) pour épargner votre précieuse data, vos données restent vulnérables. Pensez à sécuriser vos transferts et protéger votre identité en ligne avec un VPN de qualité tel que NordVPN.</p>
+        <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=140680&source=freemobile" target="_blank" rel="nofollow noopener noreferrer sponsored" class="inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-800 hover:underline">Découvrir comment un VPN protège mon Pixel →</a>
       </div>
     `,
   }
