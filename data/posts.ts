@@ -859,5 +859,112 @@ export const posts: BlogPost[] = [
         <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=140680&source=freemobile" target="_blank" rel="nofollow noopener noreferrer sponsored" class="inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-800 hover:underline">Découvrir comment un VPN protège mon Pixel →</a>
       </div>
     `,
+  },
+  {
+    slug: "configurer-routeur-4g-5g-free-mobile-apn",
+    title: "Routeur 4G/5G Free Mobile : Le Guide de Configuration APN",
+    excerpt: "Routeur 4G/5G bloqué avec une SIM Free Mobile ? Découvrez la configuration APN exacte pour débloquer votre accès internet en quelques minutes.",
+    date: "2026-03-02",
+    author: "Wade",
+    readTime: "8 min",
+    category: "Configuration",
+    image: "/blog_routeur_4g_5g_free.png",
+    imagePrompt: "Tech 3D, Isometric, Glassmorphism, Free Mobile colors (Red/White), clean background, a modern glowing 4G/5G Wi-Fi router emitting digital wireless network waves, connected to a glowing Free Mobile SIM card, floating neon data streams, minimalist premium tech blog style, 8k resolution",
+    content: `
+      <p>Vous avez inséré votre carte SIM <strong>Free Mobile</strong> dans votre tout nouveau <strong>routeur 4G/5G</strong> (TP-Link, Huawei, Netgear, Zyxel...), mais le voyant Internet reste désespérément rouge ou éteint ? Vous avez beau redémarrer l'appareil, impossible de connecter le moindre smartphone ou ordinateur au Wi-Fi. Ce <strong>problème réseau</strong> est le cauchemar de tous ceux qui souhaitent utiliser leur forfait mobile comme alternative à la fibre (box 4G maison, résidence étudiante ou vacances).</p>
+      <p>Pas de panique ! Dans la très grande majorité des cas, le routeur n'est pas défectueux et la carte SIM fonctionne parfaitement. Le blocage provient d'une information manquante : l'appareil ne sait pas quelle "porte" utiliser pour accéder au réseau de l'opérateur. La solution consiste à configurer l'<strong>APN</strong> (Access Point Name) manuellement. Suivez ce guide complet pour débloquer votre connexion en quelques minutes.</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-bold text-blue-800">Résumé des étapes :</p>
+        <ul class="list-disc list-inside mt-2 text-blue-700">
+          <li>Désactiver le code PIN de la carte SIM Free Mobile (Étape indispensable).</li>
+          <li>Se connecter à l'interface d'administration du routeur (ex: 192.168.1.1).</li>
+          <li>Créer un profil avec l'APN "free".</li>
+          <li>Activer l'itinérance des données si nécessaire.</li>
+        </ul>
+      </div>
+
+      <h2>Étape 1 : Le Piège du Code PIN (À faire avant tout !)</h2>
+      <p>C'est l'erreur numéro 1 qui empêche les routeurs 4G/5G de se connecter. Par défaut, votre carte SIM Free Mobile est protégée par un <strong>code PIN</strong> (généralement 1234). Si un smartphone vous demande ce code au démarrage, un routeur, dépourvu d'écran, reste silencieusement bloqué et coupe l'accès réseau.</p>
+      <p><strong>Comment désactiver le code PIN ?</strong></p>
+      <ol>
+        <li>Insérez temporairement la carte SIM Free dans un <a href="/marques" class="text-red-600 font-bold hover:underline">smartphone débloqué</a>.</li>
+        <li>Sur Android : Allez dans <strong>Sécurité</strong> > <strong>Verrouillage de la carte SIM</strong> et décochez "Verrouiller la carte SIM".</li>
+        <li>Sur iPhone : Allez dans <strong>Réglages</strong> > <strong>Données cellulaires</strong> > <strong>PIN de la carte SIM</strong> et désactivez-le.</li>
+        <li>Testez que la 4G/5G fonctionne sur le téléphone.</li>
+        <li>Retirez la SIM et insérez-la (au bon format : micro ou nano SIM) dans votre routeur éteint.</li>
+      </ol>
+
+      <h2>Étape 2 : Accéder à l'interface de votre Routeur 4G/5G</h2>
+      <p>Saisir l'APN est facile, mais encore faut-il trouver où le renseigner ! Contrairement à un téléphone, un routeur se configure depuis un navigateur web (Chrome, Safari, Firefox), connecté au réseau Wi-Fi de l'appareil.</p>
+      <ul>
+        <li>Mettez le routeur sous tension et connectez votre ordinateur ou smartphone à son réseau Wi-Fi (le nom et le mot de passe Wi-Fi par défaut sont souvent sous l'appareil).</li>
+        <li>Ouvrez votre navigateur web et tapez l'adresse IP d'administration. Les plus courantes sont <strong>192.168.1.1</strong>, <strong>192.168.0.1</strong> ou <strong>192.168.8.1</strong>.</li>
+        <li>Connectez-vous avec les identifiants administrateur (généralement <code>admin/admin</code> ou <code>admin/password</code> inscrits sous le boîtier).</li>
+      </ul>
+
+      <h2>Étape 3 : La Configuration APN Officielle Free Mobile</h2>
+      <p>Une fois dans l'interface, vous devez créer un nouveau profil réseau qui indiquera au routeur comment communiquer avec les antennes de Free. Voici les <strong>données exactes</strong> à renseigner :</p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">Paramètres APN Routeurs (Toutes Marques)</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><strong>Nom du profil :</strong> Free Mobile (ou Free)</li>
+          <li><strong>APN :</strong> free</li>
+          <li><strong>MCC :</strong> 208 (souvent détecté automatiquement)</li>
+          <li><strong>MNC :</strong> 15 (souvent détecté automatiquement)</li>
+          <li><strong>Type IP / Protocole :</strong> IPv4/IPv6 (ou IPv4 seul)</li>
+          <li><strong>Type d'authentification :</strong> Aucune (ou PAP/CHAP par défaut, laisser vide)</li>
+          <li><strong>Nom d'utilisateur :</strong> <em>(laisser le champ vide)</em></li>
+          <li><strong>Mot de passe :</strong> <em>(laisser le champ vide)</em></li>
+        </ul>
+      </div>
+
+      <p><strong>NB :</strong> Si vous configurez un smartphone en partage de connexion, sachez qu'il est parfois nécessaire de le configurer différemment. Référez-vous à notre <a href="/configurer-apn" class="text-red-600 font-bold hover:underline">tutoriel universel de configuration APN Free</a> pour mobile.</p>
+
+      <h2>Où trouver le menu APN selon la marque de votre routeur ?</h2>
+      <p>L'interface varie sensiblement d'un constructeur à l'autre. Voici le chemin à suivre pour les modèles les plus vendus en France :</p>
+
+      <h3>Configuration sur Routeur TP-Link (Archer, Deco...)</h3>
+      <p>Allez dans <strong>Avancé</strong> > <strong>Réseau</strong> > <strong>Internet</strong>. Désactivez parfois la 'Configuration Automatique' ou la 'Création de profil Auto'. Sous la section <strong>Profil</strong>, cliquez sur <strong>Créer</strong>, entrez l'APN "free" et sélectionnez-le comme profil par défaut. Cliquez sur Enregistrer.</p>
+
+      <h3>Configuration sur Routeur Huawei (B535, B818, E5577...)</h3>
+      <p>Allez dans <strong>Paramètres réseau</strong> > <strong>Réseau mobile</strong> > <strong>Connexion Internet</strong> (ou <strong>Gestion des profils</strong>). Cliquez sur le symbole "<strong>+</strong>" ou <strong>Nouveau profil</strong>, ajoutez "free" en minuscule pour le nom du point d'accès, et sauvegardez.</p>
+
+      <h3>Configuration sur Routeur Netgear (Série Nighthawk)</h3>
+      <p>Allez dans l'onglet <strong>Paramètres</strong> > <strong>Réseau</strong> > <strong>APN</strong>. Cliquez sur le bouton <strong>Ajouter</strong> et saisissez les informations de Free Mobile. N'oubliez pas d'indiquer que c'est l'APN "Actif".</p>
+
+      <h2>Étape 4 : Activer l'Itinérance (Roaming) – Optionnel mais salvateur</h2>
+      <p>Si, après avoir configuré l'APN et retiré le code PIN, le routeur refuse toujours de se connecter (voyant rouge), un dernier paramètre peut bloquer. Par sécurité, de nombreux routeurs désactivent le trafic data en cas d'itinérance.</p>
+      <p>Historiquement, Free Mobile a conclu des contrats d'itinérance avec Orange en France métropolitaine. Bien que le réseau 4G/5G de Free couvre aujourd'hui la quasi-totalité de la population, certains routeurs croient à tort au "roaming".</p>
+      <p>Allez dans le menu <strong>Réseau Mobile</strong> ou <strong>Données Mobiles</strong> de l'interface, et cochez l'option <strong>Itinérance des données</strong> (ou <strong>Data Roaming</strong>). Enregistrez les modifications. La lumière de votre boîtier devrait basculer au vert ou bleu fixe : vous êtes connecté !</p>
+
+      <h2>Astuce Pro : Comment optimiser le débit de votre Routeur avec Free Mobile ?</h2>
+      <p>Capter la 4G/5G c'est bien, avoir un débit rapide pour travailler ou regarder Netflix en 4K, c'est mieux. Contrairement à une box Fibre, le débit sur un réseau cellulaire est très sensible à l'environnement physique.</p>
+      <ul>
+        <li><strong>L'emplacement est crucial :</strong> Placez le routeur <strong>près d'une fenêtre</strong>, idéalement en hauteur (sur une étagère), et du côté de la maison orienté vers l'antenne relais Free Mobile la plus proche de chez vous (vérifiez sur Cartoradio.fr).</li>
+        <li><strong>Évitez les interférences :</strong> Ne placez pas le routeur 4G/5G à côté d'un micro-ondes, derrière un meuble TV ou près d'équipements métalliques qui bloquent le signal radio.</li>
+        <li><strong>Sélectionnez la seule 4G ou 5G (Fixer la bande) :</strong> Si le routeur "saute" sans cesse d'une bande à l'autre (créant des micro-coupures), cherchez dans l'interface l'option <em>Type de réseau préféré</em> et forcez <strong>4G Only</strong> ou <strong>5G Only</strong> pour stabiliser la connexion.</li>
+      </ul>
+
+      <h2>Foire Aux Questions (FAQ) Routeurs & Free Mobile</h2>
+      <p><strong>Q : Je ne vois que APN "free", dois-je rajouter "mmsfree" quelque part ?</strong><br>
+      R : Absolument pas. Le profil "mmsfree" est uniquement destiné à l'envoi de textos avec photos. Un routeur sert à distribuer une connexion Internet (Data), donc l'APN principal "free" suffit amplement.</p>
+
+      <p><strong>Q : Le Forfait Free Mobile (19,99€) est-il 100% illimité si je le mets dans une box 4G ?</strong><br>
+      R : Non. Même si le forfait est "Illimité en 4G/5G" pour les abonnés box classique (Freebox Pop, Delta, Ultra...), Free ne considère pas un routeur tiers comme un terminal "mobile". Officieusement, l'usage dans un routeur/boîtier est toléré par les conditions générales, mais en cas de consommation extrême, l'enveloppe data peut être restreinte aux 300 Go standards.</p>
+
+      <p><strong>Q : Que faire si ma connexion se coupe tous les soirs ?</strong><br>
+      R : Ce n'est généralement pas un problème d'APN, mais d'antenne Free saturée en heure de pointe (forte densité d'utilisateurs le soir). Redémarrez le routeur pour forcer une ré-accroche sur une bande moins chargée, ou ajoutez de petites antennes SMA/TS9 externes sur le dos de votre routeur si celui-ci le permet.</p>
+
+      <p><strong>Q : L'adresse 192.168.1.1 ne s'affiche pas, "Aucun Accès" sur mon ordinateur. Pourquoi ?</strong><br>
+      R : Cela signifie que vous n'êtes pas connecté au bon réseau Wi-Fi. Coupez la connexion filaire (Ethernet) au besoin, assurez-vous de bien sélectionner le réseau Wi-Fi de votre nouveau routeur (et non celui de votre ancienne box internet), et renouvelez l'opération.</p>
+
+      <div class="bg-gradient-to-r from-blue-50 to-violet-50 border border-blue-200 rounded-xl p-6 my-8">
+        <p class="font-bold text-gray-900 flex items-center gap-2 mb-2">🔒 Un dernier conseil de sécurité pour votre Wi-Fi "Maison"</p>
+        <p class="text-gray-700 text-sm leading-relaxed mb-3">Une fois le routeur configuré, n'oubliez pas de changer le mot de passe "admin" par défaut. Et si vous partagez cette nouvelle connexion ultra-rapide en résidence ou en télétravail, l'utilisation d'un VPN à la source protégera simultanément l'ensemble des appareils (PC, TV, smartphones) connectés dessus contre le tracking publicitaire et les menaces.</p>
+        <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=140680&source=freemobile" target="_blank" rel="nofollow noopener noreferrer sponsored" class="inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-800 hover:underline">Découvrir comment 1 abonnement VPN protège tout votre équipement →</a>
+      </div>
+    `,
   }
 ];
