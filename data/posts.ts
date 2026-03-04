@@ -13,6 +13,45 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "pass-destination-free-liste-pays-inclus-2026-maj",
+    title: "Pass Destination Free 2026 : La Liste des Pays Inclus",
+    excerpt: "Vous voyagez à l'étranger ? Ne prenez pas de carte SIM locale ! Le forfait Free Mobile inclut plus de 110 pays. Découvrez la liste complète 2026 et les astuces 5G.",
+    date: "2026-03-04",
+    author: "TechWriterBot",
+    readTime: "5 min",
+    category: "Voyage",
+    image: "/blog_pass_destination_free_2026_maj.png",
+    imagePrompt: "Tech 3D, Isometric, Glassmorphism, Free Mobile colors (Red/White), clean background, floating world globe with red glowing pins on various countries, digital connecting lines crossing continents, airplane flying above, high tech travel blog style, 8k resolution",
+    content: `
+      <p>Vous garez votre voiture à l'aéroport ou vous posez le pied sur le sol étranger, vous désactivez le mode avion et l'angoisse commence. Allez-vous rencontrer un <strong>problème réseau</strong> ? Allez-vous exploser votre facture avec du hors-forfait sans l'avoir voulu ? C'est le cauchemar de tous les voyageurs.</p>
+      <p>Si vous êtes abonné au forfait <strong>Free Mobile</strong> 5G à 19,99€ (ou moins si vous avez une Freebox), la solution est déjà dans votre poche : le <strong>Pass Destination</strong>. Cette option, activée par défaut, vous permet d'emporter <strong>35 Go d'Internet en 4G et 5G</strong> dans plus de 110 pays, sans dépenser un centime supplémentaire. Découvrez la liste mise à jour en 2026 des destinations couvertes et les réglages à faire absolument sur votre smartphone pour ne pas rester déconnecté.</p>
+      <h2>Comment fonctionne le Pass Destination ?</h2>
+      <p>Le principe de Free Mobile est direct : la simplicité. Aucun "Pack Séjour" ou option complexe à souscrire. Dès que vous voyagez dans un des pays inclus de la liste, vous profitez de vos <strong>appels, SMS et MMS illimités</strong> vers la France et en local, et d'une des plus grosses enveloppes web du marché avec 35 Go par mois. Vos déplacements se font exactement sous les mêmes conditions qu'en Métropole !</p>
+      <h2>La liste des pays couverts par Free Mobile en 2026</h2>
+      <p>L'opérateur augmente chaque année le nombre de lieux où Internet est disponible. Voici les principales zones pour préparer vos valises sereinement :</p>
+      <h3>🌍 Europe et Départements d'Outre-Mer (DOM)</h3>
+      <p>Dans l'ensemble de l'<strong>Union Européenne</strong> (Espagne, Italie, Allemagne, Grèce...), c'est le grand confort. De même pour les DOM (La Réunion, Martinique, Guadeloupe, Mayotte). Gros avantage de l'offre Free par rapport à certains concurrents : le <strong>Royaume-Uni</strong> et la <strong>Suisse</strong> sont également inclus sans aucun bridage dans l'enveloppe de 35 Go !</p>
+      <h3>🌎 Les Amériques (Nord, Centre et Sud)</h3>
+      <p>Le Pass Destination couvre sans frais les grandes destinations du continent : <strong>Canada</strong>, <strong>États-Unis</strong>, Mexique, Brésil, Colombie et Argentine. <br><strong>Attention pour les États-Unis :</strong> La norme 3G a totalement disparu du sol américain. Votre smartphone doit donc impérativement être nativement compatible avec les appels 4G (VoLTE) pour téléphoner. Si vous n'êtes pas sûr de votre téléphone, n'hésitez pas à vérifier sa compatibilité dans la section <a href="/marques">les marques prises en charge</a>.</p>
+      <h3>🌏 Asie, Océanie, Afrique et Moyen-Orient</h3>
+      <p>Vous partez très loin ? Free vous accompagne en <strong>Australie</strong>, Nouvelle-Zélande, <strong>Chine</strong>, Japon, Inde, Thaïlande, Afrique du Sud ou encore en Turquie. Pratique pour utiliser un GPS ou un traducteur en ligne de l'autre côté du globe.</p>
+      <h2>Les 3 réglages à faire pour éviter le "problème réseau"</h2>
+      <p>Votre avion atterrit mais votre téléphone refuse de capter ? Pas de panique, c'est que votre mobile n'est pas encore prêt. Voici la checklist à vérifier :</p>
+      <ul>
+      <li><strong>Activez l'Itinérance des données (Roaming) :</strong> Android et iPhone bloquent l'utilisation des données à l'étranger par défaut. Rendez-vous dans les réglages réseau de votre appareil et activez l'interrupteur "Itinérance des données" pour débrider la 4G/5G.</li>
+      <li><strong>Vérifiez vos réglages réseaux :</strong> Un mauvais <strong>APN</strong> est la première cause de panne d'internet. Assurez-vous d'avoir les paramètres exacts en parcourant notre tutoriel explicatif pour <a href="/configurer-apn">bien configurer l'APN Free Mobile</a> de votre appareil.</li>
+      <li><strong>L'Option Voyage du Forfait 2€ :</strong> Notez bien que le petit forfait Free (2€ ou 0€) n'inclut PAS le Pass Destination. Pour pouvoir appeler à l'étranger, vous devrez activer manuellement l'<strong>Option Voyage</strong> dans votre Espace Client et ajouter une avance sur facturation. L'Internet, lui, vous coûtera très cher par Mégaoctet.</li>
+      </ul>
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p><strong>Q : Peut-on capter la 5G à l'étranger avec Free Mobile ?</strong><br>
+      R : Exactement. Free a étendu ses partenariats et offre désormais l'accès à la <strong>5G</strong> dans un grand nombre de pays comme l'Espagne, l'Allemagne ou les États-Unis. Si la 5G est disponible et activée sur votre téléphone, il s'y connectera tout seul.</p>
+      <p><strong>Q : L'APN "mmsfree" fonctionne-t-il dans les autres pays ?</strong><br>
+      R : Oui. L'APN ne change jamais, que ce soit pour la navigation web classique ou l'envoi de vos photos. Si cela fonctionnait en France, vous n'avez rien à changer à la configuration.</p>
+      <p><strong>Q : Comment savoir où j'en suis dans mes 35 Go d'Internet ?</strong><br>
+      R : L'opérateur Free Mobile vous aidera à contrôler votre consommation en envoyant systématiquement un SMS d'alerte lorsque vous atteignez 80 %, puis 100 % de votre seuil en roaming. Vous pouvez aussi consulter votre jauge dans votre espace abonné depuis l'application Free ou le site web officiel.</p>
+    `,
+  },
+  {
     slug: "apn-free-mobile-etranger-faut-il-changer",
     title: "APN Free à l'Étranger : Faut-il Changer ses Réglages ?",
     excerpt: "Plus d'internet en voyage avec Free Mobile ? Découvrez s'il faut changer votre APN et la manipulation exacte pour retrouver la 4G/5G à l'étranger en 2 minutes.",
