@@ -13,6 +13,71 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "appeler-international-depuis-france-free-mobile-pays-inclus",
+    title: "Appeler l'International avec Free : Les Pays Inclus (Sans Hors-Forfait)",
+    excerpt: "Vous voulez appeler l'étranger depuis la France avec votre forfait Free Mobile ? Découvrez la liste des pays inclus et évitez le hors-forfait surprise.",
+    date: "2026-03-07",
+    author: "TechWriterBot",
+    readTime: "5 min",
+    category: "Voyage",
+    image: "/blog_appeler_international_free_mobile.png",
+    imagePrompt: "Tech 3D, Isometric, Glassmorphism, Free Mobile colors (Red/White), clean background, a smartphone in France dialing out to a glowing 3D world globe with connection lines linking to various countries, modern premium telecommunications concept, 8k resolution",
+    content: `
+      <p>Vous avez de la famille à l'étranger ou vous devez joindre un hôtel à l'autre bout du monde pour vos prochaines vacances ? Le premier réflexe est souvent l'hésitation. Appeler l'international depuis la France peut vite se transformer en un cauchemar financier si l'on ne connaît pas exactement ce que son forfait autorise. La peur du hors-forfait est légitime.</p>
+      <p>Heureusement, si vous êtes abonné <strong>Free Mobile</strong>, vous disposez probablement de l'une des offres les plus généreuses du marché pour les appels vers l'étranger. Que vous ayez le forfait 5G à 19,99€ ou le petit forfait à 2€, voici la liste claire et définitive des pays inclus, pour appeler sans aucune angoisse.</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-bold text-blue-800">La réponse rapide (Forfait 19,99€) :</p>
+        <p class="text-blue-700 mt-2">Le Forfait Free 5G inclut les <strong>appels illimités vers les fixes de 100 destinations</strong> et vers les <strong>mobiles de nombreux pays</strong> comme les États-Unis, le Canada, la Chine et les DOM. Si la destination n'est pas incluse, vous paierez le tarif en vigueur à la minute.</p>
+      </div>
+
+      <h2>Appeler vers l'International avec le Forfait Free 5G (19,99€)</h2>
+      <p>C'est le forfait roi pour les voyageurs et ceux qui appellent l'international. Depuis la France métropolitaine, vous n'aurez aucun <strong>problème réseau</strong> ni bridage pour joindre vos correspondants, à condition de savoir distinguer les appels vers les fixes et vers les mobiles.</p>
+
+      <h3>📞 Vers les Mobiles ET les Fixes (Les hyper-inclus)</h3>
+      <p>Pour une poignée de destinations privilégiées, Free Mobile ne fait aucune différence. Vous pouvez appeler en illimité aussi bien les lignes fixes que les téléphones portables :</p>
+      <ul>
+        <li><strong>Amérique du Nord :</strong> États-Unis, Canada, Alaska, Hawaï.</li>
+        <li><strong>Asie :</strong> Chine.</li>
+        <li><strong>Les DOM :</strong> Guadeloupe, Guyane française, Martinique, Mayotte et La Réunion.</li>
+      </ul>
+
+      <h3>☎️ Vers les Fixes UNIQUEMENT (100 destinations)</h3>
+      <p>C'est ici que la liste devient massive. Vous pouvez appeler en illimité vers les <strong>téléphones fixes</strong> de plus de 100 pays. Attention : si vous appelez un téléphone portable dans ces pays, cela vous sera facturé en hors-forfait.</p>
+      <ul>
+        <li><strong>Toute l'Europe :</strong> Allemagne, Espagne, Italie, Portugal, Royaume-Uni, Suisse, Belgique...</li>
+        <li><strong>Amérique du Sud :</strong> Brésil, Argentine, Chili, Colombie...</li>
+        <li><strong>Reste du Monde :</strong> Australie, Japon, Inde, Israël, Thaïlande, Russie...</li>
+      </ul>
+
+      <h2>Et avec le Forfait 2€ (ou 0€) ?</h2>
+      <p>Le petit forfait de Free Mobile est pensé pour un usage modéré en France, mais il réserve quelques bonnes surprises pour l'international. Vos <strong>2 heures d'appels</strong> mensuelles peuvent être utilisées pour appeler vers :</p>
+      <ul>
+        <li>Les <strong>mobiles et fixes</strong> aux États-Unis, au Canada, en Chine et dans les DOM.</li>
+        <li>Les <strong>fixes</strong> de 100 destinations (la même liste que le forfait 19,99€).</li>
+      </ul>
+      <p>Cependant, une fois les 2 heures épuisées, la facturation à la minute s'applique. Une bonne connexion <strong>5G</strong> ou Wi-Fi couplée à une application comme WhatsApp reste, dans ce cas, la meilleure alternative pour éviter la facture salée.</p>
+
+      <h2>3 Astuces pour éviter les erreurs de facturation</h2>
+      <p>Même avec une liste des pays inclus sous les yeux, quelques précautions s'imposent :</p>
+      <ol>
+        <li><strong>L'indicatif du pays :</strong> Avant de composer le numéro, n'oubliez pas de remplacer le premier "0" par l'indicatif international (ex: +44 pour le Royaume-Uni, +1 pour les USA). Si la ligne ne veut pas se lancer, vérifiez que vous avez bien configuré votre <a href="/configurer-apn">APN Free Mobile</a> pour vous assurer que le téléphone arrive bien à accrocher le réseau pour la voix sur 4G (VoLTE).</li>
+        <li><strong>Les numéros spéciaux étrangers :</strong> Les appels illimités ne concernent que les numéros classiques. L'appel vers des numéros surtaxés, des numéros courts ou des services clients à l'étranger vous sera presque toujours facturé à des prix d'or.</li>
+        <li><strong>Smartphone adapté :</strong> Assurez-vous que votre téléphone gère correctement les appels internationaux en VoLTE pour une qualité optimale. Parcourez notre section des <a href="/marques">marques compatibles</a> pour vérifier votre modèle.</li>
+      </ol>
+
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p><strong>Q : Les SMS vers l'étranger sont-ils inclus ?</strong><br>
+      R : Non. Les appels peuvent être illimités, mais l'envoi de SMS vers un numéro étranger depuis la France est facturé en supplément (le prix varie selon la destination, généralement hors Europe et DOM). Utilisez des messageries par internet pour vos messages écrits.</p>
+
+      <p><strong>Q : Je suis moi-même à l'étranger, puis-je appeler la France gratuitement ?</strong><br>
+      R : Oui, c'est le principe du Pass Destination du forfait 19,99€. Depuis l'Europe, les DOM et plus de 110 pays, vos appels vers la France sont inclus sans surcoût dans votre forfait.</p>
+
+      <p><strong>Q : Peut-on bloquer les appels vers les numéros non-inclus ?</strong><br>
+      R : Oui ! Dans votre Espace Abonné Free Mobile, rubrique "Mes Options", vous pouvez activer le "Forfait bloqué". Cela empêchera tout appel vers une destination non comprise dans votre abonnement, garantissant une facture sans surprise.</p>
+    `,
+  },
+  {
     slug: "ipv4-vs-ipv6-free-mobile-difference-config",
     title: "IPv4 vs IPv6 Free Mobile : Faut-il Changer L'APN ?",
     excerpt: "Votre connexion Free Mobile bloque sur certains sites ou le partage de connexion échoue ? C'est le piège de l'IPv4/IPv6. Découvrez le réglage rapide pour tout débloquer.",
