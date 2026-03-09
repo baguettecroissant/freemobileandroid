@@ -13,6 +13,69 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "imessage-free-mobile-en-attente-activation-solution",
+    title: "iMessage Free Mobile : La Solution au \"En attente d'activation\"",
+    excerpt: "Votre iMessage reste bloqué sur \"En attente d'activation\" avec votre numéro Free Mobile ? Ne paniquez pas, voici les étapes simples pour le débloquer en 2 minutes.",
+    date: "2026-03-09",
+    author: "Wade",
+    readTime: "5 min",
+    category: "Dépannage",
+    image: "/blog_imessage_activation_free.png",
+    imagePrompt: "Tech 3D, Isometric, Glassmorphism, Free Mobile colors (Red/White), clean background. A premium illustration of an iPhone showing a blue iMessage bubble with a loading spinner and the text 'En attente d'activation'. Surrounding the phone are floating 3D icons of SIM cards, network signals, and Apple logos. Soft lighting, professional tech blog aesthetic, 8k resolution.",
+    content: `
+      <p>Vous venez d'insérer votre nouvelle carte SIM <strong>Free Mobile</strong> ou de redémarrer votre iPhone, et là, c'est le blocage : iMessage affiche désespérément <strong>\"En attente d'activation\"</strong>. Impossible d'envoyer vos bulles bleues avec votre numéro de téléphone. Ce <strong>problème réseau</strong> (ou plutôt logiciel) est extrêmement fréquent, mais heureusement très simple à résoudre.</p>
+      <p>Chez <strong>Free Mobile</strong>, l'activation d'iMessage nécessite l'envoi d'un SMS invisible vers les serveurs d'Apple. Si ce SMS ne part pas ou n'arrive pas, le processus reste figé. Voici la marche à suivre étape par étape pour débloquer votre iPhone immédiatement.</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-bold text-blue-800">La solution express (Vérification n°1) :</p>
+        <p class="text-blue-700 mt-2">Allez dans <strong>Réglages > Général > Date et heure</strong>. Assurez-vous que l'option <strong>\"Réglage automatique\"</strong> est bien activée. Un décalage de quelques secondes suffit à bloquer l'authentification sécurisée d'Apple.</p>
+      </div>
+
+      <h2>1. Pourquoi mon numéro Free ne s'active pas ?</h2>
+      <p>Il ne s'agit pas d'une panne de votre <strong>5G</strong> ou de votre <strong>APN</strong>. iMessage utilise un système de vérification par SMS international. Si votre forfait est bloqué ou si vous n'avez pas de crédit (pour le forfait 2€ sans option), l'iPhone ne peut pas confirmer votre identité.</p>
+      <ul>
+        <li><strong>Forfait Free 5G (19,99€) :</strong> L'activation est incluse et transparente.</li>
+        <li><strong>Forfait 2€ :</strong> Vous devez impérativement avoir activé l'option <strong>\"Communications vers l'international\"</strong> dans votre Espace Abonné, car le SMS d'activation est envoyé vers un serveur situé au Royaume-Uni.</li>
+      </ul>
+
+      <h2>2. Les étapes de dépannage prioritaires</h2>
+      <p>Si la date et l'heure sont correctes, suivez cette séquence de nettoyage :</p>
+      <h3>🔄 Désactiver / Réactiver iMessage et FaceTime</h3>
+      <ol>
+        <li>Allez dans <strong>Réglages > Messages</strong> et désactivez <strong>iMessage</strong>.</li>
+        <li>Allez dans <strong>Réglages > FaceTime</strong> et désactivez <strong>FaceTime</strong>.</li>
+        <li>Redémarrez votre iPhone.</li>
+        <li>Réactivez d'abord iMessage, puis FaceTime. Attendez quelques minutes.</li>
+      </ol>
+
+      <h3>🌐 Réinitialiser les réglages réseau</h3>
+      <p>Parfois, d'anciens paramètres de connexion d'un autre opérateur interfèrent. Cette action ne supprimera pas vos données, mais effacera vos mots de passe Wi-Fi.</p>
+      <p>Allez dans <strong>Réglages > Général > Transférer ou réinitialiser l'iPhone > Réinitialiser > Réinitialiser les réglages réseau</strong>. Votre téléphone redémarrera et retéléchargera la configuration <strong>APN Free Mobile</strong> propre.</p>
+
+      <h2>3. Le problème de l'eSIM et du numéro temporaire</h2>
+      <p>Si vous avez effectué une portabilité récemment, votre iPhone a peut-être gardé en mémoire le numéro temporaire fourni par Free. Pour corriger cela :</p>
+      <ol>
+        <li>Allez dans <strong>Réglages > Téléphone > Mon numéro</strong>.</li>
+        <li>Vérifiez que c'est bien votre numéro définitif qui est affiché. Si ce n'est pas le cas, modifiez-le manuellement et enregistrez.</li>
+        <li>Relancez l'activation d'iMessage comme expliqué au point précédent.</li>
+      </ol>
+
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p><strong>Q : Combien de temps prend l'activation ?</strong><br>
+      R : En général, cela prend quelques secondes. Cependant, Apple précise que cela peut prendre jusqu'à <strong>24 heures</strong>. Si après une journée le message persiste, contactez le support Apple.</p>
+
+      <p><strong>Q : L'activation est-elle payante chez Free ?</strong><br>
+      R : Pour le forfait 19,99€, c'est inclus. Pour le forfait 2€, le SMS international vers le Royaume-Uni peut être facturé environ 0,15€ (hors forfait). Assurez-vous d'avoir de l'avance sur votre consommation.</p>
+
+      <p><strong>Q : Mon APN influence-t-il iMessage ?</strong><br>
+      R : Indirectement oui. Si votre connexion internet est instable, l'iPhone ne pourra pas communiquer avec les serveurs Apple. Vérifiez que vous avez bien <a href='/configurer-apn'>configuré votre APN Free</a> correctement pour avoir une 4G/5G stable.</p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <p class="text-sm text-gray-600 italic">Si vous avez d'autres soucis selon votre modèle, n'hésitez pas à consulter notre guide par <a href='/marques'>marques de téléphones</a>.</p>
+      </div>
+    `,
+  },
+  {
     slug: "appeler-international-depuis-france-free-mobile-pays-inclus",
     title: "Appeler l'International avec Free : Les Pays Inclus (Sans Hors-Forfait)",
     excerpt: "Vous voulez appeler l'étranger depuis la France avec votre forfait Free Mobile ? Découvrez la liste des pays inclus et évitez le hors-forfait surprise.",
