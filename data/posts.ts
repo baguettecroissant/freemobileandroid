@@ -13,6 +13,168 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "huawei-honor-reglages-apn-free-mobile-post-embargo-google",
+    title: "Huawei & Honor : Configurer l'APN Free Mobile Sans Google",
+    excerpt: "Votre Huawei ou Honor sans Google Services ne capte pas la 4G/5G Free Mobile ? Voici les réglages APN manuels complets pour retrouver Internet en 2 minutes.",
+    date: "2026-03-19",
+    author: "Wade",
+    readTime: "7 min",
+    category: "Configuration",
+    image: "/blog_huawei_honor_apn.png",
+    imagePrompt: "Tech 3D, Isometric, Glassmorphism, Free Mobile colors (Red/White), clean white background. Two smartphones side by side showing network settings screens, surrounded by floating 3D icons of SIM cards, gear/settings cogs, 4G/5G signal bars. Modern minimal premium tech blog style, professional digital art, 8k resolution.",
+    content: `
+      <p>Vous venez d'acheter un <strong>Huawei Pura 70</strong>, un <strong>Honor Magic6</strong> ou tout autre modèle récent de ces deux marques, et c'est la douche froide : impossible d'accéder à Internet avec votre carte SIM <strong>Free Mobile</strong>. Les appels passent, les SMS aussi, mais la 4G ou la <strong>5G</strong> refuse catégoriquement de s'activer. Pas de Play Store, pas de configuration automatique de l'<strong>APN</strong>... vous êtes bloqué.</p>
+      <p>Ce <strong>problème réseau</strong> touche des milliers d'utilisateurs Huawei et Honor en France depuis l'embargo américain de 2019. Sans les <strong>Google Mobile Services (GMS)</strong>, ces smartphones ne reçoivent plus la configuration APN automatique que Google pousse habituellement via le Play Store. Résultat : il faut tout faire à la main. Mais rassurez-vous, c'est simple et rapide quand on sait où chercher.</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-bold text-blue-800">La solution express (30 secondes) :</p>
+        <p class="text-blue-700 mt-2">Allez dans <strong>Paramètres > Réseau mobile > Noms des points d'accès</strong>, créez un nouvel APN avec le nom <strong>"Free"</strong> et l'adresse APN <strong>"free"</strong>. Sauvegardez, sélectionnez-le et redémarrez. C'est tout. Les détails complets sont ci-dessous.</p>
+      </div>
+
+      <h2>Pourquoi Huawei et Honor sont-ils touchés ?</h2>
+      <p>Depuis mai 2019, le gouvernement américain a interdit à Google de fournir ses services (Gmail, Play Store, YouTube, Maps...) aux nouveaux appareils Huawei. <strong>Honor</strong>, ancienne filiale de Huawei devenue indépendante en 2020, a progressivement récupéré l'accès aux GMS sur certains modèles, mais pas tous.</p>
+      <p>Le problème concret pour vous en tant qu'abonné <strong>Free Mobile</strong> :</p>
+      <ul>
+        <li><strong>Pas de Google Play Services</strong> = pas de push de configuration APN automatique. Quand vous insérez votre SIM Free, le téléphone ne sait pas comment se connecter au réseau de données.</li>
+        <li><strong>Pas de Play Store</strong> = impossible de télécharger l'app Free Mobile officielle pour auto-configurer l'APN.</li>
+        <li><strong>AppGallery (le store Huawei)</strong> ne contient pas toujours les outils de configuration opérateur français.</li>
+      </ul>
+      <p>Bonne nouvelle : la configuration manuelle de l'APN est identique à celle de n'importe quel autre Android. Il suffit de connaître les bons paramètres.</p>
+
+      <h2>Tutoriel : Configurer l'APN Free Mobile sur Huawei (EMUI / HarmonyOS)</h2>
+      <p>Que vous soyez sur <strong>EMUI 14</strong> ou <strong>HarmonyOS 4</strong>, la procédure est la même. Suivez ces étapes précisément :</p>
+      <ol>
+        <li>Ouvrez l'application <strong>Paramètres</strong> (icône engrenage).</li>
+        <li>Appuyez sur <strong>Réseau de données mobiles</strong> (ou "Réseau mobile" selon la version).</li>
+        <li>Sélectionnez <strong>Noms des points d'accès (APN)</strong>.</li>
+        <li>Appuyez sur le <strong>"+" (Ajouter)</strong> en haut à droite ou sur "Nouvel APN".</li>
+        <li>Remplissez les champs suivants :</li>
+      </ol>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">APN Internet Free Mobile (obligatoire)</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><strong>Nom :</strong> Free</li>
+          <li><strong>APN :</strong> free</li>
+          <li><strong>MMSC :</strong> (laisser vide)</li>
+          <li><strong>MCC :</strong> 208</li>
+          <li><strong>MNC :</strong> 15</li>
+          <li><strong>Type d'authentification :</strong> Aucun</li>
+          <li><strong>Type d'APN :</strong> default,supl</li>
+          <li><strong>Protocole APN :</strong> IPv4/IPv6</li>
+          <li><strong>Protocole d'itinérance APN :</strong> IPv4/IPv6</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">APN MMS Free Mobile (pour envoyer/recevoir des photos par MMS)</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><strong>Nom :</strong> Free MMS</li>
+          <li><strong>APN :</strong> mmsfree</li>
+          <li><strong>MMSC :</strong> http://mms.free.fr</li>
+          <li><strong>Proxy MMS :</strong> (laisser vide)</li>
+          <li><strong>Port MMS :</strong> (laisser vide)</li>
+          <li><strong>MCC :</strong> 208</li>
+          <li><strong>MNC :</strong> 15</li>
+          <li><strong>Type d'authentification :</strong> Aucun</li>
+          <li><strong>Type d'APN :</strong> mms</li>
+          <li><strong>Protocole APN :</strong> IPv4/IPv6</li>
+          <li><strong>Protocole d'itinérance APN :</strong> IPv4/IPv6</li>
+        </ul>
+      </div>
+
+      <ol start="6">
+        <li>Appuyez sur les <strong>trois points</strong> en haut à droite puis sur <strong>"Enregistrer"</strong>.</li>
+        <li>Sélectionnez l'APN <strong>"Free"</strong> comme APN par défaut (le point bleu doit être à côté).</li>
+        <li><strong>Redémarrez votre téléphone</strong>. C'est indispensable pour que les changements prennent effet.</li>
+      </ol>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
+        <p class="font-bold text-green-800">💡 Astuce EMUI/HarmonyOS :</p>
+        <p class="text-green-700 mt-1">Sur certains modèles Huawei récents, le menu APN est caché. Si vous ne le trouvez pas, essayez : <strong>Paramètres > Plus de paramètres réseau > Réseau mobile > Noms des points d'accès</strong>. Si le menu reste introuvable, composez <strong>*#*#4636#*#*</strong> depuis l'application Téléphone pour accéder aux réglages réseau avancés.</p>
+      </div>
+
+      <h2>Configurer l'APN Free Mobile sur Honor (MagicOS)</h2>
+      <p>Depuis la séparation avec Huawei, les modèles <strong>Honor</strong> récents (Magic6, Honor 200, Honor X9b...) tournent sous <strong>MagicOS</strong> avec ou sans Google Services selon le marché. Si votre Honor possède le Play Store, la configuration APN devrait être automatique. Sinon, suivez ces étapes :</p>
+      <ol>
+        <li>Ouvrez <strong>Paramètres > Réseau mobile > Données mobiles</strong>.</li>
+        <li>Appuyez sur <strong>Noms des points d'accès (APN)</strong>.</li>
+        <li>Créez un nouvel APN avec exactement les mêmes paramètres que ceux listés ci-dessus pour Huawei.</li>
+        <li>Enregistrez, sélectionnez, et <strong>redémarrez</strong>.</li>
+      </ol>
+      <p>La procédure est quasi identique car MagicOS partage encore beaucoup de code avec EMUI. Les menus peuvent varier légèrement selon la version de MagicOS (7 ou 8), mais les champs APN restent les mêmes. Pour plus de détails sur votre modèle spécifique, consultez notre page <a href='/marques'>marques compatibles</a>.</p>
+
+      <h2>Les problèmes fréquents et leurs solutions</h2>
+
+      <h3>❌ "Je ne peux pas créer de nouvel APN, le bouton + est grisé"</h3>
+      <p>Ce problème survient souvent sur les Huawei avec une <strong>carte SIM verrouillée par un autre opérateur</strong> ou si l'APN est poussé et verrouillé par l'opérateur précédent. Solution :</p>
+      <ul>
+        <li>Allez dans <strong>Paramètres > Système > Réinitialiser > Réinitialiser les réglages réseau</strong>. Cela supprimera les APN existants et les mots de passe Wi-Fi, mais vous permettra d'en créer de nouveaux.</li>
+        <li>Vérifiez que votre téléphone est bien <strong>débloqué tous opérateurs</strong>. Un Huawei acheté chez un autre opérateur peut nécessiter un code de déblocage.</li>
+      </ul>
+
+      <h3>❌ "J'ai configuré l'APN mais la 4G ne s'accroche pas"</h3>
+      <p>Plusieurs vérifications à faire dans l'ordre :</p>
+      <ul>
+        <li><strong>Données mobiles activées :</strong> Vérifiez que l'interrupteur "Données mobiles" est bien au vert dans <strong>Paramètres > Réseau mobile</strong>.</li>
+        <li><strong>Mode réseau :</strong> Allez dans <strong>Paramètres > Réseau mobile > Mode réseau</strong> et sélectionnez <strong>"4G/3G/2G (automatique)"</strong> ou <strong>"5G/4G/3G/2G (automatique)"</strong> si votre modèle est compatible <strong>5G</strong>.</li>
+        <li><strong>Bande de fréquence :</strong> Les Huawei vendus en Chine (import gris) ne supportent pas toujours la bande 28 (700 MHz) utilisée par Free Mobile pour la 4G/5G dans les zones rurales. Vérifiez la compatibilité de votre modèle sur notre page <a href='/marques'>marques de téléphones</a>.</li>
+      </ul>
+
+      <h3>❌ "La 5G ne fonctionne pas sur mon Huawei"</h3>
+      <p>Deux points à vérifier impérativement :</p>
+      <ul>
+        <li><strong>Compatibilité 5G Free :</strong> Free Mobile utilise principalement les bandes <strong>n1 (2100 MHz)</strong>, <strong>n3 (1800 MHz)</strong>, <strong>n28 (700 MHz)</strong> et <strong>n78 (3500 MHz)</strong>. Les Huawei vendus pour le marché européen sont généralement compatibles, mais les modèles importés de Chine peuvent ne supporter que les bandes asiatiques.</li>
+        <li><strong>Activation 5G :</strong> Sur EMUI/HarmonyOS, allez dans <strong>Paramètres > Réseau mobile > Données mobiles > Activer la 5G</strong>. Cet interrupteur est parfois désactivé par défaut.</li>
+      </ul>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6">
+        <p class="font-bold text-red-800">⚠️ Attention aux Huawei importés :</p>
+        <p class="text-red-700 mt-2">Les modèles <strong>Huawei Pura 70</strong>, <strong>Mate 60</strong> ou <strong>Nova 12</strong> achetés sur AliExpress ou importés de Chine utilisent souvent un <strong>modem Kirin différent</strong> qui ne supporte pas toutes les bandes de fréquence françaises. Avant d'acheter, vérifiez la mention <strong>"Version Globale"</strong> ou <strong>"EU Version"</strong> pour être sûr de la compatibilité avec le réseau <strong>Free Mobile</strong>.</p>
+      </div>
+
+      <h2>Et pour les applications Google ? (GMS vs HMS)</h2>
+      <p>Configurer l'APN ne résoudra pas l'absence du Play Store. Mais une fois Internet rétabli, vous pourrez :</p>
+      <ul>
+        <li>Utiliser <strong>AppGallery</strong> (le store Huawei) pour télécharger les applications compatibles (WhatsApp, Instagram, TikTok... la plupart sont disponibles).</li>
+        <li>Installer <strong>Petal Search</strong> pour trouver et télécharger des APK d'applications non disponibles sur AppGallery.</li>
+        <li>Utiliser les services <strong>Huawei Mobile Services (HMS)</strong> comme alternative : Petal Maps au lieu de Google Maps, Huawei Mail au lieu de Gmail, etc.</li>
+        <li>Accéder à votre <strong>Espace Abonné Free Mobile</strong> directement via le navigateur à l'adresse <a href="https://mobile.free.fr/account/" target="_blank" class="text-red-600 font-bold hover:underline">mobile.free.fr</a> sans avoir besoin de l'app.</li>
+      </ul>
+      <p>Pour gérer votre forfait, vos options et vos consommations, le site web mobile de Free fonctionne parfaitement sur le navigateur Huawei préinstallé.</p>
+
+      <h2>Réinitialiser l'APN si tout est bloqué</h2>
+      <p>Si vous avez essayé plusieurs configurations et que plus rien ne fonctionne (pas de réseau, APN corrompus, multiples profils en conflit), voici la procédure de remise à zéro :</p>
+      <ol>
+        <li>Allez dans <strong>Paramètres > Système et mises à jour > Réinitialiser</strong>.</li>
+        <li>Sélectionnez <strong>"Restaurer les paramètres réseau"</strong>.</li>
+        <li>Confirmez (cette action supprime tous les APN, les appareils Bluetooth appairés et les mots de passe Wi-Fi. Vos photos et données ne sont PAS affectées).</li>
+        <li>Le téléphone redémarre. Retournez dans les paramètres APN et recréez uniquement les deux APN Free listés plus haut.</li>
+      </ol>
+      <p>Si le problème persiste après cette manipulation, consultez notre guide complet <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">configuration APN Free Mobile</a> pour des instructions détaillées adaptées à chaque marque.</p>
+
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p><strong>Q : Mon Huawei Mate 50 (ou P60) avec HarmonyOS peut-il fonctionner normalement chez Free Mobile ?</strong><br>
+      R : Oui, absolument. Les réglages APN sont universels et fonctionnent sur <strong>tous les systèmes d'exploitation</strong> (EMUI, HarmonyOS, MagicOS, Android pur). La seule condition est que votre modèle supporte les bandes de fréquence françaises (bandes 3, 7, 20, 28 en 4G). La version européenne des Huawei les supporte toutes.</p>
+
+      <p><strong>Q : Faut-il deux APN séparés (Internet + MMS) ou un seul suffit ?</strong><br>
+      R : <strong>Free Mobile utilise deux APN distincts</strong> : "free" pour Internet et "mmsfree" pour les MMS. Si vous ne configurez que le premier, Internet fonctionnera mais vous ne pourrez ni envoyer ni recevoir de photos par MMS. Pour plus de détails, consultez notre article sur <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">la configuration APN complète</a>.</p>
+
+      <p><strong>Q : L'APN change-t-il si je passe du forfait 2€ au forfait 5G (19,99€) ?</strong><br>
+      R : Non. L'APN est <strong>strictement identique</strong> quel que soit votre forfait <strong>Free Mobile</strong>. Seul l'accès au réseau de données (Data) peut nécessiter une activation manuelle sur le forfait 2€ dans votre Espace Abonné.</p>
+
+      <p><strong>Q : Mon Honor a le Google Play Store, dois-je quand même configurer l'APN manuellement ?</strong><br>
+      R : En principe, non. Si votre Honor possède les <strong>Google Mobile Services</strong>, la configuration APN de <strong>Free Mobile</strong> devrait se pousser automatiquement dès l'insertion de la SIM. Si ce n'est pas le cas (ça arrive après une mise à jour système), appliquez la procédure manuelle décrite dans cet article.</p>
+
+      <p><strong>Q : Existe-t-il un risque à installer des APK manuellement sur un Huawei sans Google ?</strong><br>
+      R : Oui, un risque modéré. Sans le <strong>Google Play Protect</strong>, votre téléphone n'a pas de scanner de malware automatique. Téléchargez vos APK uniquement depuis des sources fiables comme <strong>APKMirror</strong> ou via <strong>Petal Search</strong>. Huawei intègre son propre scanner de sécurité dans AppGallery, mais il est moins performant que celui de Google.</p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <p class="text-sm text-gray-600 italic">L'absence de Google Services sur Huawei ne change rien à la configuration réseau de <strong>Free Mobile</strong>. Votre APN fonctionne de manière identique. Pour vérifier la compatibilité complète de votre modèle (bandes de fréquence 4G/5G, VoLTE, Wi-Fi Calling), consultez notre section <a href='/marques'>marques de téléphones</a>.</p>
+      </div>
+    `,
+  },
+  {
     slug: "mcafee-securite-free-mobile-utile-ou-pas",
     title: "McAfee Sécurité Free Mobile : Utile ou Arnaque Cachée ?",
     excerpt: "Free Mobile inclut un antivirus McAfee gratuit dans son forfait 5G. Mais faut-il vraiment l'activer ou est-ce du bloatware déguisé ? Notre verdict honnête.",
