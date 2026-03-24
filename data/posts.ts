@@ -13,6 +13,194 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "config-apn-free-mobile-xiaomi-guide-miui-hyperos",
+    title: "Config APN Free Mobile Xiaomi : Le Guide Ultime (MIUI & HyperOS)",
+    excerpt: "Pas d'internet sur votre Xiaomi avec Free Mobile ? Voici la config APN exacte pour MIUI et HyperOS. Résolu en 2 minutes, garanti.",
+    date: "2026-03-24",
+    author: "Wade",
+    readTime: "7 min",
+    category: "Configuration",
+    image: "/blog_xiaomi_apn_free_mobile.png",
+    imagePrompt: "Tech 3D, Isometric, Glassmorphism, Free Mobile colors (Red/White), clean white background. A Xiaomi smartphone displaying MIUI/HyperOS network settings screen with APN configuration fields visible. Surrounding the phone are floating 3D icons: a red SIM card with Free branding, gear/settings cogs, 4G/5G signal bars, and the Xiaomi Mi logo. Soft gradient lighting, modern minimal premium tech blog style, professional digital art, 8k resolution.",
+    content: `
+      <p>Vous venez de glisser votre carte SIM <strong>Free Mobile</strong> dans votre tout nouveau <strong>Xiaomi Redmi Note 13</strong>, <strong>Xiaomi 14</strong> ou <strong>POCO X6</strong> et… rien. Les appels passent, les SMS aussi, mais impossible de charger la moindre page web. Pas de 4G, pas de <strong>5G</strong>, pas d'Internet. Ce <strong>problème réseau</strong> touche des milliers d'utilisateurs Xiaomi chaque mois en France, et la raison est toujours la même : l'<strong>APN</strong> (Access Point Name) n'est pas configuré correctement.</p>
+      <p>Que votre Xiaomi tourne sous <strong>MIUI 14</strong>, <strong>MIUI 15</strong> ou le tout nouveau <strong>HyperOS 2</strong>, les menus ont changé de nom et de place au fil des mises à jour. Résultat : même les tutos récents sont souvent obsolètes. Ce guide est à jour en mars 2026 et couvre <strong>toutes les interfaces Xiaomi</strong> actuelles.</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-bold text-blue-800">La solution express (30 secondes) :</p>
+        <p class="text-blue-700 mt-2">Allez dans <strong>Paramètres > Cartes SIM et réseaux mobiles > Free > Noms des points d'accès</strong>, créez un nouvel APN avec le nom <strong>"Free"</strong> et l'adresse APN <strong>"free"</strong>. Sauvegardez, sélectionnez-le et redémarrez. Détails complets ci-dessous.</p>
+      </div>
+
+      <h2>Pourquoi les Xiaomi posent-ils problème avec Free Mobile ?</h2>
+      <p>Contrairement à Samsung ou Google Pixel qui embarquent une base de données APN quasi complète pour les opérateurs français, les smartphones <strong>Xiaomi</strong> (y compris les marques <strong>Redmi</strong> et <strong>POCO</strong>) sont conçus pour le marché mondial. La configuration APN de <strong>Free Mobile</strong> n'est pas toujours pré-enregistrée dans le firmware, surtout sur les modèles importés ou les versions internationales.</p>
+      <p>Les raisons concrètes du blocage :</p>
+      <ul>
+        <li><strong>Base APN incomplète :</strong> Le firmware Xiaomi ne contient souvent que les profils Orange et SFR. Free Mobile, plus récent sur le marché, est parfois oublié.</li>
+        <li><strong>Mise à jour système :</strong> Une mise à jour de MIUI vers HyperOS peut écraser vos réglages APN personnalisés et remettre un profil par défaut qui ne fonctionne pas.</li>
+        <li><strong>Double SIM :</strong> Sur les Xiaomi Dual SIM, l'APN se configure par emplacement SIM. Si Free est dans le slot 2, les réglages du slot 1 ne s'appliquent pas.</li>
+        <li><strong>ROM modifiée :</strong> Si vous avez flashé une ROM custom (Xiaomi.eu, LineageOS), les profils opérateurs français sont rarement inclus.</li>
+      </ul>
+
+      <h2>Tutoriel : Configurer l'APN Free Mobile sur MIUI 14/15</h2>
+      <p>Si votre Xiaomi est encore sous <strong>MIUI</strong> (vérifiez dans <strong>Paramètres > À propos du téléphone</strong>), suivez ces étapes :</p>
+      <ol>
+        <li>Ouvrez <strong>Paramètres</strong> (icône engrenage).</li>
+        <li>Appuyez sur <strong>Cartes SIM et réseaux mobiles</strong>.</li>
+        <li>Sélectionnez la carte SIM <strong>Free</strong> (SIM 1 ou SIM 2 selon l'emplacement).</li>
+        <li>Appuyez sur <strong>Noms des points d'accès</strong> (APN).</li>
+        <li>Appuyez sur <strong>"+" (Nouvel APN)</strong> en bas de l'écran.</li>
+        <li>Remplissez les champs comme indiqué ci-dessous.</li>
+      </ol>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">APN Internet Free Mobile (obligatoire)</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><strong>Nom :</strong> Free</li>
+          <li><strong>APN :</strong> free</li>
+          <li><strong>Proxy :</strong> (laisser vide)</li>
+          <li><strong>Port :</strong> (laisser vide)</li>
+          <li><strong>Nom d'utilisateur :</strong> (laisser vide)</li>
+          <li><strong>Mot de passe :</strong> (laisser vide)</li>
+          <li><strong>MCC :</strong> 208</li>
+          <li><strong>MNC :</strong> 15</li>
+          <li><strong>Type d'authentification :</strong> Aucun</li>
+          <li><strong>Type d'APN :</strong> default,supl</li>
+          <li><strong>Protocole APN :</strong> IPv4/IPv6</li>
+          <li><strong>Protocole d'itinérance APN :</strong> IPv4/IPv6</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">APN MMS Free Mobile (pour envoyer/recevoir des photos par MMS)</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><strong>Nom :</strong> Free MMS</li>
+          <li><strong>APN :</strong> mmsfree</li>
+          <li><strong>MMSC :</strong> http://mms.free.fr</li>
+          <li><strong>Proxy MMS :</strong> (laisser vide)</li>
+          <li><strong>Port MMS :</strong> (laisser vide)</li>
+          <li><strong>MCC :</strong> 208</li>
+          <li><strong>MNC :</strong> 15</li>
+          <li><strong>Type d'authentification :</strong> Aucun</li>
+          <li><strong>Type d'APN :</strong> mms</li>
+          <li><strong>Protocole APN :</strong> IPv4/IPv6</li>
+          <li><strong>Protocole d'itinérance APN :</strong> IPv4/IPv6</li>
+        </ul>
+      </div>
+
+      <ol start="7">
+        <li>Appuyez sur les <strong>trois points</strong> en haut à droite puis sur <strong>"Enregistrer"</strong> (ou le bouton ✓).</li>
+        <li>Sélectionnez l'APN <strong>"Free"</strong> comme APN par défaut (le point bleu doit apparaître à côté).</li>
+        <li><strong>Redémarrez votre Xiaomi</strong>. C'est indispensable pour appliquer les changements.</li>
+      </ol>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
+        <p class="font-bold text-green-800">💡 Astuce MIUI spécifique :</p>
+        <p class="text-green-700 mt-1">Sur MIUI 14 et 15, le bouton "+" pour ajouter un APN peut être caché en bas de la liste des APN existants. <strong>Scrollez jusqu'en bas</strong> de l'écran pour le trouver. Si vous ne le voyez toujours pas, appuyez sur le menu trois points (⋮) en haut à droite et sélectionnez <strong>"Nouvel APN"</strong>.</p>
+      </div>
+
+      <h2>Tutoriel : Configurer l'APN Free Mobile sur HyperOS (1.0 et 2.0)</h2>
+      <p>Depuis fin 2023, Xiaomi remplace progressivement MIUI par <strong>HyperOS</strong>. L'interface est plus épurée mais les menus ont changé de place. Voici le chemin exact :</p>
+      <ol>
+        <li>Ouvrez <strong>Paramètres</strong>.</li>
+        <li>Appuyez sur <strong>Réseau mobile</strong> (et non plus "Cartes SIM et réseaux mobiles").</li>
+        <li>Sélectionnez votre carte SIM <strong>Free</strong>.</li>
+        <li>Descendez et appuyez sur <strong>Noms des points d'accès (APN)</strong>.</li>
+        <li>Appuyez sur <strong>"Nouvel APN"</strong> ou le bouton <strong>"+"</strong>.</li>
+        <li>Saisissez les <strong>mêmes paramètres APN</strong> que ceux listés ci-dessus pour MIUI (ils sont identiques).</li>
+        <li>Enregistrez avec le bouton <strong>"✓"</strong> ou via le menu trois points > <strong>Enregistrer</strong>.</li>
+        <li>Sélectionnez l'APN "Free" comme profil actif.</li>
+        <li><strong>Redémarrez</strong> votre smartphone.</li>
+      </ol>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
+        <p class="font-bold text-green-800">💡 Spécificité HyperOS 2 (Xiaomi 14, 15, Redmi Note 14) :</p>
+        <p class="text-green-700 mt-1">Sur HyperOS 2, le menu APN est parfois masqué derrière <strong>Paramètres > Réseau mobile > [Votre SIM] > Paramètres avancés > Noms des points d'accès</strong>. Si vous ne le trouvez pas avec le chemin standard, cherchez dans les paramètres avancés. Vous pouvez aussi utiliser la barre de recherche en haut des Paramètres et taper <strong>"APN"</strong>.</p>
+      </div>
+
+      <h2>Xiaomi et 5G Free Mobile : la compatibilité</h2>
+      <p>Tous les Xiaomi ne sont pas égaux face à la <strong>5G Free Mobile</strong>. L'opérateur utilise principalement les bandes suivantes :</p>
+      <ul>
+        <li><strong>n1 (2100 MHz)</strong> : La bande 5G la plus répandue, supportée par quasiment tous les Xiaomi 5G.</li>
+        <li><strong>n3 (1800 MHz)</strong> : Bien couverte par les modèles européens.</li>
+        <li><strong>n28 (700 MHz)</strong> : La bande "couverture" de Free, essentielle en zone rurale. <strong>Attention</strong> : les Xiaomi importés de Chine ne supportent souvent pas cette bande !</li>
+        <li><strong>n78 (3500 MHz)</strong> : La bande 5G ultra-rapide. Supportée par les Xiaomi 13, 14, 15 et POCO F5/F6.</li>
+      </ul>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6">
+        <p class="font-bold text-red-800">⚠️ Attention aux Xiaomi importés :</p>
+        <p class="text-red-700 mt-2">Les modèles achetés sur <strong>AliExpress</strong>, <strong>Banggood</strong> ou importés de Chine/Inde portent souvent une référence de type <strong>"CN"</strong> ou <strong>"IN"</strong>. Ces variantes ne supportent pas toujours les bandes de fréquence européennes, notamment la <strong>bande 28 (700 MHz)</strong> cruciale pour Free Mobile en zone rurale. Avant d'acheter, vérifiez que la mention <strong>"Global"</strong> ou <strong>"EU"</strong> figure dans la référence du produit. Pour en savoir plus, consultez notre section <a href='/marques'>marques compatibles</a>.</p>
+      </div>
+
+      <p>Pour activer la 5G sur votre Xiaomi :</p>
+      <ol>
+        <li>Allez dans <strong>Paramètres > Réseau mobile > [Votre SIM Free]</strong>.</li>
+        <li>Appuyez sur <strong>Type de réseau préféré</strong>.</li>
+        <li>Sélectionnez <strong>"5G/4G/3G/2G (automatique)"</strong>.</li>
+      </ol>
+      <p>Si l'option 5G n'apparaît pas, votre modèle n'est tout simplement pas compatible 5G, ou vous utilisez une ROM qui ne la supporte pas.</p>
+
+      <h2>Les problèmes fréquents et leurs solutions</h2>
+
+      <h3>❌ "J'ai configuré l'APN mais toujours pas d'internet"</h3>
+      <p>C'est le problème le plus courant. Vérifiez dans cet ordre :</p>
+      <ul>
+        <li><strong>Données mobiles activées :</strong> Descendez les notifications et vérifiez que l'icône "Données mobiles" est bien allumée. Sur MIUI/HyperOS, elle peut se désactiver après un redémarrage.</li>
+        <li><strong>Bon slot SIM sélectionné :</strong> Sur un Xiaomi Dual SIM, allez dans <strong>Paramètres > Cartes SIM et réseaux mobiles</strong> et vérifiez que Free est bien défini comme <strong>"Données par défaut"</strong>.</li>
+        <li><strong>Vérifiez les fautes de frappe :</strong> L'APN doit être <strong>"free"</strong> en minuscules, pas "Free" ni "FREE". Une majuscule suffit à bloquer la connexion.</li>
+        <li><strong>Mode avion :</strong> Activez le mode avion pendant 10 secondes puis désactivez-le. Cela force une nouvelle recherche réseau.</li>
+      </ul>
+
+      <h3>❌ "Le bouton Nouvel APN est grisé ou absent"</h3>
+      <p>Deux causes possibles :</p>
+      <ul>
+        <li><strong>Téléphone verrouillé opérateur :</strong> Si votre Xiaomi a été acheté via un autre opérateur (Orange, SFR, Bouygues), l'APN peut être verrouillé. Faites désimlocker votre téléphone, puis réinitialisez les réglages réseau.</li>
+        <li><strong>Profil opérateur poussé :</strong> Allez dans <strong>Paramètres > Système > Réinitialiser > Restaurer les paramètres réseau</strong>. Attention : cela supprimera aussi vos mots de passe Wi-Fi enregistrés.</li>
+      </ul>
+
+      <h3>❌ "Les MMS ne fonctionnent pas (photos non reçues)"</h3>
+      <p>Vous avez sûrement configuré l'APN Internet mais oublié l'<strong>APN MMS</strong>. Free Mobile utilise <strong>deux APN séparés</strong> : "free" pour Internet et "mmsfree" pour les MMS. Créez le deuxième profil avec les paramètres MMS listés plus haut. Pour un rappel complet, consultez notre page <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">configuration APN Free Mobile</a>.</p>
+
+      <h3>❌ "Je perds le réseau Free de manière aléatoire"</h3>
+      <p>Ce phénomène de décrochage est souvent lié à une fonctionnalité MIUI/HyperOS d'économie de batterie trop agressive :</p>
+      <ol>
+        <li>Allez dans <strong>Paramètres > Batterie</strong>.</li>
+        <li>Désactivez <strong>"Économie de batterie adaptative"</strong> ou passez en mode <strong>"Aucune restriction"</strong> pour les applications réseau.</li>
+        <li>Dans <strong>Paramètres > Applications > Gérer les applications</strong>, trouvez les services réseau et désactivez <strong>"Restreindre l'activité en arrière-plan"</strong>.</li>
+      </ol>
+
+      <h2>Réinitialiser les APN : la solution nucléaire</h2>
+      <p>Si vous avez essayé plusieurs configurations et que plus rien ne fonctionne, il est temps de repartir de zéro :</p>
+      <ol>
+        <li>Allez dans <strong>Paramètres > Réseau mobile > [Votre SIM] > Noms des points d'accès</strong>.</li>
+        <li>Appuyez sur les <strong>trois points (⋮)</strong> en haut à droite.</li>
+        <li>Sélectionnez <strong>"Restaurer les valeurs par défaut"</strong>.</li>
+        <li>Tous les APN seront supprimés. Recréez uniquement les deux APN Free (Internet + MMS) listés dans ce guide.</li>
+        <li><strong>Redémarrez</strong> votre téléphone.</li>
+      </ol>
+      <p>Si même après cette manipulation le problème persiste, effectuez une <strong>réinitialisation complète des paramètres réseau</strong> dans <strong>Paramètres > Système > Réinitialiser > Restaurer les paramètres réseau</strong>. Cela supprimera aussi vos Wi-Fi et appareils Bluetooth, mais ne touchera pas à vos photos ni applications.</p>
+
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p><strong>Q : L'APN est-il le même sur Xiaomi, Redmi et POCO ?</strong><br>
+      R : Oui, <strong>strictement identique</strong>. Xiaomi, Redmi et POCO sont trois marques du même groupe. L'APN Free Mobile ("free" pour Internet, "mmsfree" pour les MMS) fonctionne de manière identique sur tous les modèles : Xiaomi 14, Redmi Note 13, POCO X6 Pro, etc. Seul le chemin dans les menus peut varier légèrement entre MIUI et HyperOS.</p>
+
+      <p><strong>Q : Mon Xiaomi avait Internet avant la mise à jour HyperOS, pourquoi ça ne marche plus ?</strong><br>
+      R : La migration de MIUI vers <strong>HyperOS</strong> réinitialise parfois les profils APN. C'est un bug connu. Il suffit de recréer manuellement l'APN Free comme expliqué dans ce guide. Xiaomi ne corrige généralement pas ce problème par patch car il dépend de la base opérateur embarquée dans le firmware.</p>
+
+      <p><strong>Q : Faut-il configurer l'APN différemment selon le forfait Free (2€ ou 19,99€) ?</strong><br>
+      R : Non. L'<strong>APN est strictement identique</strong> quel que soit votre forfait <strong>Free Mobile</strong>. La seule différence est que le forfait 2€ nécessite l'activation manuelle de la <strong>Data Mobile</strong> depuis votre Espace Abonné pour que les données fonctionnent.</p>
+
+      <p><strong>Q : Mon Xiaomi est un modèle chinois (CN), peut-il fonctionner chez Free Mobile ?</strong><br>
+      R : Partiellement. Les appels et SMS fonctionneront, mais vous risquez de ne pas capter la <strong>4G sur la bande 28 (700 MHz)</strong> qui est la bande principale de Free en zone rurale. En ville, les bandes 3 et 7 devraient fonctionner. Vérifiez les spécifications exactes de votre modèle sur notre page <a href='/marques' class="text-red-600 font-bold hover:underline">marques de téléphones</a>.</p>
+
+      <p><strong>Q : Le partage de connexion (hotspot) ne fonctionne pas depuis mon Xiaomi, est-ce lié à l'APN ?</strong><br>
+      R : Oui, c'est souvent le cas. Pour le partage de connexion, ajoutez <strong>"dun"</strong> au type d'APN, soit <strong>"default,supl,dun"</strong>. Si le problème persiste, vérifiez que le <strong>protocole APN est bien en "IPv4/IPv6"</strong> et non en "IPv6" seul, car beaucoup d'appareils connectés (PC, tablettes) ne gèrent pas l'IPv6 correctement.</p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <p class="text-sm text-gray-600 italic">La configuration APN de <strong>Free Mobile</strong> sur Xiaomi est identique à celle de tout autre smartphone Android. Seuls les chemins de menus changent entre MIUI et HyperOS. Pour retrouver le guide adapté à une autre marque (Samsung, iPhone, Google Pixel...), consultez notre section <a href='/marques'>marques de téléphones</a> ou notre page dédiée à la <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">configuration APN complète</a>.</p>
+      </div>
+    `,
+  },
+  {
     slug: "huawei-honor-reglages-apn-free-mobile-post-embargo-google",
     title: "Huawei & Honor : Configurer l'APN Free Mobile Sans Google",
     excerpt: "Votre Huawei ou Honor sans Google Services ne capte pas la 4G/5G Free Mobile ? Voici les réglages APN manuels complets pour retrouver Internet en 2 minutes.",
