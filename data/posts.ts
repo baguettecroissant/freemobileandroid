@@ -13,6 +13,230 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "free-mobile-usa-configuration-frequences-astuces",
+    title: "Free Mobile aux USA : Config, Fréquences et Pièges à Éviter",
+    excerpt: "Vous partez aux États-Unis avec Free Mobile ? Attention aux fréquences ! Voici la config exacte, les bandes compatibles et les astuces pour avoir du réseau partout.",
+    date: "2026-03-27",
+    author: "Wade",
+    readTime: "8 min",
+    category: "Voyage",
+    image: "/blog_free_mobile_usa.png",
+    imagePrompt: "Tech 3D, Isometric, Glassmorphism, Free Mobile colors (Red/White), clean white background. A smartphone displaying network signal bars and a US flag overlaid with 5G/4G icons, sitting on a stylized 3D map of the United States. Surrounding the phone are floating isometric elements: a red SIM card with Free branding, frequency wave bands labeled B2 B4 B12 n71, an airplane, and the Statue of Liberty in miniature. Soft gradient lighting, modern minimal premium tech blog style, professional digital art, 8k resolution.",
+    content: `
+      <p>Vous bouclez votre valise pour <strong>New York</strong>, <strong>Los Angeles</strong> ou la <strong>Floride</strong>, et une question vous taraude : <em>est-ce que mon forfait <strong>Free Mobile</strong> va fonctionner aux États-Unis ?</em> La réponse courte est oui — mais avec des nuances cruciales que 90 % des voyageurs ignorent. Résultat : ils atterrissent à JFK ou LAX avec un smartphone muet, incapable de commander un Uber ou d'appeler leur hôtel.</p>
+      <p>Le <strong>problème réseau</strong> aux USA avec Free n'est pas une question de forfait (le <strong>Pass Destination</strong> couvre les États-Unis). C'est une question de <strong>fréquences</strong>. Les opérateurs américains (T-Mobile, AT&T) utilisent des bandes radio différentes de celles de l'Europe. Si votre smartphone n'est pas compatible, vous aurez beau avoir le meilleur <strong>APN</strong> du monde, aucune barre de réseau n'apparaîtra.</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-bold text-blue-800">La réponse express :</p>
+        <p class="text-blue-700 mt-2">Avec le forfait Free 5G (19,99€), vous avez <strong>35 Go de data aux USA</strong>, appels/SMS illimités vers la France et en local. Votre APN reste <strong>"free"</strong>, ne changez rien. Activez juste l'<strong>itinérance des données</strong> et vérifiez que votre téléphone supporte les <strong>bandes B2, B4, B12/B13</strong> (4G) et <strong>n71</strong> (5G). C'est tout.</p>
+      </div>
+
+      <h2>Pourquoi les USA sont un cas particulier pour Free Mobile ?</h2>
+      <p>Contrairement à l'Europe où Free Mobile partage les mêmes bandes de fréquence que ses voisins (la fameuse harmonisation européenne), les <strong>États-Unis</strong> utilisent un spectre radio très différent. C'est la principale cause de <strong>problème réseau</strong> pour les voyageurs français.</p>
+
+      <h3>Les bandes de fréquence américaines vs françaises</h3>
+      <p>Voici le cœur du problème. En France, Free Mobile utilise principalement :</p>
+      <ul>
+        <li><strong>4G :</strong> Bandes 3 (1800 MHz), 7 (2600 MHz), 28 (700 MHz)</li>
+        <li><strong>5G :</strong> n1 (2100 MHz), n3 (1800 MHz), n28 (700 MHz), n78 (3500 MHz)</li>
+      </ul>
+      <p>Aux USA, les opérateurs partenaires de Free (principalement <strong>T-Mobile</strong>) utilisent des bandes complètement différentes :</p>
+      <ul>
+        <li><strong>4G LTE :</strong> Bandes <strong>B2 (1900 MHz)</strong>, <strong>B4/B66 (1700/2100 MHz AWS)</strong>, <strong>B12 (700 MHz)</strong>, B71 (600 MHz)</li>
+        <li><strong>5G NR :</strong> <strong>n71 (600 MHz)</strong>, n41 (2500 MHz), n258/n261 (mmWave)</li>
+      </ul>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6">
+        <p class="font-bold text-red-800">⚠️ Le piège des smartphones importés :</p>
+        <p class="text-red-700 mt-2">Un smartphone acheté en France avec la mention <strong>"Européen"</strong> ou <strong>"Global"</strong> est généralement compatible. Mais les téléphones importés de <strong>Chine</strong> (Xiaomi CN, Huawei CN) ou achetés sur <strong>AliExpress</strong> ne supportent souvent <strong>PAS les bandes B2, B4 et B12</strong> utilisées par T-Mobile aux USA. Vérifiez impérativement les spécifications de votre modèle sur notre page <a href='/marques'>marques compatibles</a> avant de partir.</p>
+      </div>
+
+      <h3>La fin de la 3G aux USA : un changement majeur</h3>
+      <p>Depuis 2022, les trois grands opérateurs américains (AT&T, T-Mobile, Verizon) ont <strong>totalement éteint leurs réseaux 3G</strong>. C'est une révolution silencieuse qui piège des milliers de voyageurs européens chaque année. Concrètement :</p>
+      <ul>
+        <li>Si votre téléphone ne supporte pas la <strong>4G sur les bandes américaines</strong>, il ne pourra <strong>ni se connecter à Internet, ni passer d'appels</strong>.</li>
+        <li>Les appels vocaux passent obligatoirement par la <strong>VoLTE</strong> (Voice over LTE). Sans VoLTE active, votre téléphone captera peut-être la data mais sera incapable de téléphoner.</li>
+        <li>Les vieux smartphones 3G-only sont tout simplement <strong>inutilisables</strong> sur le sol américain.</li>
+      </ul>
+
+      <h2>Votre téléphone est-il compatible avec le réseau US ?</h2>
+      <p>Avant de réserver votre vol, voici comment vérifier en 30 secondes si votre smartphone fonctionnera aux États-Unis avec <strong>Free Mobile</strong> :</p>
+
+      <div class="overflow-x-auto my-8">
+        <table class="w-full text-sm text-left text-gray-500 border rounded-lg overflow-hidden">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+              <th scope="col" class="px-6 py-3">Marque / Modèle</th>
+              <th scope="col" class="px-6 py-3">Compatible USA ?</th>
+              <th scope="col" class="px-6 py-3">Détail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">iPhone 12 et + (version FR/EU)</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Oui ✅</span></td>
+              <td class="px-6 py-4">Toutes les bandes US incluses. VoLTE native. Aucun réglage nécessaire.</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Samsung Galaxy S22/S23/S24/S25 (EU)</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Oui ✅</span></td>
+              <td class="px-6 py-4">Versions européennes compatibles B2/B4/B12. VoLTE OK.</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Google Pixel 7/8/9</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Oui ✅</span></td>
+              <td class="px-6 py-4">Conçus aux USA, compatibilité totale. 5G n71 incluse.</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Xiaomi 14 / Redmi Note 13 (Global)</td>
+              <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Partiel ⚠️</span></td>
+              <td class="px-6 py-4">B2 et B4 OK, mais B12/B71 souvent absentes. Couverture limitée hors grandes villes.</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Xiaomi import Chine (CN)</td>
+              <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Non ❌</span></td>
+              <td class="px-6 py-4">Bandes US absentes. Ne fonctionnera quasiment pas.</td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Huawei récent (Pura 70, Mate 60)</td>
+              <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Non ❌</span></td>
+              <td class="px-6 py-4">Embargo US = bandes américaines retirées du firmware. Incompatible.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Pour une liste exhaustive, consultez notre section <a href='/marques' class="text-red-600 font-bold hover:underline">marques de téléphones compatibles</a>.</p>
+
+      <h2>Configuration : les 4 étapes avant de décoller</h2>
+      <p>Voici la checklist complète pour être opérationnel dès l'atterrissage :</p>
+
+      <h3>Étape 1 : Vérifiez votre forfait</h3>
+      <p>Le <strong>Pass Destination</strong> est inclus uniquement dans le <strong>Forfait Free 5G à 19,99€/mois</strong> (ou 9,99€ si vous avez une Freebox). Il vous donne droit à :</p>
+      <ul>
+        <li><strong>35 Go</strong> d'Internet 4G/<strong>5G</strong> aux USA</li>
+        <li><strong>Appels/SMS illimités</strong> vers la France et en local aux USA</li>
+        <li>Aucun surcoût, aucune option à activer</li>
+      </ul>
+      <p><strong>Forfait 2€ :</strong> Vous n'avez PAS le Pass Destination. L'Internet à l'étranger vous sera facturé à la consommation (très cher). Activez impérativement le <strong>Service Voyage</strong> dans votre Espace Abonné et prévoyez une avance sur consommation, ou passez temporairement au forfait 19,99€ avant de partir.</p>
+
+      <h3>Étape 2 : Activez l'itinérance des données</h3>
+      <p>C'est le <strong>coupable n°1</strong> des pannes réseau à l'étranger. Par défaut, votre téléphone bloque toute connexion data hors de France :</p>
+      <ul>
+        <li><strong>Android :</strong> <strong>Paramètres > Réseau mobile > Données en itinérance</strong> → activez l'interrupteur.</li>
+        <li><strong>iPhone :</strong> <strong>Réglages > Données cellulaires > Options > Données à l'étranger</strong> → activez.</li>
+      </ul>
+
+      <h3>Étape 3 : Vérifiez votre APN</h3>
+      <p>Bonne nouvelle : l'<strong>APN Free Mobile</strong> ne change <strong>PAS</strong> aux USA. Il reste identique à celui utilisé en France :</p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">APN Free Mobile (France & USA, identique)</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><strong>Nom :</strong> Free</li>
+          <li><strong>APN :</strong> free</li>
+          <li><strong>MCC :</strong> 208</li>
+          <li><strong>MNC :</strong> 15</li>
+          <li><strong>Type d'APN :</strong> default,supl</li>
+          <li><strong>Protocole APN :</strong> IPv4/IPv6</li>
+          <li><strong>Protocole d'itinérance APN :</strong> IPv4/IPv6</li>
+        </ul>
+      </div>
+      <p>Si votre APN est mal configuré ou a été écrasé par une mise à jour, consultez notre guide complet <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">configurer l'APN Free Mobile</a> pour le recréer en 2 minutes.</p>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
+        <p class="font-bold text-green-800">💡 Astuce critique pour les USA :</p>
+        <p class="text-green-700 mt-1">Le champ <strong>"Protocole d'itinérance APN"</strong> doit impérativement être réglé sur <strong>"IPv4/IPv6"</strong> et NON sur "IPv6" seul. Beaucoup de réseaux américains ne gèrent pas encore parfaitement l'IPv6 en roaming. Si ce champ est mal réglé, vous aurez du réseau mais aucune page web ne chargera.</p>
+      </div>
+
+      <h3>Étape 4 : Activez la VoLTE</h3>
+      <p>Sans la <strong>3G aux USA</strong>, la VoLTE (Voice over LTE) est <strong>obligatoire</strong> pour passer des appels. Si elle n'est pas activée, vous aurez Internet mais ne pourrez ni appeler, ni recevoir d'appels :</p>
+      <ul>
+        <li><strong>Android :</strong> <strong>Paramètres > Réseau mobile > [Votre SIM Free] > Appels VoLTE</strong> → activez.</li>
+        <li><strong>iPhone :</strong> <strong>Réglages > Données cellulaires > Options > Voix et données</strong> → sélectionnez <strong>"LTE, VoLTE activé"</strong>.</li>
+      </ul>
+
+      <h2>Sur quel opérateur américain Free s'accroche-t-il ?</h2>
+      <p>Quand vous atterrissez aux USA, votre smartphone ne se connecte pas directement à Free Mobile (qui n'a pas d'antennes aux États-Unis). Il se connecte à un <strong>opérateur partenaire</strong> grâce à un accord d'itinérance (roaming). En 2026, Free Mobile utilise principalement :</p>
+      <ul>
+        <li><strong>T-Mobile</strong> : Le partenaire principal. Excellente couverture dans les grandes villes et le long des autoroutes. C'est sur T-Mobile que vous aurez accès à la <strong>5G</strong> si votre téléphone est compatible (bande n71).</li>
+        <li><strong>AT&T</strong> : Partenaire secondaire. Votre téléphone peut s'y accrocher dans les zones où T-Mobile est absent, mais le débit peut être plus limité en roaming.</li>
+      </ul>
+      <p>Votre smartphone sélectionnera automatiquement le meilleur réseau disponible. Si vous constatez un <strong>problème réseau</strong>, vous pouvez forcer la sélection manuelle dans <strong>Paramètres > Réseau mobile > Sélection du réseau</strong> et choisir "T-Mobile" ou "AT&T" à la main.</p>
+
+      <h2>Les 5 astuces pour maximiser votre réseau aux USA</h2>
+      <ol>
+        <li><strong>Téléchargez vos cartes hors ligne :</strong> Avant de partir, téléchargez les cartes Google Maps / Apple Plans des villes que vous visitez. En cas de zone blanche (parcs nationaux, routes du Midwest), vous aurez quand même le GPS.</li>
+        <li><strong>Forcez le réseau manuellement :</strong> Si votre téléphone s'accroche à AT&T et que le débit est mauvais, passez en sélection manuelle du réseau et choisissez <strong>"T-Mobile"</strong> pour de meilleures performances.</li>
+        <li><strong>Surveillez vos 35 Go :</strong> Free vous enverra un SMS à 80% puis à 100% de consommation. Au-delà, plus de data. Évitez le streaming vidéo HD en 4G et connectez-vous au Wi-Fi de l'hôtel pour les gros téléchargements.</li>
+        <li><strong>Décalage horaire et SMS :</strong> Free envoie les SMS de suivi conso sur le fuseau heure de Paris. Ne soyez pas surpris si vous recevez un SMS "bilan" à 3h du matin heure locale.</li>
+        <li><strong>Wi-Fi Calling (Appels Wi-Fi) :</strong> Si vous êtes dans une zone avec du Wi-Fi mais sans réseau cellulaire (certains bâtiments en béton, sous-sols), activez les <strong>Appels Wi-Fi</strong> dans vos réglages. Vos appels transiteront par Internet comme si vous étiez en France.</li>
+      </ol>
+
+      <div class="bg-gradient-to-r from-blue-50 to-violet-50 border border-blue-200 rounded-xl p-6 my-8">
+        <p class="font-bold text-gray-900 flex items-center gap-2 mb-2">🔒 Protégez-vous sur les Wi-Fi publics américains :</p>
+        <p class="text-gray-700 text-sm leading-relaxed mb-3">Les Starbucks, aéroports et hôtels US proposent du Wi-Fi gratuit, mais souvent non chiffré. Un VPN est indispensable pour protéger vos données bancaires et mots de passe quand vous vous connectez à ces réseaux ouverts.</p>
+        <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=140680&source=freemobile" target="_blank" rel="nofollow noopener noreferrer sponsored" class="inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-800 hover:underline">Voir l'offre NordVPN pour voyageurs Free Mobile →</a>
+      </div>
+
+      <h2>Les problèmes fréquents et leurs solutions</h2>
+
+      <h3>❌ "J'ai du réseau mais impossible de téléphoner"</h3>
+      <p>C'est le symptôme typique d'un téléphone sans <strong>VoLTE</strong> aux USA. Sans réseau 3G (éteint depuis 2022), votre smartphone ne peut pas rabattre les appels vocaux sur un réseau plus ancien. Solution :</p>
+      <ul>
+        <li>Activez la VoLTE (voir Étape 4 ci-dessus).</li>
+        <li>Si l'option VoLTE n'apparaît pas dans vos paramètres, votre téléphone n'est probablement pas compatible avec la VoLTE de Free Mobile. Vérifiez sur notre page <a href='/marques'>marques compatibles</a>.</li>
+        <li>En dernier recours, utilisez <strong>WhatsApp</strong>, <strong>FaceTime</strong> ou <strong>Signal</strong> pour passer vos appels en VoIP via la data.</li>
+      </ul>
+
+      <h3>❌ "Mon téléphone affiche 'Réseau indisponible' ou 'Pas de service'"</h3>
+      <p>Trois vérifications à faire dans l'ordre :</p>
+      <ul>
+        <li><strong>Itinérance des données :</strong> Vérifiez qu'elle est bien activée (c'est le problème dans 80% des cas).</li>
+        <li><strong>Sélection réseau automatique :</strong> Allez dans <strong>Paramètres > Réseau mobile > Sélection du réseau</strong> et passez en <strong>Automatique</strong>. Parfois, le téléphone essaie de s'accrocher à un opérateur incompatible.</li>
+        <li><strong>Mode avion :</strong> Activez le mode avion pendant 15 secondes, puis désactivez-le. Cela force une nouvelle recherche de réseau.</li>
+      </ul>
+
+      <h3>❌ "Internet est extrêmement lent (Edge, H+)"</h3>
+      <p>Si vous voyez un logo "E" ou "H+" au lieu de "LTE" ou "5G", votre téléphone est accroché sur une bande de secours à faible débit. Causes possibles :</p>
+      <ul>
+        <li>Votre smartphone ne supporte pas les bandes 4G américaines principales (B2, B4, B12). C'est malheureusement un problème matériel, pas de solution logicielle.</li>
+        <li>Vous êtes dans une zone à faible couverture (campagne, montagnes). Rapprochez-vous d'une ville ou d'une autoroute.</li>
+        <li>Forcez le mode réseau sur <strong>"LTE/4G uniquement"</strong> dans vos paramètres pour empêcher le téléphone de basculer sur 2G/3G (désactivés).</li>
+      </ul>
+
+      <h3>❌ "Mon forfait 2€ ne fonctionne pas du tout aux USA"</h3>
+      <p>C'est normal. Le <strong>forfait 2€</strong> n'inclut pas le Pass Destination. Pour utiliser votre téléphone aux USA :</p>
+      <ul>
+        <li>Activez l'<strong>Option Voyage</strong> + <strong>Communications internationales</strong> dans votre Espace Abonné.</li>
+        <li>Ajoutez une <strong>avance sur consommation</strong> (10€ minimum recommandé).</li>
+        <li>Ou, solution plus économique : passez temporairement au forfait 19,99€ depuis votre Espace Abonné (sans engagement, changement immédiat).</li>
+      </ul>
+
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p><strong>Q : Mon APN change-t-il quand j'arrive aux États-Unis ?</strong><br>
+      R : Non, <strong>jamais</strong>. L'<a href='/configurer-apn'>APN Free Mobile</a> reste identique partout dans le monde : nom "Free", APN "free". Le roaming est géré automatiquement par le réseau. Ne touchez à rien.</p>
+
+      <p><strong>Q : Est-ce que je peux utiliser la 5G de Free aux USA ?</strong><br>
+      R : Oui, si votre smartphone supporte la bande <strong>n71 (600 MHz)</strong> utilisée par T-Mobile aux USA. Les iPhone 14/15/16 et les Samsung Galaxy S24/S25 européens sont compatibles. Les Xiaomi et POCO Global ne supportent généralement pas la n71 américaine.</p>
+
+      <p><strong>Q : Que se passe-t-il si je dépasse les 35 Go aux USA ?</strong><br>
+      R : Votre connexion data est <strong>coupée</strong> jusqu'au prochain mois. Pas de hors-forfait, pas de facturation surprise — Free bloque tout. Vous pourrez toujours appeler et envoyer des SMS. Pour continuer à surfer, connectez-vous en Wi-Fi.</p>
+
+      <p><strong>Q : Free fonctionne-t-il à Hawaï et en Alaska ?</strong><br>
+      R : Oui. <strong>Hawaï</strong> et l'<strong>Alaska</strong> sont couverts par le Pass Destination au même titre que le reste des États-Unis. Les réseaux T-Mobile y sont présents, même si la couverture est plus limitée dans les zones rurales d'Alaska.</p>
+
+      <p><strong>Q : Puis-je utiliser le partage de connexion (hotspot) aux USA ?</strong><br>
+      R : Oui, le partage de connexion fonctionne normalement aux USA avec Free Mobile. Vos 35 Go sont utilisables en hotspot. Vérifiez que votre type d'APN inclut bien <strong>"default,supl"</strong> (ajoutez <strong>"dun"</strong> si le partage est bloqué, soit <strong>"default,supl,dun"</strong>).</p>
+
+      <p><strong>Q : Et si je fais une escale au Canada, ça marche aussi ?</strong><br>
+      R : Oui. Le <strong>Canada</strong> est aussi couvert par le Pass Destination de Free Mobile, avec les mêmes 35 Go. Les bandes de fréquence canadiennes sont similaires aux américaines (les opérateurs Rogers et Bell utilisent B2, B4, B7), donc votre téléphone compatible USA fonctionnera aussi au Canada.</p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <p class="text-sm text-gray-600 italic">Avant de voyager aux USA avec <strong>Free Mobile</strong>, vérifiez la compatibilité exacte de votre smartphone (bandes de fréquence, VoLTE) sur notre page <a href='/marques'>marques de téléphones</a>. Pour tout problème de configuration réseau, consultez notre guide <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">APN Free Mobile</a>.</p>
+      </div>
+    `,
+  },
+  {
     slug: "config-apn-free-mobile-xiaomi-guide-miui-hyperos",
     title: "Config APN Free Mobile Xiaomi : Le Guide Ultime (MIUI & HyperOS)",
     excerpt: "Pas d'internet sur votre Xiaomi avec Free Mobile ? Voici la config APN exacte pour MIUI et HyperOS. Résolu en 2 minutes, garanti.",
