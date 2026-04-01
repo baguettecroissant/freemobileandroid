@@ -13,6 +13,236 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "forfait-free-max-internet-illimite-5g-135-destinations",
+    title: "Forfait Free Max : Internet Illimité en 5G dans 135 Pays",
+    excerpt: "Free Mobile lance le forfait Free Max : data illimitée en 5G en France ET à l'étranger dans 135 destinations. Prix, détails, pièges et comparatif avec l'ancien forfait.",
+    date: "2026-04-01",
+    author: "Wade",
+    readTime: "7 min",
+    category: "5G",
+    image: "/blog_free_max_forfait.png",
+    imagePrompt: "Tech 3D, Isometric, Glassmorphism style illustration. A premium smartphone displaying ILLIMITÉ on screen with glowing 5G signal waves radiating outward. The phone sits on a stylized 3D globe showing Europe, USA, Africa, and Asia. Surrounding the phone are floating isometric elements: a red SIM card with Free branding, an infinity symbol representing unlimited data, a VPN shield icon, an eSIM watch icon, and small 3D airplane icons representing international destinations. Color palette: Free Mobile Red (#CD1E25) and White with clean light gradient background. Soft gradient lighting, modern minimal premium tech blog aesthetic, professional digital art, ultra clean composition, 8k resolution.",
+    content: `
+      <p>C'est officiel : <strong>Free Mobile</strong> vient de frapper un très grand coup. Le <strong>31 mars 2026</strong>, l'opérateur a dévoilé le <strong>forfait Free Max</strong>, une offre mobile qui promet ni plus ni moins que la fin des enveloppes data. <strong>Internet illimité en 5G/5G+</strong> en France, mais aussi — et c'est la vraie bombe — <strong>Internet illimité dans plus de 135 destinations à travers le monde</strong>. Pas 35 Go comme avant. Pas 100 Go. <em>Illimité</em>.</p>
+      <p>À <strong>29,99€/mois sans engagement</strong> (ou <strong>19,99€ pour les abonnés Freebox</strong>), Free bouscule tout le marché. Mais est-ce vraiment aussi bien que ça en a l'air ? Quelles sont les conditions cachées ? Et surtout : devez-vous quitter votre forfait actuel pour migrer vers le Free Max ? On vous dit tout, sans bullshit.</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-bold text-blue-800">Le résumé express :</p>
+        <p class="text-blue-700 mt-2"><strong>29,99€/mois</strong> (19,99€ avec Freebox). Data illimitée en <strong>5G/5G+</strong> en France + dans <strong>135 pays</strong>. Appels illimités vers les mobiles d'Europe, USA, Canada, Chine, DOM. SMS/MMS illimités. <strong>VPN intégré</strong>, <strong>eSIM Watch</strong> et <strong>Free TV+</strong> inclus. Sans engagement. Disponible immédiatement.</p>
+      </div>
+
+      <h2>Ce que contient le forfait Free Max (les détails)</h2>
+      <p>Oubliez les enveloppes data. Voici tout ce que le <strong>Free Max</strong> embarque :</p>
+
+      <h3>Internet illimité, vraiment illimité</h3>
+      <ul>
+        <li><strong>En France métropolitaine :</strong> Internet en <strong>5G et 5G+</strong> sans aucune limite de volume. Pas de fair use, pas de bridage après X Go. Vous consommez ce que vous voulez.</li>
+        <li><strong>À l'étranger (135+ destinations) :</strong> Internet illimité en <strong>5G ou 4G</strong> selon la couverture locale. L'Europe, les DOM, la Suisse, les <strong>États-Unis</strong>, le <strong>Canada</strong>, le <strong>Maroc</strong>, l'<strong>Algérie</strong>, la <strong>Tunisie</strong>, le <strong>Japon</strong>, la <strong>Chine</strong>, le <strong>Brésil</strong>, la <strong>Thaïlande</strong>… la liste est monumentale. C'est la première fois qu'un opérateur français propose ça.</li>
+      </ul>
+
+      <h3>Appels et SMS : couverture mondiale</h3>
+      <ul>
+        <li><strong>Depuis la France :</strong> Appels illimités vers les <strong>mobiles d'Europe, Suisse, Andorre, États-Unis, Canada, Chine et DOM</strong>. Appels illimités vers les <strong>fixes de 100 destinations</strong>.</li>
+        <li><strong>Depuis l'étranger :</strong> Appels, SMS et MMS illimités depuis <strong>plus de 65 pays</strong> vers la France.</li>
+        <li><strong>SMS/MMS :</strong> Illimités en France et vers l'Europe, la Suisse, Andorre et les DOM.</li>
+      </ul>
+
+      <h3>Les services inclus (sans surcoût)</h3>
+      <ul>
+        <li><strong>Free mVPN :</strong> Un VPN intégré directement dans le réseau Free pour sécuriser votre navigation mobile. Pas besoin d'app tierce.</li>
+        <li><strong>eSIM Watch :</strong> Connectez votre Apple Watch (ou montre compatible) à votre forfait sans carte SIM physique supplémentaire.</li>
+        <li><strong>Free TV+ :</strong> Accès à l'application de streaming Free inclus dans le forfait.</li>
+      </ul>
+
+      <h2>Free Max vs Ancien Forfait Free 5G : le comparatif</h2>
+      <p>Pour y voir clair, voici ce qui change concrètement par rapport à l'ancien forfait Free à 19,99€ :</p>
+
+      <div class="overflow-x-auto my-8">
+        <table class="w-full text-sm text-left text-gray-500 border rounded-lg overflow-hidden">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+              <th scope="col" class="px-6 py-3">Caractéristique</th>
+              <th scope="col" class="px-6 py-3">Ancien Forfait Free 5G</th>
+              <th scope="col" class="px-6 py-3">Nouveau Free Max</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Prix</td>
+              <td class="px-6 py-4">19,99€ (9,99€ Freebox)</td>
+              <td class="px-6 py-4"><strong>29,99€ (19,99€ Freebox)</strong></td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Data en France</td>
+              <td class="px-6 py-4">300 Go en 5G</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">ILLIMITÉ en 5G/5G+ ✅</span></td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Data à l'étranger</td>
+              <td class="px-6 py-4">35 Go (Europe + certains pays)</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">ILLIMITÉ dans 135+ pays ✅</span></td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Appels internationaux</td>
+              <td class="px-6 py-4">Fixes de 100 destinations</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Mobiles EU/USA/Canada/Chine + Fixes 100 dest. ✅</span></td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">VPN intégré</td>
+              <td class="px-6 py-4">❌ Non</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Free mVPN ✅</span></td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">eSIM Watch</td>
+              <td class="px-6 py-4">Option payante</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Inclus ✅</span></td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Engagement</td>
+              <td class="px-6 py-4">Sans engagement</td>
+              <td class="px-6 py-4">Sans engagement</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
+        <p class="font-bold text-green-800">💡 Le point clé :</p>
+        <p class="text-green-700 mt-1">Pour <strong>10€ de plus par mois</strong> (ou le même prix de 19,99€ si vous avez une Freebox), vous passez de 300 Go à <strong>illimité en France</strong> et de 35 Go à <strong>illimité dans 135 pays</strong>. Pour les voyageurs fréquents, c'est une évidence. Pour les sédentaires avec du Wi-Fi partout... c'est plus discutable.</p>
+      </div>
+
+      <h2>Les conditions à connaître (le petit texte en bas)</h2>
+      <p>Free a beau crier "illimité" partout, il y a évidemment des <strong>conditions d'utilisation raisonnable</strong> à respecter. Voici ce qu'il faut savoir :</p>
+
+      <h3>Usage personnel uniquement</h3>
+      <p>Le forfait <strong>Free Max</strong> est destiné à un usage <strong>strictement personnel sur smartphone</strong>. Utiliser votre SIM comme passerelle Internet fixe (hotspot permanent pour remplacer votre box), comme modem pour de la vidéosurveillance ou pour du M2M (Machine to Machine) peut entraîner des <strong>restrictions de débit ou la résiliation du forfait</strong>. En clair : c'est un forfait mobile, pas un abonnement fibre déguisé.</p>
+
+      <h3>Itinérance internationale : la règle des 4 mois</h3>
+      <p>Si votre <strong>consommation à l'étranger dépasse votre consommation en France</strong> pendant <strong>4 mois consécutifs</strong>, Free se réserve le droit d'appliquer des frais supplémentaires après notification et un délai de 15 jours. En pratique : si vous vivez à l'étranger et n'utilisez votre forfait qu'en roaming, Free finira par vous rappeler à l'ordre. Pour les vacances ou les déplacements professionnels réguliers, aucun souci.</p>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6">
+        <p class="font-bold text-red-800">⚠️ Attention expatriés :</p>
+        <p class="text-red-700 mt-2">Le forfait Free Max n'est <strong>pas conçu pour une utilisation permanente à l'étranger</strong>. Si vous résidez hors de France, l'opérateur pourra appliquer des restrictions après 4 mois d'utilisation majoritairement en roaming. Pour les voyages et déplacements ponctuels (même fréquents), c'est parfait.</p>
+      </div>
+
+      <h3>Pas de bridage de débit</h3>
+      <p>Contrairement aux forfaits classiques où le débit est réduit après avoir atteint un seuil (ex : bridé à 128 kbps après 300 Go), le <strong>Free Max ne prévoit aucune réduction de débit automatique</strong> en France. Vous bénéficiez de la vitesse maximale de la <strong>5G/5G+</strong> en permanence, selon la couverture de votre zone.</p>
+
+      <h2>Comment souscrire ou migrer vers le Free Max ?</h2>
+      <p>Bonne nouvelle : la migration est <strong>gratuite et immédiate</strong> pour les abonnés Free Mobile existants. Voici comment faire :</p>
+
+      <h3>Si vous êtes déjà chez Free Mobile</h3>
+      <ol>
+        <li>Connectez-vous à votre <strong>Espace Abonné</strong> sur <a href="https://mobile.free.fr/account/" target="_blank" class="text-red-600 font-bold hover:underline">mobile.free.fr</a> (ou via l'app Free).</li>
+        <li>Rendez-vous dans la section <strong>"Mon Forfait"</strong>.</li>
+        <li>Sélectionnez le <strong>"Forfait Free Max"</strong>.</li>
+        <li>Confirmez le changement. Le basculement est effectif <strong>sous 24h</strong>.</li>
+      </ol>
+      <p><em>Aucun frais de changement, pas besoin de nouvelle SIM, et votre numéro ne change pas.</em></p>
+
+      <h3>Si vous venez d'un autre opérateur</h3>
+      <ol>
+        <li>Rendez-vous sur <a href="https://mobile.free.fr/" target="_blank" class="text-red-600 font-bold hover:underline">mobile.free.fr</a>.</li>
+        <li>Sélectionnez le <strong>Forfait Free Max à 29,99€/mois</strong>.</li>
+        <li>Munissez-vous de votre <strong>numéro RIO</strong> (composez le <strong>3179</strong> depuis votre ligne actuelle pour l'obtenir).</li>
+        <li>Suivez les étapes de souscription. La <strong>portabilité du numéro</strong> est automatique et prend entre 1 et 3 jours ouvrés.</li>
+      </ol>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
+        <p class="font-bold text-green-800">💡 Astuce APN :</p>
+        <p class="text-green-700 mt-1">L'<strong>APN</strong> du forfait Free Max est <strong>strictement identique</strong> à celui des autres forfaits Free Mobile : nom "<strong>Free</strong>", APN "<strong>free</strong>". Rien ne change côté configuration réseau. Si votre téléphone fonctionnait déjà avec Free, il fonctionnera immédiatement avec Free Max. Pour les nouveaux abonnés, consultez notre guide <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">configurer l'APN Free Mobile</a>.</p>
+      </div>
+
+      <h2>Pour qui le Free Max est-il vraiment fait ?</h2>
+      <p>Soyons pragmatiques. Voici notre recommandation selon votre profil :</p>
+
+      <div class="overflow-x-auto my-8">
+        <table class="w-full text-sm text-left text-gray-500 border rounded-lg overflow-hidden">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+              <th scope="col" class="px-6 py-3">Profil</th>
+              <th scope="col" class="px-6 py-3">Free Max ?</th>
+              <th scope="col" class="px-6 py-3">Pourquoi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Voyageur fréquent (pro ou perso)</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Foncez ✅</span></td>
+              <td class="px-6 py-4">L'illimité dans 135 pays tue tous les pass roaming du marché. Le rapport qualité/prix est imbattable.</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Gros consommateur de data</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Oui ✅</span></td>
+              <td class="px-6 py-4">Si vous explosez régulièrement les 300 Go (streaming, hotspot, télétravail), l'illimité met fin au stress.</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Abonné Freebox</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Excellente affaire ✅</span></td>
+              <td class="px-6 py-4">À 19,99€/mois (même prix que l'ancien forfait plein tarif), c'est un upgrade gratuit en services.</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Utilisateur sédentaire (Wi-Fi partout)</td>
+              <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Pas nécessaire ⚠️</span></td>
+              <td class="px-6 py-4">Si vous ne dépassez jamais 50 Go/mois et ne voyagez pas, l'ancien forfait à 19,99€ suffit largement.</td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Budget serré</td>
+              <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Non ❌</span></td>
+              <td class="px-6 py-4">Le forfait Free 5G à 19,99€ (ou le Série Free à ~10€) reste un excellent rapport qualité/prix.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Free Max et compatibilité téléphone : ce qu'il faut vérifier</h2>
+      <p>Le forfait est révolutionnaire, mais votre smartphone doit suivre. Pour profiter pleinement du <strong>Free Max</strong>, votre téléphone doit :</p>
+      <ul>
+        <li><strong>Supporter la 5G/5G+ :</strong> Bandes <strong>n1, n3, n28 et n78</strong> pour la couverture maximale Free en France. Consultez notre page <a href='/marques' class="text-red-600 font-bold hover:underline">marques de téléphones</a> pour vérifier.</li>
+        <li><strong>Être compatible avec les bandes locales à l'étranger :</strong> Si vous voyagez aux <strong>USA</strong>, votre smartphone doit supporter les bandes <strong>B2, B4, B12</strong> (4G) et <strong>n71</strong> (5G). Les iPhone 13+ et Samsung Galaxy S22+ sont OK. Les Xiaomi importés de Chine, souvent non.</li>
+        <li><strong>Supporter l'eSIM</strong> (si vous voulez utiliser l'eSIM Watch) : iPhone XR et +, Samsung Galaxy S21 et +, Google Pixel 3 et +.</li>
+      </ul>
+
+      <h2>Free Max vs la concurrence : où se situe-t-il ?</h2>
+      <p>Au <strong>1er avril 2026</strong>, aucun opérateur français ne propose d'offre comparable :</p>
+      <ul>
+        <li><strong>Orange :</strong> Le forfait le plus premium (Max 300 Go) plafonne à 300 Go en France et 100 Go en Europe pour 64,99€/mois. Pas d'illimité à l'étranger.</li>
+        <li><strong>SFR :</strong> Le forfait Premium 5G offre 250 Go en France et 100 Go en Europe pour 50€/mois. Data limitée hors Europe.</li>
+        <li><strong>Bouygues Telecom :</strong> L'offre Sensation Avantages 200 Go culmine à 200 Go pour 40€/mois. Data roaming limitée à l'Europe.</li>
+      </ul>
+      <p>En résumé : <strong>Free Max offre plus, pour moins cher, avec une couverture internationale que personne ne peut égaler aujourd'hui</strong>. Xavier Niel frappe fort, comme d'habitude.</p>
+
+      <div class="bg-gradient-to-r from-blue-50 to-violet-50 border border-blue-200 rounded-xl p-6 my-8">
+        <p class="font-bold text-gray-900 flex items-center gap-2 mb-2">🔒 Free mVPN inclus, mais est-ce suffisant ?</p>
+        <p class="text-gray-700 text-sm leading-relaxed mb-3">Le <strong>Free mVPN</strong> inclus dans le forfait Max protège votre navigation sur le réseau Free en France. Mais à l'étranger, sur les Wi-Fi d'hôtels, d'aéroports ou de cafés, un VPN premium avec <strong>kill switch</strong> et <strong>protocole WireGuard</strong> est indispensable pour une protection réellement complète de vos données bancaires et mots de passe.</p>
+        <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=140680&source=freemobile" target="_blank" rel="nofollow noopener noreferrer sponsored" class="inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-800 hover:underline">Voir l'offre NordVPN pour voyageurs Free Max →</a>
+      </div>
+
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p><strong>Q : L'ancien forfait Free 5G à 19,99€ existe-t-il encore ?</strong><br>
+      R : Oui, le forfait Free 5G classique (300 Go en France, 35 Go à l'étranger) reste disponible à <strong>19,99€/mois</strong> (9,99€ avec Freebox). Il coexiste avec le <strong>Free Max</strong>. Vous n'êtes pas obligé de migrer.</p>
+
+      <p><strong>Q : Mon APN change-t-il avec le forfait Free Max ?</strong><br>
+      R : <strong>Non, absolument pas.</strong> L'<a href='/configurer-apn'>APN Free Mobile</a> reste identique : nom "Free", APN "free". Aucune modification de configuration réseau n'est nécessaire. Si votre téléphone fonctionnait avant, il fonctionne avec Free Max.</p>
+
+      <p><strong>Q : Puis-je utiliser le partage de connexion (hotspot) avec le Free Max ?</strong><br>
+      R : Oui, le partage de connexion est autorisé. Cependant, une utilisation <strong>abusive en tant que box Internet fixe</strong> (connexion permanente 24h/24 pour alimenter un foyer) pourrait être sanctionnée par Free au titre de l'usage raisonnable.</p>
+
+      <p><strong>Q : Combien de lignes Free Max peut-on avoir avec l'avantage Freebox ?</strong><br>
+      R : L'avantage <strong>Free Family</strong> (19,99€ au lieu de 29,99€) est limité à <strong>4 lignes mobiles</strong> par foyer Freebox. Au-delà, les lignes supplémentaires sont au tarif plein de 29,99€.</p>
+
+      <p><strong>Q : La 5G+ est-elle disponible partout en France ?</strong><br>
+      R : Non. La <strong>5G+</strong> (bande n78 à 3500 MHz) de Free est déployée principalement dans les grandes agglomérations. En zones rurales, vous bénéficierez de la <strong>5G classique</strong> (bandes n1/n3/n28) ou de la <strong>4G+</strong>. Le forfait Free Max fonctionne sur tous ces réseaux sans distinction.</p>
+
+      <p><strong>Q : Existe-t-il une version pro du forfait Free Max ?</strong><br>
+      R : Oui. Le <strong>Forfait Free Pro Max</strong> est proposé aux entreprises et indépendants à <strong>29,99€ HT/mois</strong>. Il offre les mêmes caractéristiques que le forfait grand public, avec en plus une facturation professionnelle et un support dédié.</p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <p class="text-sm text-gray-600 italic">Le forfait <strong>Free Max</strong> utilise les mêmes réglages réseau et le même <strong>APN</strong> que tous les forfaits <strong>Free Mobile</strong>. Si vous rencontrez un <strong>problème réseau</strong> après votre migration, consultez notre guide <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">configuration APN Free Mobile</a> ou vérifiez la compatibilité de votre smartphone sur notre page <a href='/marques' class="text-red-600 font-bold hover:underline">marques de téléphones</a>.</p>
+      </div>
+    `,
+  },
+  {
     slug: "free-mobile-usa-configuration-frequences-astuces",
     title: "Free Mobile aux USA : Config, Fréquences et Pièges à Éviter",
     excerpt: "Vous partez aux États-Unis avec Free Mobile ? Attention aux fréquences ! Voici la config exacte, les bandes compatibles et les astuces pour avoir du réseau partout.",
