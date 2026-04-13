@@ -13,6 +13,185 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "xavier-niel-forfait-6g-free-mobile-date-lancement",
+    title: "Xavier Niel et la 6G : Free Mobile Prépare-t-il un Forfait ?",
+    excerpt: "Forfait 6G chez Free Mobile en 2026 ? On fait le point sur ce que Xavier Niel a vraiment dit, le calendrier réaliste de la 6G et ce qui vous attend concrètement.",
+    date: "2026-04-13",
+    author: "Wade",
+    readTime: "6 min",
+    category: "5G",
+    image: "/blog_6g_niel_forfait.png",
+    imagePrompt: "Tech 3D, Isometric, Glassmorphism style illustration. A futuristic smartphone floating in center displaying '6G?' on screen with holographic question mark above it. Surrounding the phone are floating isometric elements: a red SIM card with Free branding, a glowing '6G' text with futuristic neon blue/purple wireframe, a stylized portrait silhouette of a tech CEO figure, radio wave towers emanating circular signal waves, a calendar showing '2030+', DNA-like helix representing advanced network architecture, and small AI chip icons. In the background, a subtle futuristic cityscape with connected nodes. Color palette: Free Mobile Red (#CD1E25) and White with clean light gradient background, accents of electric blue and neon purple for the 6G futuristic elements. Soft gradient lighting, modern minimal premium tech blog aesthetic, professional digital art, ultra clean composition, 8k resolution.",
+    content: `
+      <p>La question revient en boucle dans les forums, sur Reddit et dans vos DM : <strong>Xavier Niel va-t-il lancer un forfait 6G chez Free Mobile ?</strong> Après l'annonce fracassante du <strong>forfait Free Max</strong> avec sa data illimitée en <strong>5G</strong> dans 135 pays, l'appétit est logique. Si Free a pu révolutionner la 4G en 2012, puis la <strong>5G</strong> en 2022, pourquoi pas la <strong>6G</strong> dès demain ?</p>
+      <p>La réponse courte : <strong>non, il n'y a aucun forfait 6G prévu chez Free Mobile en 2026</strong>. Ni chez aucun autre opérateur dans le monde. Mais l'histoire ne s'arrête pas là. Voici tout ce que vous devez savoir — sans blabla, sans spéculation hasardeuse — sur la 6G, le positionnement de Free et ce que Xavier Niel prépare <em>vraiment</em>.</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-bold text-blue-800">Le résumé express :</p>
+        <p class="text-blue-700 mt-2"><strong>Non</strong>, Free Mobile ne propose pas de forfait 6G. La <strong>6G</strong> n'existe pas encore commercialement — elle est en phase de <strong>recherche et standardisation</strong>. Les premiers déploiements commerciaux sont attendus vers <strong>2030-2032</strong>. En attendant, Free concentre ses efforts sur la <strong>5G/5G+</strong> avec le forfait <strong>Free Max</strong> (data illimitée, 29,99€/mois). Votre <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">APN Free Mobile</a> reste inchangé.</p>
+      </div>
+
+      <h2>La 6G, c'est quoi exactement ?</h2>
+      <p>Avant de parler forfait, parlons technologie. La <strong>6G</strong> (sixième génération de réseau mobile) est la <strong>succession de la 5G</strong>, tout comme la 5G a succédé à la 4G. Mais attention : contrairement à la 5G qui est déjà déployée massivement par <strong>Free Mobile</strong> et ses concurrents, la 6G en est encore au stade embryonnaire.</p>
+
+      <h3>Ce que la 6G promet (en théorie)</h3>
+      <ul>
+        <li><strong>Débits de 1 Tbps :</strong> Oui, vous avez bien lu. 1 <strong>térabit par seconde</strong>, soit environ 100 fois plus rapide que la 5G actuelle. Télécharger un film 4K en moins d'une milliseconde.</li>
+        <li><strong>Latence sub-milliseconde :</strong> Moins de 0,1 ms contre 1-5 ms en 5G. Indispensable pour la chirurgie à distance, les véhicules autonomes et la réalité augmentée immersive.</li>
+        <li><strong>IA native dans le réseau :</strong> Le réseau 6G sera <strong>piloté par l'intelligence artificielle</strong> en temps réel. Allocation dynamique des ressources, prédiction des congestions, optimisation énergétique automatique.</li>
+        <li><strong>Intégration satellite-terrestre :</strong> La 6G combinera réseaux terrestres (antennes) et <strong>réseaux non-terrestres</strong> (satellites en orbite basse, drones-relais) pour une couverture absolument partout sur la planète. Plus aucune zone blanche.</li>
+        <li><strong>Bandes THz (térahertz) :</strong> De nouvelles fréquences au-delà des 100 GHz seront exploitées, offrant des capacités de transfert monumentales mais avec une portée très courte.</li>
+      </ul>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
+        <p class="font-bold text-green-800">💡 Pour faire simple :</p>
+        <p class="text-green-700 mt-1">Si la <strong>4G</strong> a permis le streaming vidéo et la <strong>5G</strong> permet l'IoT massif et la réalité virtuelle, la <strong>6G</strong> promet un monde où <strong>tout</strong> est connecté en temps réel : humains, machines, capteurs, satellites. C'est la fusion totale du numérique et du physique.</p>
+      </div>
+
+      <h2>Où en est la 6G en avril 2026 ?</h2>
+      <p>Soyons clairs : la 6G n'existe nulle part dans le monde sous forme de réseau commercial. Voici l'état des lieux réel :</p>
+
+      <h3>La standardisation en cours</h3>
+      <ul>
+        <li><strong>3GPP (l'organisme mondial des normes télécoms) :</strong> Les travaux de standardisation 6G ont commencé mais ne seront pas finalisés avant <strong>2028-2029</strong> au plus tôt. La Release 20/21 du 3GPP devrait poser les bases techniques de la 6G.</li>
+        <li><strong>ITU-R (Union Internationale des Télécoms) :</strong> L'ITU a défini en 2023 la vision globale de la 6G sous le nom <strong>IMT-2030</strong>. Les exigences techniques sont en cours de spécification.</li>
+      </ul>
+
+      <h3>La France se positionne</h3>
+      <ul>
+        <li><strong>Plateforme "France 6G" :</strong> Lancée en novembre 2025 par l'<strong>Institut Mines-Télécom (IMT)</strong>, cette plateforme nationale réunit entreprises, startups, laboratoires et institutions pour coordonner la recherche 6G française.</li>
+        <li><strong>Plan France 2030 :</strong> Le gouvernement français a intégré la 6G dans sa stratégie de <strong>souveraineté numérique</strong>, avec des financements pour la R&D sur les réseaux de prochaine génération.</li>
+        <li><strong>SNS JU (Europe) :</strong> L'initiative européenne Smart Networks and Services finance des projets de recherche 6G impliquant des acteurs français.</li>
+      </ul>
+
+      <h3>Le calendrier réaliste</h3>
+      <div class="overflow-x-auto my-8">
+        <table class="w-full text-sm text-left text-gray-500 border rounded-lg overflow-hidden">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+              <th scope="col" class="px-6 py-3">Étape</th>
+              <th scope="col" class="px-6 py-3">Période estimée</th>
+              <th scope="col" class="px-6 py-3">Détail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Recherche fondamentale</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">2023-2027 (en cours) ✅</span></td>
+              <td class="px-6 py-4">Universités, labos et industriels testent les technologies candidates (THz, IA réseau, NTN).</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Standardisation 3GPP</td>
+              <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">2028-2029 ⏳</span></td>
+              <td class="px-6 py-4">Spécifications techniques finalisées. Les constructeurs pourront commencer à développer les équipements.</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Prototypes & tests pilotes</td>
+              <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">2029-2031 ⏳</span></td>
+              <td class="px-6 py-4">Premiers réseaux 6G expérimentaux dans des zones dédiées (villes-tests, campus).</td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Déploiement commercial</td>
+              <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">2031-2035+ 🔮</span></td>
+              <td class="px-6 py-4">Premiers forfaits 6G chez les opérateurs pionniers. Déploiement progressif, grandes villes d'abord.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6">
+        <p class="font-bold text-red-800">⚠️ Méfiez-vous des annonces marketing :</p>
+        <p class="text-red-700 mt-2">Certains constructeurs chinois et coréens (Huawei, Samsung) ont annoncé des "démonstrations 6G" en laboratoire. Ce sont des <strong>prototypes de recherche</strong>, pas des produits commerciaux. Aucun smartphone 6G n'existe à la vente en avril 2026. Quiconque vous vend un "téléphone 6G" en 2026 vous ment.</p>
+      </div>
+
+      <h2>Qu'a dit Xavier Niel sur la 6G ?</h2>
+      <p>Contrairement à ce que certains articles clickbait laissent entendre, <strong>Xavier Niel n'a fait aucune annonce officielle concernant un forfait 6G</strong>. Voici ce que le fondateur d'Iliad/Free a réellement communiqué :</p>
+
+      <h3>Sa stratégie actuelle : la 5G illimitée</h3>
+      <p>Le <strong>31 mars 2026</strong>, Xavier Niel a présenté le <strong>forfait Free Max</strong>, une offre à 29,99€/mois avec :</p>
+      <ul>
+        <li><strong>Internet illimité en 5G/5G+</strong> en France métropolitaine</li>
+        <li><strong>Internet illimité dans 135+ pays</strong> à travers le monde</li>
+        <li><strong>VPN intégré</strong> (Free mVPN), <strong>eSIM Watch</strong> et <strong>Free TV+</strong> inclus</li>
+        <li>Prix réduit à <strong>19,99€</strong> pour les abonnés Freebox</li>
+      </ul>
+      <p>C'est clairement la priorité de Free : <strong>maximiser l'expérience 5G avant de penser à la 6G</strong>. Et c'est logique. La 5G n'est même pas encore déployée à 100% du territoire français.</p>
+
+      <h3>Sa vision long terme : disrupter, toujours</h3>
+      <p>Xavier Niel a toujours suivi le même schéma :</p>
+      <ul>
+        <li><strong>2012 :</strong> Free «casse» le marché de la 3G/4G avec le forfait à 19,99€ (quand Orange facturait 50€+).</li>
+        <li><strong>2020-2022 :</strong> Free déploie la <strong>5G</strong> plus vite que tous ses concurrents grâce à la bande 700 MHz.</li>
+        <li><strong>2026 :</strong> Free lance le premier forfait <strong>illimité 5G à l'international</strong> en France.</li>
+      </ul>
+      <p>Le pattern est clair : <strong>Free n'est jamais le premier sur la technologie, mais toujours le premier sur le prix et l'accessibilité</strong>. Quand la 6G sera prête (2031+), il y a fort à parier que Xavier Niel sera le premier à proposer un forfait <strong>abordable et sans engagement</strong>. Mais pas avant.</p>
+
+      <h2>Que faire en attendant la 6G ? (actions concrètes)</h2>
+      <p>Plutôt que de rêver à un futur hypothétique, voici ce que vous pouvez faire <strong>maintenant</strong> pour profiter au maximum du réseau <strong>Free Mobile</strong> :</p>
+
+      <h3>1. Vérifiez que vous profitez vraiment de la 5G</h3>
+      <p>Beaucoup d'abonnés Free ont un <strong>smartphone compatible 5G</strong> mais ne sont pas connectés en 5G. Trois points à vérifier :</p>
+      <ul>
+        <li><strong>Votre téléphone :</strong> Il doit supporter les bandes <strong>n1, n3, n28 et n78</strong> de Free. Consultez notre page <a href='/marques' class="text-red-600 font-bold hover:underline">marques de téléphones</a> pour vérifier.</li>
+        <li><strong>Votre APN :</strong> L'<strong>APN Free Mobile</strong> doit être correctement configuré (nom : "Free", APN : "free"). Un APN mal réglé peut bloquer la connexion même avec un téléphone compatible. Voir notre guide <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">configurer l'APN Free Mobile</a>.</li>
+        <li><strong>Le mode réseau :</strong> Dans <strong>Paramètres > Réseau mobile</strong>, sélectionnez <strong>"5G/4G/3G/2G (automatique)"</strong> pour que votre téléphone s'accroche automatiquement à la 5G quand elle est disponible.</li>
+      </ul>
+
+      <h3>2. Passez au forfait Free Max si vous êtes un gros consommateur</h3>
+      <p>Si vous consommez beaucoup de data (streaming, hotspot, voyages fréquents), le <strong>forfait Free Max</strong> à 29,99€/mois est actuellement l'offre la plus compétitive du marché français. Data illimitée en France ET à l'étranger, sans aucun fair use déclaré.</p>
+
+      <h3>3. Gardez votre téléphone compatible "futur"</h3>
+      <p>Quand la 6G arrivera (2031+), elle sera probablement rétrocompatible avec la 5G, comme la 5G est rétrocompatible avec la 4G. Le meilleur investissement aujourd'hui :</p>
+      <ul>
+        <li>Un smartphone supportant la <strong>5G sur toutes les bandes</strong> françaises (n1, n3, n28, n78)</li>
+        <li>Un modèle avec <strong>eSIM</strong> pour faciliter les migrations futures</li>
+        <li>Un appareil de marque globale (<strong>iPhone</strong>, <strong>Samsung Galaxy</strong>, <strong>Google Pixel</strong>) qui recevra les mises à jour firmware les plus longtemps</li>
+      </ul>
+
+      <div class="bg-gradient-to-r from-blue-50 to-violet-50 border border-blue-200 rounded-xl p-6 my-8">
+        <p class="font-bold text-gray-900 flex items-center gap-2 mb-2">🔒 Protégez-vous dès maintenant, pas en 2031 :</p>
+        <p class="text-gray-700 text-sm leading-relaxed mb-3">En attendant les promesses de sécurité native de la 6G, votre connexion <strong>5G actuelle</strong> reste vulnérable sur les Wi-Fi publics. Un VPN est le moyen le plus simple de protéger vos données bancaires et mots de passe, que ce soit en France ou avec le <strong>forfait Free Max</strong> à l'étranger.</p>
+        <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=140680&source=freemobile" target="_blank" rel="nofollow noopener noreferrer sponsored" class="inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-800 hover:underline">Voir l'offre NordVPN pour abonnés Free Mobile →</a>
+      </div>
+
+      <h2>La 6G changera-t-elle votre APN ou votre config Free ?</h2>
+      <p>Question légitime — et la réponse est rassurante : <strong>probablement pas</strong>. Voici pourquoi :</p>
+      <ul>
+        <li><strong>Historiquement :</strong> Le passage de la 3G à la 4G, puis de la 4G à la <strong>5G</strong>, n'a <strong>jamais modifié l'APN</strong> chez <strong>Free Mobile</strong>. L'APN "free" est resté identique depuis 2012.</li>
+        <li><strong>Architecture réseau :</strong> La 6G sera une évolution de la 5G (pas un remplacement). Les paramètres de connexion (APN, MCC/MNC) sont gérés au niveau du cœur de réseau, pas au niveau de la technologie radio.</li>
+        <li><strong>Côté utilisateur :</strong> Quand la 6G arrivera, il suffira probablement d'avoir un <strong>smartphone compatible</strong> et de s'assurer que le mode réseau est en <strong>"Auto"</strong>. Pas de nouvel APN, pas de manipulation spéciale.</li>
+      </ul>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
+        <p class="font-bold text-green-800">💡 En résumé :</p>
+        <p class="text-green-700 mt-1">Votre <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">configuration APN Free Mobile</a> actuelle survivra très probablement à la transition 6G. Pas de stress, pas de changement à prévoir côté réglages réseau.</p>
+      </div>
+
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p><strong>Q : Existe-t-il un forfait 6G chez Free Mobile en 2026 ?</strong><br>
+      R : <strong>Non, absolument pas.</strong> La 6G n'existe commercialement nulle part dans le monde. Les premiers forfaits 6G ne sont pas attendus avant <strong>2031 au plus tôt</strong>. En 2026, l'offre la plus avancée de <strong>Free Mobile</strong> est le <strong>forfait Free Max</strong> en <strong>5G/5G+</strong> illimitée.</p>
+
+      <p><strong>Q : Xavier Niel a-t-il annoncé des investissements dans la 6G ?</strong><br>
+      R : Pas d'annonce publique spécifique. Cependant, Iliad (la maison mère de Free) participe aux consortiums européens de recherche télécoms et suit de près les travaux de standardisation via le <strong>3GPP</strong>. Free sera prêt quand la technologie le sera.</p>
+
+      <p><strong>Q : Mon smartphone 5G actuel sera-t-il compatible 6G ?</strong><br>
+      R : <strong>Non.</strong> La 6G utilisera de nouvelles bandes de fréquence (notamment les fréquences <strong>térahertz</strong>) et de nouvelles technologies radio. Il faudra un <strong>nouveau smartphone compatible 6G</strong> quand le moment viendra. Mais votre téléphone 5G continuera de fonctionner normalement — la 5G ne sera pas éteinte.</p>
+
+      <p><strong>Q : Faudra-t-il changer d'APN pour la 6G ?</strong><br>
+      R : Très probablement <strong>non</strong>. L'<a href='/configurer-apn'>APN Free Mobile</a> n'a jamais changé depuis le lancement de l'opérateur, que vous soyez en 3G, 4G ou <strong>5G</strong>. Il n'y a aucune raison technique pour que la 6G modifie cette configuration.</p>
+
+      <p><strong>Q : La 5G+ de Free, c'est déjà de la 6G ?</strong><br>
+      R : Non. La <strong>5G+</strong> (ou 5G SA — Standalone) est l'évolution finale de la 5G, pas de la 6G. Elle offre des débits plus rapides et une latence réduite par rapport à la 5G classique, mais elle reste de la 5G. La 6G est une <strong>génération entièrement nouvelle</strong> avec des technologies fondamentalement différentes.</p>
+
+      <p><strong>Q : Quel opérateur français lancera la 6G en premier ?</strong><br>
+      R : Impossible à prédire avec certitude. Historiquement, <strong>Free Mobile</strong> a été l'opérateur le plus agressif sur la couverture 5G grâce à sa stratégie de la bande 700 MHz. Orange a l'avantage de la recherche via Orange Labs. Bouygues et SFR suivent. Le premier à <strong>commercialiser</strong> un forfait 6G abordable sera probablement Free — c'est dans l'ADN de Xavier Niel.</p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <p class="text-sm text-gray-600 italic">La <strong>6G</strong> est une technologie passionnante mais encore lointaine. En attendant, assurez-vous que votre <strong>smartphone</strong> profite pleinement de la <strong>5G Free Mobile</strong> actuelle. Vérifiez votre configuration sur notre page <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">APN Free Mobile</a> et la compatibilité de votre téléphone sur notre section <a href='/marques' class="text-red-600 font-bold hover:underline">marques de téléphones</a>.</p>
+      </div>
+    `,
+  },
+  {
     slug: "forfait-free-max-internet-illimite-5g-135-destinations",
     title: "Forfait Free Max : Internet Illimité en 5G dans 135 Pays",
     excerpt: "Free Mobile lance le forfait Free Max : data illimitée en 5G en France ET à l'étranger dans 135 destinations. Prix, détails, pièges et comparatif avec l'ancien forfait.",
