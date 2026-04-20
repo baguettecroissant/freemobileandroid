@@ -13,6 +13,339 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "iphone-free-mobile-reglages-automatiques-vs-manuels-apn",
+    title: "iPhone Free Mobile : Réglages Auto vs Manuels (APN)",
+    excerpt: "Votre iPhone ne capte pas la 4G/5G avec Free Mobile ? Découvrez si les réglages automatiques suffisent ou s'il faut configurer l'APN manuellement. Guide 2026.",
+    date: "2026-04-20",
+    author: "Wade",
+    readTime: "8 min",
+    category: "Configuration",
+    image: "/blog_iphone_reglages_auto_manuel_free.png",
+    imagePrompt: "Tech 3D, Isometric, Glassmorphism style illustration. An iPhone floating in center with its Settings/Réglages screen visible showing cellular network configuration options. On the left side of the phone, a glowing green checkmark and automatic gear icons representing automatic settings. On the right side, a wrench tool icon and manual configuration fields representing manual settings. Between them, a split/comparison divider. Surrounding the iPhone are floating isometric elements: a red SIM card with Free Mobile branding, 5G signal waves, APN text bubbles, small gear cogs, and a cellular tower emitting signal rings. A large VS text between the automatic and manual sides. Color palette: Free Mobile Red (#CD1E25) and White with clean light gradient background, accents of soft blue for the automatic/recommended side. Soft gradient lighting, modern minimal premium tech blog aesthetic, professional digital art, ultra clean composition, 8k resolution.",
+    content: `
+      <p>Vous venez d'insérer votre carte SIM <strong>Free Mobile</strong> dans votre <strong>iPhone</strong> — et là, c'est le drame. Pas de 4G, pas de <strong>5G</strong>, le symbole "E" qui clignote ou carrément <strong>"Pas de service"</strong>. Vous cherchez frénétiquement l'<strong>APN</strong> dans les réglages et… rien. Pas de champ modifiable. Bienvenue dans le monde merveilleux d'iOS et de la configuration réseau verrouillée par Apple.</p>
+      <p>La question que se posent des milliers d'abonnés Free chaque mois : <strong>faut-il laisser les réglages automatiques d'Apple gérer la connexion, ou configurer manuellement l'APN Free Mobile ?</strong> La réponse dépend de votre situation. On vous explique tout, sans tourner autour du pot.</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-bold text-blue-800">Le résumé express :</p>
+        <p class="text-blue-700 mt-2">Sur iPhone, les <strong>réglages automatiques</strong> (profil opérateur Apple) gèrent l'APN <strong>Free Mobile</strong> sans intervention. Dans <strong>95 % des cas</strong>, ça fonctionne parfaitement. Si ce n'est pas le cas : mettez à jour iOS, réinitialisez les réglages réseau, ou installez manuellement un profil APN. Détails et procédures ci-dessous.</p>
+      </div>
+
+      <h2>Comment fonctionne la config réseau sur iPhone ? (la base)</h2>
+      <p>Contrairement à <strong>Android</strong> où l'utilisateur peut créer, modifier et supprimer les <strong>APN</strong> à volonté, Apple a fait un choix radicalement différent : <strong>l'APN est verrouillé</strong>. Vous ne pouvez pas le modifier manuellement dans les réglages iOS — du moins pas directement.</p>
+
+      <h3>Les réglages automatiques : le "profil opérateur"</h3>
+      <p>Quand vous insérez une SIM <strong>Free Mobile</strong> dans un iPhone, voici ce qui se passe en coulisses :</p>
+      <ul>
+        <li><strong>Détection de l'opérateur :</strong> iOS lit le <strong>MCC/MNC</strong> de la SIM (208/15 pour Free Mobile) et identifie l'opérateur.</li>
+        <li><strong>Téléchargement du profil opérateur :</strong> L'iPhone se connecte aux serveurs Apple et télécharge le <strong>carrier bundle</strong> (profil opérateur) correspondant à Free Mobile. Ce fichier contient l'APN, les réglages VoLTE, VoWiFi, la config MMS, etc.</li>
+        <li><strong>Application automatique :</strong> Tous les réglages réseau sont appliqués en arrière-plan. Vous n'avez <strong>rien à faire</strong>.</li>
+      </ul>
+      <p>Ce profil est mis à jour à chaque <strong>mise à jour iOS</strong> et parfois en arrière-plan (mise à jour opérateur). C'est pour ça que vous voyez parfois la notification <strong>"Mise à jour des réglages de l'opérateur disponible"</strong>.</p>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
+        <p class="font-bold text-green-800">💡 Pour vérifier votre version de profil opérateur :</p>
+        <p class="text-green-700 mt-1">Allez dans <strong>Réglages > Général > Informations</strong>. Descendez jusqu'à <strong>"Opérateur"</strong>. Vous verrez quelque chose comme <strong>"Free 56.1"</strong> ou <strong>"Free 57.0"</strong>. Si le numéro est ancien, une mise à jour iOS résoudra probablement votre problème.</p>
+      </div>
+
+      <h3>Les réglages manuels : quand c'est nécessaire</h3>
+      <p>Les <strong>réglages manuels</strong> entrent en jeu dans des situations spécifiques où le profil automatique d'Apple ne fait pas le travail :</p>
+      <ul>
+        <li><strong>iPhone ancien :</strong> Les iPhone 6s, 7 et 8 ne reçoivent plus les mises à jour iOS. Leur profil opérateur peut être obsolète.</li>
+        <li><strong>iPhone importé :</strong> Un iPhone acheté aux USA, au Japon ou en Chine peut avoir un profil opérateur incomplet pour Free Mobile France.</li>
+        <li><strong>Bug post mise à jour :</strong> Après une mise à jour iOS majeure (ex : passage à iOS 18/19), le profil opérateur peut se corrompre.</li>
+        <li><strong>eSIM mal provisionnée :</strong> Lors du transfert d'eSIM entre deux iPhones, les réglages réseau peuvent ne pas se transférer correctement.</li>
+        <li><strong>Double SIM (nano SIM + eSIM) :</strong> Le profil <strong>Free Mobile</strong> peut ne pas s'appliquer correctement sur la ligne secondaire.</li>
+      </ul>
+
+      <h2>Réglages automatiques : ce qui marche (et ce qui ne marche pas)</h2>
+      <p>Soyons clairs : pour la <strong>très grande majorité</strong> des utilisateurs d'iPhone avec <strong>Free Mobile</strong>, les réglages automatiques fonctionnent parfaitement. Voici un état des lieux en avril 2026 :</p>
+
+      <div class="overflow-x-auto my-8">
+        <table class="w-full text-sm text-left text-gray-500 border rounded-lg overflow-hidden">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+              <th scope="col" class="px-6 py-3">Fonctionnalité</th>
+              <th scope="col" class="px-6 py-3">Via réglages auto ?</th>
+              <th scope="col" class="px-6 py-3">Détail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Internet 4G/5G</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Oui ✅</span></td>
+              <td class="px-6 py-4">L'APN "free" est intégré au profil opérateur Apple. Fonctionne dès l'insertion de la SIM.</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">MMS (envoi/réception)</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Oui ✅</span></td>
+              <td class="px-6 py-4">Le profil APN MMS ("mmsfree") est configuré automatiquement par iOS.</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Partage de connexion (Hotspot)</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Oui ✅</span></td>
+              <td class="px-6 py-4">Depuis iOS 16+, le hotspot fonctionne nativement avec Free. Plus besoin de bidouiller.</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">VoLTE (appels HD en 4G)</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Oui ✅</span></td>
+              <td class="px-6 py-4">Activé automatiquement sur iPhone 8 et + avec Free Mobile.</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">VoWiFi (appels via Wi-Fi)</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Oui ✅</span></td>
+              <td class="px-6 py-4">Disponible depuis 2021 chez Free. Activez dans <strong>Réglages > Téléphone > Appels Wi-Fi</strong>.</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">5G (n1, n3, n28, n78)</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Oui ✅</span></td>
+              <td class="px-6 py-4">iPhone 12 et + supportent la 5G Free. Aucun réglage APN nécessaire.</td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Roaming international</td>
+              <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Partiel ⚠️</span></td>
+              <td class="px-6 py-4">Fonctionne, mais il faut activer manuellement <strong>Données à l'étranger</strong> dans les réglages.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Quand faut-il passer en configuration manuelle ?</h2>
+      <p>Voici les <strong>5 situations</strong> où les réglages automatiques échouent et où une intervention manuelle est nécessaire :</p>
+
+      <h3>1. Vous avez le Wi-Fi mais pas d'Internet mobile (4G/5G)</h3>
+      <p>Symptôme classique : les appels passent, les SMS aussi, mais <strong>impossible de charger une page web en données mobiles</strong>. C'est le signe que l'APN n'est pas correctement chargé par le profil opérateur.</p>
+      <p><strong>Solution :</strong></p>
+      <ol>
+        <li>Allez dans <strong>Réglages > Général > Informations</strong>. Si une mise à jour opérateur est disponible, un pop-up apparaîtra. Acceptez-la.</li>
+        <li>Si aucune mise à jour n'apparaît : <strong>Réglages > Général > Transférer ou Réinitialiser > Réinitialiser > Réinitialiser les réglages réseau</strong>. Votre iPhone oubliera les mots de passe Wi-Fi, mais reconfigurera l'APN depuis zéro.</li>
+        <li>Redémarrez votre iPhone (éteindre complètement puis rallumer).</li>
+      </ol>
+
+      <h3>2. Le partage de connexion est grisé ou absent</h3>
+      <p>C'est un problème historique entre <strong>Free Mobile et l'iPhone</strong>. Même si Apple a officiellement résolu le bug depuis iOS 16, certains utilisateurs voient encore l'option <strong>"Partage de connexion"</strong> grisée ou absente.</p>
+      <p><strong>Solution :</strong></p>
+      <ol>
+        <li>Vérifiez que vous êtes bien sur le <strong>Forfait Free 19,99€</strong> ou le <strong>Free Max</strong>. Le forfait 2€ ne permet pas le hotspot.</li>
+        <li>Réinitialisez les réglages réseau (voir ci-dessus).</li>
+        <li>Si le problème persiste, un profil APN manuel peut forcer l'activation du hotspot (voir section suivante).</li>
+      </ol>
+
+      <h3>3. Les MMS ne s'envoient pas / ne se reçoivent pas</h3>
+      <p>Vous recevez un SMS de notification à la place de la photo ? Le profil MMS automatique ne s'est pas correctement installé.</p>
+      <p><strong>Solution :</strong></p>
+      <ul>
+        <li><strong>Vérifiez que les données mobiles sont activées :</strong> Les MMS nécessitent une connexion data. Si vous avez désactivé les données mobiles, les MMS ne fonctionneront pas.</li>
+        <li><strong>Réinitialiser les réglages réseau</strong> puis redémarrez.</li>
+        <li>Si le problème persiste après redémarrage, consultez notre guide complet <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">configuration APN Free Mobile</a>.</li>
+      </ul>
+
+      <h3>4. Vous êtes bloqué en "E" (Edge) au lieu de 4G/5G</h3>
+      <p>Votre iPhone affiche le symbole <strong>"E"</strong> en haut de l'écran au lieu de <strong>"4G"</strong> ou <strong>"5G"</strong>. Deux causes possibles :</p>
+      <ul>
+        <li><strong>Cause 1 — Le mode réseau :</strong> Allez dans <strong>Réglages > Données cellulaires > Options > Voix et données</strong> et sélectionnez <strong>"5G automatique"</strong> (ou <strong>"LTE"</strong> minimum). Si c'est réglé sur "3G" ou "2G", votre iPhone n'utilise pas la 4G.</li>
+        <li><strong>Cause 2 — Le profil opérateur :</strong> Un profil obsolète peut forcer l'iPhone à rester en 2G. Mettez à jour iOS à la dernière version disponible.</li>
+      </ul>
+
+      <h3>5. Vous venez de passer d'un autre opérateur à Free</h3>
+      <p>Quand vous faites une <strong>portabilité</strong> de Orange, SFR ou Bouygues vers <strong>Free Mobile</strong>, l'ancien profil opérateur peut rester en mémoire. L'iPhone continue d'essayer de se connecter avec les réglages APN de votre ancien opérateur.</p>
+      <p><strong>Solution :</strong> Réinitialisez les réglages réseau, <strong>retirez puis réinsérez la SIM Free</strong>, et redémarrez. iOS re-téléchargera le bon profil opérateur.</p>
+
+      <h2>Comment installer un profil APN manuel sur iPhone</h2>
+      <p>Contrairement à Android, vous ne pouvez <strong>pas taper manuellement un APN</strong> dans les réglages d'un iPhone. La seule façon d'injecter un APN personnalisé est d'installer un <strong>profil de configuration</strong> (fichier .mobileconfig). Voici comment faire :</p>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-4 my-6">
+        <p class="font-bold text-red-800">⚠️ Attention :</p>
+        <p class="text-red-700 mt-2">L'installation d'un profil APN <strong>remplace les réglages automatiques</strong> d'Apple. Dans 95 % des cas, une simple <strong>réinitialisation des réglages réseau</strong> suffit à résoudre les problèmes. N'installez un profil manuel qu'en <strong>dernier recours</strong>, et uniquement depuis une source de confiance. Jamais depuis un lien aléatoire trouvé sur un forum.</p>
+      </div>
+
+      <h3>Les valeurs APN Free Mobile pour iPhone</h3>
+      <p>Si vous devez configurer manuellement (via un profil .mobileconfig ou un MDM), voici les valeurs exactes :</p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">APN Internet Free Mobile (iPhone)</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><strong>Nom :</strong> Free</li>
+          <li><strong>APN :</strong> free</li>
+          <li><strong>Nom d'utilisateur :</strong> (vide)</li>
+          <li><strong>Mot de passe :</strong> (vide)</li>
+          <li><strong>MCC :</strong> 208</li>
+          <li><strong>MNC :</strong> 15</li>
+          <li><strong>Type d'APN :</strong> default,supl,hipri</li>
+          <li><strong>Protocole APN :</strong> IPv4/IPv6</li>
+          <li><strong>Protocole d'itinérance APN :</strong> IPv4/IPv6</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">APN MMS Free Mobile (iPhone)</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><strong>Nom :</strong> Free MMS</li>
+          <li><strong>APN :</strong> mmsfree</li>
+          <li><strong>MMSC :</strong> http://mms.free.fr</li>
+          <li><strong>Proxy MMS :</strong> (vide)</li>
+          <li><strong>Port MMS :</strong> (vide)</li>
+          <li><strong>MCC :</strong> 208</li>
+          <li><strong>MNC :</strong> 15</li>
+          <li><strong>Type d'APN :</strong> mms</li>
+          <li><strong>Protocole APN :</strong> IPv4/IPv6</li>
+        </ul>
+      </div>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
+        <p class="font-bold text-green-800">💡 Astuce iPhone spécifique :</p>
+        <p class="text-green-700 mt-1">Sur iPhone, la méthode la plus fiable reste de <strong>laisser iOS gérer l'APN automatiquement</strong>. Si vous avez installé un profil APN manuel et que les choses empirent, supprimez-le dans <strong>Réglages > Général > VPN et gestion de l'appareil</strong>, puis réinitialisez les réglages réseau. L'iPhone re-téléchargera le profil opérateur officiel de <strong>Free Mobile</strong>.</p>
+      </div>
+
+      <h2>La checklist de dépannage complète (iPhone + Free Mobile)</h2>
+      <p>Avant de paniquer, suivez cette checklist dans l'ordre. Elle résout <strong>99 % des problèmes réseau</strong> sur iPhone avec <strong>Free Mobile</strong> :</p>
+      <ol>
+        <li><strong>Vérifiez la couverture :</strong> Free n'a pas d'antenne partout. Vérifiez sur <a href="https://mobile.free.fr/couverture" target="_blank" class="text-red-600 font-bold hover:underline">la carte de couverture Free</a> que votre zone est couverte en 4G/<strong>5G</strong>.</li>
+        <li><strong>Activez/désactivez le mode avion :</strong> 15 secondes en mode avion puis désactivez. Cela force une reconnexion au réseau.</li>
+        <li><strong>Vérifiez les données mobiles :</strong> <strong>Réglages > Données cellulaires</strong> → l'interrupteur principal doit être <strong>vert</strong>.</li>
+        <li><strong>Mettez à jour iOS :</strong> <strong>Réglages > Général > Mise à jour logicielle</strong>. Un iOS obsolète = un profil opérateur potentiellement incompatible.</li>
+        <li><strong>Mettez à jour le profil opérateur :</strong> <strong>Réglages > Général > Informations</strong>. Si un pop-up de mise à jour opérateur apparaît, installez-la.</li>
+        <li><strong>Réinitialisez les réglages réseau :</strong> <strong>Réglages > Général > Transférer ou Réinitialiser > Réinitialiser > Réinitialiser les réglages réseau</strong>.</li>
+        <li><strong>Retirez et réinsérez la SIM :</strong> Physiquement. Éteignez l'iPhone, retirez la SIM, attendez 30 secondes, réinsérez et rallumez.</li>
+        <li><strong>Testez votre SIM dans un autre téléphone :</strong> Si elle ne fonctionne nulle part, la SIM est peut-être défectueuse. Demandez un remplacement gratuit dans votre Espace Abonné Free.</li>
+      </ol>
+
+      <h2>iPhone et 5G Free Mobile : tout ce qu'il faut savoir</h2>
+      <p>La <strong>5G Free Mobile</strong> fonctionne en mode automatique sur tous les <strong>iPhone 12, 13, 14, 15, 16 et 17</strong>. Aucun réglage APN spécifique n'est nécessaire pour la 5G — c'est géré par le profil opérateur.</p>
+
+      <h3>Activer la 5G sur votre iPhone</h3>
+      <ol>
+        <li>Allez dans <strong>Réglages > Données cellulaires > Options > Voix et données</strong>.</li>
+        <li>Sélectionnez <strong>"5G automatique"</strong> (recommandé) ou <strong>"5G activée"</strong> (priorité permanente à la 5G, consomme plus de batterie).</li>
+      </ol>
+
+      <h3>Mode "5G Automatique" vs "5G Activée"</h3>
+      <div class="overflow-x-auto my-8">
+        <table class="w-full text-sm text-left text-gray-500 border rounded-lg overflow-hidden">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+              <th scope="col" class="px-6 py-3">Mode</th>
+              <th scope="col" class="px-6 py-3">Comportement</th>
+              <th scope="col" class="px-6 py-3">Recommandé pour</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">5G Automatique</td>
+              <td class="px-6 py-4">iOS bascule entre 5G et 4G intelligemment selon la charge réseau et l'économie de batterie.</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Tout le monde ✅</span></td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">5G Activée</td>
+              <td class="px-6 py-4">Force la connexion 5G en permanence, même si le signal est faible. Impact batterie notable.</td>
+              <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Power users ⚠️</span></td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">LTE</td>
+              <td class="px-6 py-4">Désactive la 5G, connexion 4G uniquement. Utile en zone de couverture 5G instable.</td>
+              <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Économie batterie ⚠️</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Les bandes <strong>5G</strong> supportées par Free Mobile et compatibles avec les iPhone sont : <strong>n1 (2100 MHz)</strong>, <strong>n3 (1800 MHz)</strong>, <strong>n28 (700 MHz)</strong> et <strong>n78 (3500 MHz)</strong>. Tous les iPhone à partir du <strong>12</strong> supportent ces 4 bandes. Vérifiez la compatibilité exacte de votre modèle sur notre page <a href='/marques' class="text-red-600 font-bold hover:underline">marques de téléphones</a>.</p>
+
+      <h2>eSIM Free Mobile sur iPhone : auto ou manuel ?</h2>
+      <p>Depuis 2023, <strong>Free Mobile</strong> supporte l'<strong>eSIM</strong> sur iPhone (XS et ultérieur). Bonne nouvelle : la configuration est <strong>100 % automatique</strong>.</p>
+      <ol>
+        <li>Commandez votre eSIM depuis votre <strong>Espace Abonné Free</strong>.</li>
+        <li>Scannez le <strong>QR code</strong> fourni par Free avec l'app Appareil Photo de votre iPhone.</li>
+        <li>iOS télécharge le profil eSIM + le profil opérateur <strong>Free Mobile</strong> automatiquement.</li>
+        <li>L'APN, la VoLTE, le VoWiFi et les MMS sont configurés <strong>sans aucune intervention manuelle</strong>.</li>
+      </ol>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-4 my-6">
+        <p class="font-bold text-green-800">💡 Astuce eSIM :</p>
+        <p class="text-green-700 mt-1">Si vous utilisez <strong>deux lignes</strong> (nano SIM + eSIM) sur votre iPhone, allez dans <strong>Réglages > Données cellulaires</strong> et vérifiez que la ligne <strong>Free Mobile</strong> est bien définie comme <strong>"Données cellulaires par défaut"</strong>. Sinon, votre iPhone utilisera l'autre ligne pour Internet et vous n'aurez pas le bon APN.</p>
+      </div>
+
+      <div class="bg-gradient-to-r from-blue-50 to-violet-50 border border-blue-200 rounded-xl p-6 my-8">
+        <p class="font-bold text-gray-900 flex items-center gap-2 mb-2">🔒 Votre iPhone Free en Wi-Fi public ? Prudence :</p>
+        <p class="text-gray-700 text-sm leading-relaxed mb-3">Les réglages automatiques configurent votre connexion <strong>cellulaire</strong>, mais pas votre sécurité en Wi-Fi. Quand vous vous connectez au Wi-Fi d'un café, d'un hôtel ou d'un aéroport, vos données transitent en clair. Un VPN chiffre tout le trafic de votre iPhone, que vous soyez en <strong>4G</strong>, <strong>5G</strong> ou Wi-Fi.</p>
+        <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=140680&source=freemobile" target="_blank" rel="nofollow noopener noreferrer sponsored" class="inline-flex items-center gap-2 text-sm font-bold text-blue-700 hover:text-blue-800 hover:underline">Voir l'offre NordVPN pour iPhone →</a>
+      </div>
+
+      <h2>Auto vs Manuel : le verdict final</h2>
+      <div class="overflow-x-auto my-8">
+        <table class="w-full text-sm text-left text-gray-500 border rounded-lg overflow-hidden">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+              <th scope="col" class="px-6 py-3">Critère</th>
+              <th scope="col" class="px-6 py-3">Réglages Auto</th>
+              <th scope="col" class="px-6 py-3">Réglages Manuels</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Facilité</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Aucune action ✅</span></td>
+              <td class="px-6 py-4">Nécessite un profil .mobileconfig</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Fiabilité</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">95 % des cas ✅</span></td>
+              <td class="px-6 py-4">100 % si bien configuré</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Mises à jour</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Automatiques ✅</span></td>
+              <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Manuelles ❌</span></td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Hotspot</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Inclus (iOS 16+) ✅</span></td>
+              <td class="px-6 py-4">Potentiellement plus fiable sur iOS ancien</td>
+            </tr>
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">5G</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Automatique ✅</span></td>
+              <td class="px-6 py-4">Identique (pas de différence)</td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-50">
+              <td class="px-6 py-4 font-bold text-gray-900">Sécurité</td>
+              <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Signé par Apple ✅</span></td>
+              <td class="px-6 py-4"><span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Risque profil malveillant ⚠️</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+        <p class="font-bold text-blue-800">Notre recommandation :</p>
+        <p class="text-blue-700 mt-2"><strong>Laissez les réglages automatiques faire le travail.</strong> Si ça ne fonctionne pas : mettez à jour iOS, réinitialisez les réglages réseau, retirez/réinsérez la SIM. N'installez un profil APN manuel qu'en <strong>tout dernier recours</strong>, et uniquement depuis le site officiel de <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">FreeMobileAndroid.fr</a> ou de Free Mobile.</p>
+      </div>
+
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p><strong>Q : Pourquoi je ne vois pas de champ "APN" dans les réglages de mon iPhone ?</strong><br>
+      R : C'est normal. <strong>Apple verrouille l'accès aux réglages APN</strong> sur iPhone. L'APN est géré automatiquement par le profil opérateur. Sur Android, vous pouvez le modifier librement ; sur iPhone, c'est Apple qui contrôle. La seule façon de modifier l'APN est d'installer un profil de configuration (.mobileconfig).</p>
+
+      <p><strong>Q : Mon iPhone était chez Orange/SFR, je passe chez Free. L'APN va-t-il changer tout seul ?</strong><br>
+      R : <strong>Oui, normalement.</strong> Quand vous insérez votre nouvelle SIM Free, l'iPhone détecte le changement d'opérateur et télécharge le profil <strong>Free Mobile</strong>. Si l'ancien profil reste « collé », faites une <strong>réinitialisation des réglages réseau</strong>.</p>
+
+      <p><strong>Q : Est-ce que le forfait 2€ de Free fonctionne sur iPhone ?</strong><br>
+      R : Oui, le forfait 2€ fonctionne sur iPhone avec les réglages automatiques. Cependant, vous n'avez que <strong>50 Mo de data</strong> par mois (quasi rien). Le partage de connexion n'est pas disponible sur ce forfait. Pour profiter pleinement de votre iPhone, le <strong>forfait à 19,99€</strong> ou le <strong>Free Max</strong> sont recommandés.</p>
+
+      <p><strong>Q : Faut-il un APN différent pour la 5G sur iPhone ?</strong><br>
+      R : <strong>Non.</strong> L'APN est le même en 4G et en <strong>5G</strong> : "free". La 5G est gérée au niveau du modem radio et du profil opérateur, pas au niveau de l'APN. Aucune configuration supplémentaire n'est nécessaire.</p>
+
+      <p><strong>Q : Les réglages automatiques marchent-ils avec une eSIM Free Mobile ?</strong><br>
+      R : <strong>Oui, parfaitement.</strong> Quand vous activez une eSIM Free via QR code, le profil opérateur est téléchargé en même temps que le profil eSIM. Tout est automatique : APN, VoLTE, MMS, hotspot.</p>
+
+      <p><strong>Q : Mon iPhone affiche "Free" mais j'ai un débit très lent. Que faire ?</strong><br>
+      R : Plusieurs causes possibles : antenne Free saturée (heure de pointe), zone de couverture faible, ou mode réseau mal réglé. Vérifiez que vous êtes en <strong>"5G Automatique"</strong> dans <strong>Réglages > Données cellulaires > Options > Voix et données</strong>. Si le problème persiste, testez à un autre endroit ou contactez Free (3244).</p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 my-6">
+        <p class="text-sm text-gray-600 italic">Sur iPhone, la <strong>configuration réseau Free Mobile</strong> est conçue pour être transparente. Apple et Free ont travaillé ensemble pour que le profil opérateur gère tout automatiquement. Si vous rencontrez un <strong>problème réseau</strong> persistant, consultez notre guide complet <a href='/configurer-apn' class="text-red-600 font-bold hover:underline">APN Free Mobile</a> ou vérifiez la compatibilité de votre modèle sur notre page <a href='/marques' class="text-red-600 font-bold hover:underline">marques de téléphones</a>.</p>
+      </div>
+    `,
+  },
+  {
     slug: "xavier-niel-forfait-6g-free-mobile-date-lancement",
     title: "Xavier Niel et la 6G : Free Mobile Prépare-t-il un Forfait ?",
     excerpt: "Forfait 6G chez Free Mobile en 2026 ? On fait le point sur ce que Xavier Niel a vraiment dit, le calendrier réaliste de la 6G et ce qui vous attend concrètement.",
